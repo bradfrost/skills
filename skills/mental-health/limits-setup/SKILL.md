@@ -38,50 +38,80 @@ Run these rounds in order, one question at a time. Offer each default and
 make clear it's just a starting point. Keep the whole thing under ten
 minutes.
 
-### Round 1 — Purpose
+### Round 1 — Motivation
 
-> "What do you want AI *for* — and what do you refuse to let it become?"
+> "Why do you want to be intentional about your AI usage? Check all that
+> apply:
+>
+> - **My mental health** — I want AI in my life on my terms, not the tool's
+> - **Sleep** — "one more prompt" at midnight keeps costing me
+> - **Clarity around my work** — I want sessions that end cleanly, not
+>   endless dangling next steps
+> - **The environment** — every prompt burns real energy and water
+> - **Something else** — tell me in your own words"
 
-Free-form, no default. Quote their answer back at the top of the contract.
-If they mention late nights, lost sleep, or compulsive prompting, let that
-shape your defaults in later rounds.
+Multi-select; there's no wrong combination. Their picks shape the rest of
+the interview: **sleep** → lean into quiet hours (Round 2); **mental
+health** → give the session ceiling (Round 3) real attention; **clarity**
+→ Round 4 endings is their headline; **environment** → note the session
+ceiling helps today and `limits-energy` is coming. Quote their checked
+reasons — plus any "something else" in their own words — at the top of the
+contract, so the config always says why it exists.
 
 ### Round 2 — Quiet hours
 
-> "When should AI tools be off-limits? The default is **10pm to 7am, every
-> day** — the hours where 'one more prompt' costs you sleep."
+> "When do you want AI tools to be off-limits to protect sleep & balance?
+> Default is **10pm to 7am daily**."
 
-Capture start and end. Say honestly: on Claude Code this is enforceable
-(tool calls actually refuse); on chat surfaces it's advisory.
+If they checked **Sleep** in Round 1, tie the default to their own words
+instead of a generic pitch. Capture start and end — a window that wraps
+midnight is fine. Then the honesty note, plainly: on Claude Code this
+actually refuses to work during those hours; on chat and mobile it's
+advisory, and the real tool there is Do Not Disturb on their phone.
 
 ### Round 3 — Sessions per day
 
-> "Do you want a ceiling on how many sessions you start in a day? The
-> default is **measure first**: no ceiling for the first week, just an
-> honest count, then you pick a number that's yours."
+> "Do you want to set an upper limit on how many AI sessions you can start
+> in a day? Default: **monitor usage for the first week** to get an honest
+> count, and then you pick an upper limit number that you feel comfortable
+> with."
 
-If they pick a number now, take it. Explain the deal either way: a session
-counts the first time they prompt in it, the count resets at 4am (a
-late-night session belongs to the day it started), and once they're at the
-limit, new sessions get a terse refusal — same words every time, no lecture.
-Raising the limit later costs a typed phrase, a logged reason, and takes
-effect in a new session, never the one that got refused.
+If they pick a number now, take it. Explain the deal either way, in three
+plain beats:
+
+1. A session counts the first time you prompt in it — opening one costs
+   nothing.
+2. The day resets at 4am, so a late night doesn't hand you a fresh
+   allowance at midnight.
+3. At your limit, new sessions get the same short refusal every time — and
+   raising the limit means typing a phrase that says you're doing it on
+   purpose, with the change kicking in next session, not the one that just
+   got refused.
 
 ### Round 4 — Session endings
 
-> "How should sessions end? The default: **definitively** — the task that
-> started the session is the task that ends it, and nothing dangles."
+> "How should AI sessions end? Default: **definitively** — the task that
+> started the session is seen through until completion, with additional
+> tasks captured in your task tracker instead of dangled in front of you."
 
-If yes, point them to the `limits-endings` skill, which carries the full
-contract. Offer the optional closing ritual described there.
+If they checked **Clarity around my work** in Round 1, this round is their
+headline — say so. If they opt in, point to the `limits-endings` skill for
+the full contract, including the Signal Flags close-out block. Then offer
+the optional closing ritual: one fixed final beat at the end of a
+wrapped-up session that points away from the machine — their own chosen
+phrase, or quotes from a source they supply and can verify. Never invent
+one.
 
 ### Round 5 — Automation
 
-> "If you have scheduled or automated AI tasks: should they keep running
-> inside your quiet hours? The default: **they may run, but they may not
-> notify you** — nothing pulls you back to the keyboard."
+> "Should scheduled/automated AI tasks keep running inside your quiet
+> hours? Default: **scheduled/automated tasks run during your defined
+> quiet hours, but they do not notify you**."
 
-Skip if they have no automation.
+Skip this round entirely if they have no automation. If they take the
+default, note it in the contract as `run-silent`: automations may proceed
+inside quiet hours, but reports, pings, and messages hold until the window
+ends.
 
 ## Output
 
@@ -105,7 +135,7 @@ AUTOMATION_IN_QUIET=run-silent
 ```
 
 **2. `~/.config/ai-limits/limits.md`** — the human contract: their Round 1
-answer quoted at the top, then each limit with its honest enforcement label
+motivations quoted at the top, then each limit with its honest enforcement label
 (**enforced** / **advisory** / **nothing**) for each surface they use, per
 [ENFORCEMENT.md](./ENFORCEMENT.md).
 

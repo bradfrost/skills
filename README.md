@@ -14,7 +14,7 @@ Here's how it works:
 2. Answer a few questions to determine your own terms of engagement and define your own limits for AI usage.
 3. AI will honor the your stated limits as far as is technically possible, and where it technically can't, this kit documents the gap loudly instead of papering over it with willpower.
 
-> **It's important to say this cannot completely stop you from using AI, but it can provide a healthier user experience and > boundaries for working with AI.**
+> **It's important to say this cannot completely stop you from using AI, but it can provide a healthier user experience and boundaries for working with AI.**
 
 | Skill | What it does |
 |---|---|
