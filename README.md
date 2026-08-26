@@ -5,7 +5,7 @@ agents, spanning different dimensions of work and life. Inspired by [mattpocock/
 
 ## Limit your use of AI
 
-AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions almost never definitely end; there's always next steps (e.g. "want me to tackle this next?") dangled out in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658). 
+AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions always dangle next steps (e.g. "want me to tackle this next?") in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658). 
 
 "Just exercise more self discipline" is bullshit, especially when there's increasing pressure to rely on AI to work. That's why **this first family of AI skills helps you use AI less.** Here's how it works:
 1. Install the skill
