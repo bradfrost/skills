@@ -1,6 +1,6 @@
 # Brad Frost Skills
 
-These agent skills are installable, self-contained instructions for AI
+[Brad Frost](https://bradfrost.com/)'s agent skills are installable, self-contained instructions for AI
 agents, spanning different dimensions of work and life. Inspired by [mattpocock/skills](https://github.com/mattpocock/skills).
 
 ## Limit your use of AI
