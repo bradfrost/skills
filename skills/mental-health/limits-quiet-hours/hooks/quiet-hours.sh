@@ -18,6 +18,11 @@ OVERRIDE="$DIR/state/override-quiet-hours"
 . "$CONF"
 [ -n "$QUIET_START" ] && [ -n "$QUIET_END" ] || exit 0
 
+# Automation sessions (daemons, cron, scheduled tasks) declare themselves
+# with AI_LIMITS_AUTOMATION=1 in their environment and may run inside quiet
+# hours — the Round 5 deal. Their obligation not to notify is on them.
+[ "${AI_LIMITS_AUTOMATION:-}" = "1" ] && exit 0
+
 to_min() { IFS=: read -r h m <<EOF
 $1
 EOF

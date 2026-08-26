@@ -21,6 +21,12 @@ STATE="$DIR/state"
 # shellcheck disable=SC1090
 . "$CONF"
 
+# Automation sessions (daemons, cron, scheduled tasks) declare themselves
+# with AI_LIMITS_AUTOMATION=1 in their environment: they neither consume
+# the day's allowance nor get refused. That's the Round 5 deal — they may
+# run; they may not pull you back to the keyboard.
+[ "${AI_LIMITS_AUTOMATION:-}" = "1" ] && exit 0
+
 # Identify this session from the hook's stdin JSON; fail open if we can't.
 input=$(cat 2>/dev/null)
 sid=$(printf '%s' "$input" | sed -n 's/.*"session_id"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' | head -1)

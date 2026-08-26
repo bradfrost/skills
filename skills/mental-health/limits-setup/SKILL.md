@@ -176,6 +176,15 @@ If they use Claude Code and want the enforced layer:
 
 3. Offer to add `~/.config/ai-limits/bin` to their PATH.
 
+4. **Ask whether other automated Claude sessions run under this account**
+   — daemons, cron jobs, scheduled tasks. User-level hooks apply to ALL of
+   them: quiet hours would block their tool calls and their prompts would
+   eat the session allowance. Any session meant to run as automation must
+   set `AI_LIMITS_AUTOMATION=1` in its environment (launchd plist, crontab,
+   scheduler env) — the hooks stand aside for it, per the Round 5 deal.
+   Skipping this step with automation present means their own quiet hours
+   will strangle their automations tonight.
+
 Then say, honestly: hooks fail open by platform design, settings stay
 editable, and the session gate blocks prompts while quiet hours block tool
 calls — neither controls what the model *says*. This is a speed bump, not a
