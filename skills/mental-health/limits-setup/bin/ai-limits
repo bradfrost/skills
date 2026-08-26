@@ -1,0 +1,158 @@
+#!/usr/bin/env bash
+# ai-limits — your limits, your call, with friction where it counts.
+#
+# Tightening a limit never needs ceremony: edit the config file and you're
+# done. Raising one — using MORE — goes through here on purpose: a typed
+# phrase, a logged reason, and it takes effect in a new session, not the
+# one you're in. Frictionless flow is the failure mode this exists to
+# interrupt.
+
+set -u
+
+DIR="${AI_LIMITS_DIR:-$HOME/.config/ai-limits}"
+CONF="$DIR/config"
+STATE="$DIR/state"
+PHRASE="I'M AWARE I'M INCREASING MY AI USAGE"
+
+usage() {
+  cat <<'EOF'
+ai-limits — your limits, your call, with friction where it counts
+
+  ai-limits status
+      Show your config, today's session usage, and this week's receipts.
+
+  ai-limits raise SESSIONS_PER_DAY <n> --reason "why"
+      Raise your session ceiling. Requires the typed phrase. Logged.
+      Takes effect in a new session, not the current one.
+
+  ai-limits override quiet-hours --reason "why"
+      Bypass quiet hours for 8 hours. Requires the typed phrase. Logged.
+
+Lowering a limit needs no friction: edit ~/.config/ai-limits/config directly.
+EOF
+}
+
+limits_day() {
+  local bh=4
+  case "${DAY_BOUNDARY:-}" in
+    [0-9][0-9]:[0-9][0-9]|[0-9]:[0-9][0-9]) bh=$((10#${DAY_BOUNDARY%%:*})) ;;
+  esac
+  if [ "$((10#$(date +%H)))" -lt "$bh" ]; then
+    date -v-1d +%Y-%m-%d 2>/dev/null || date -d yesterday +%Y-%m-%d
+  else
+    date +%Y-%m-%d
+  fi
+}
+
+require_phrase() {
+  echo
+  echo "Type the following line, exactly, to confirm:"
+  echo "  $PHRASE"
+  printf '> '
+  IFS= read -r typed
+  if [ "$typed" != "$PHRASE" ]; then
+    echo "Not confirmed. Nothing changed."
+    exit 1
+  fi
+}
+
+set_conf_key() { # key value — rewrite one key, preserve the rest
+  local key="$1" value="$2" tmp
+  tmp=$(mktemp)
+  grep -v "^${key}=" "$CONF" > "$tmp" || true
+  echo "${key}=${value}" >> "$tmp"
+  mv "$tmp" "$CONF"
+}
+
+cmd="${1:-}"
+case "$cmd" in
+
+  status)
+    [ -f "$CONF" ] || { echo "No config at $CONF — run the limits-setup interview first."; exit 1; }
+    # shellcheck disable=SC1090
+    . "$CONF"
+    day=$(limits_day)
+    used=0
+    [ -f "$STATE/sessions-$day" ] && used=$(sort -u "$STATE/sessions-$day" | wc -l | tr -d ' ')
+    echo "config: $CONF"
+    grep -v '^\s*#' "$CONF" | grep -v '^\s*$' | sed 's/^/  /'
+    echo
+    if [ -n "${SESSIONS_PER_DAY:-}" ]; then
+      echo "today ($day): $used of $SESSIONS_PER_DAY sessions used"
+    else
+      echo "today ($day): $used sessions used (no ceiling set — measuring)"
+    fi
+    for log in changes overrides; do
+      if [ -s "$STATE/$log.log" ]; then
+        echo
+        echo "recent $log:"
+        tail -5 "$STATE/$log.log" | sed 's/^/  /'
+      fi
+    done
+    ;;
+
+  raise)
+    key="${2:-}"; new="${3:-}"; shift 3 2>/dev/null || { usage; exit 1; }
+    reason=""
+    while [ $# -gt 0 ]; do
+      case "$1" in
+        --reason) reason="${2:-}"; shift 2 ;;
+        *) shift ;;
+      esac
+    done
+    [ "$key" = "SESSIONS_PER_DAY" ] || { echo "Only SESSIONS_PER_DAY can be raised here for now."; exit 1; }
+    case "$new" in (*[!0-9]*|'') echo "New value must be a number."; exit 1 ;; esac
+    [ -n "$reason" ] || { echo "A raise needs a reason: --reason \"why\""; exit 1; }
+    [ -f "$CONF" ] || { echo "No config at $CONF — run the limits-setup interview first."; exit 1; }
+    # shellcheck disable=SC1090
+    . "$CONF"
+    old="${SESSIONS_PER_DAY:-}"
+    if [ -z "$old" ]; then
+      echo "You have no ceiling set (measure-first). Setting one is a tightening —"
+      echo "edit $CONF directly. No ceremony needed."
+      exit 1
+    fi
+    if [ "$new" -le "$old" ]; then
+      echo "$new is not a raise from $old. Lowering needs no friction — edit $CONF directly."
+      exit 1
+    fi
+    require_phrase
+    mkdir -p "$STATE"
+    set_conf_key SESSIONS_PER_DAY "$new"
+    printf '%s raise: SESSIONS_PER_DAY %s -> %s — %s\n' \
+      "$(date '+%Y-%m-%dT%H:%M:%S')" "$old" "$new" "$reason" >> "$STATE/changes.log"
+    echo
+    echo "Done: $old -> $new, logged. Takes effect in new sessions."
+    echo "Sessions already refused today stay refused today."
+    ;;
+
+  override)
+    what="${2:-}"; shift 2 2>/dev/null || { usage; exit 1; }
+    reason=""
+    while [ $# -gt 0 ]; do
+      case "$1" in
+        --reason) reason="${2:-}"; shift 2 ;;
+        *) shift ;;
+      esac
+    done
+    [ "$what" = "quiet-hours" ] || { echo "Only quiet-hours can be overridden here for now."; exit 1; }
+    [ -n "$reason" ] || { echo "An override needs a reason: --reason \"why\""; exit 1; }
+    require_phrase
+    mkdir -p "$STATE"
+    printf '%s\n' "$reason" > "$STATE/override-quiet-hours"
+    printf '%s override: quiet-hours — %s\n' \
+      "$(date '+%Y-%m-%dT%H:%M:%S')" "$reason" >> "$STATE/overrides.log"
+    echo
+    echo "Quiet hours overridden for the next 8 hours. Logged and counted."
+    ;;
+
+  ''|-h|--help|help)
+    usage
+    ;;
+
+  *)
+    echo "Unknown command: $cmd"
+    usage
+    exit 1
+    ;;
+esac
