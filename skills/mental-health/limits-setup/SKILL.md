@@ -38,9 +38,15 @@ Run these rounds in order, one question at a time. Offer each default and
 make clear it's just a starting point. Keep the whole thing under ten
 minutes.
 
+Open by saying how many questions are coming (five — or four, if Round 5
+gets skipped), and number every question — "(1 of 5)" — so no single
+screen ever implies the interview is over when it isn't. Client UI chrome
+(a "Submit answers" button on a multi-select) can suggest completion;
+the numbering is what counters it.
+
 ### Round 1 — Motivation
 
-> "Why do you want to be intentional about your AI usage? Check all that
+> "**(1 of 5)** Why do you want to be intentional about your AI usage? Check all that
 > apply:
 >
 > - **My mental health** — I want AI in my life on my terms, not the tool's
@@ -60,7 +66,7 @@ contract, so the config always says why it exists.
 
 ### Round 2 — Quiet hours
 
-> "When do you want AI tools to be off-limits to protect sleep & balance?
+> "**(2 of 5)** When do you want AI tools to be off-limits to protect sleep & balance?
 > Default is **10pm to 7am daily**."
 
 If they checked **Sleep** in Round 1, tie the default to their own words
@@ -71,7 +77,7 @@ advisory, and the real tool there is Do Not Disturb on their phone.
 
 ### Round 3 — Sessions per day
 
-> "Do you want to set an upper limit on how many AI sessions you can start
+> "**(3 of 5)** Do you want to set an upper limit on how many AI sessions you can start
 > in a day? Default: **monitor usage for the first week** to get an honest
 > count, and then you pick an upper limit number that you feel comfortable
 > with."
@@ -90,7 +96,7 @@ plain beats:
 
 ### Round 4 — Session endings
 
-> "How should AI sessions end? Default: **definitively** — the task that
+> "**(4 of 5)** How should AI sessions end? Default: **definitively** — the task that
 > started the session is seen through until completion, with additional
 > tasks captured in your task tracker instead of dangled in front of you."
 
@@ -104,7 +110,7 @@ one.
 
 ### Round 5 — Automation
 
-> "Should scheduled/automated AI tasks keep running inside your quiet
+> "**(5 of 5)** Should scheduled/automated AI tasks keep running inside your quiet
 > hours? Default: **scheduled/automated tasks run during your defined
 > quiet hours, but they do not notify you**."
 
