@@ -54,10 +54,20 @@ you can adopt or change based on your preferences and needs. Installing
 the skills does nothing on its own; the interview is where your limits get
 set and wired up.
 
-## Planned categories
+## Inspect your design system and products
 
-- **design-systems** — design system inspection and health-check skills
-- **product-design** — product analysis and inspection skills
+These skills walk your design system — and the products built with it —
+through a multi-point inspection, as detailed in
+[AI & Design Systems](https://aianddesign.systems/), the course by Brad
+Frost, Ian Frost, and TJ Pitre. They're designed to run in sequence:
+inspect the system, inspect what got shipped on top of it, then plan the
+rebuild.
+
+| Skill | What it does |
+|---|---|
+| [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md) | Puts your *design system* on the lift: a 10-station inspection producing a graded report and a prioritized work order |
+| [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md) | The restoration estimate: tears down a product's bespoke UI, maps every custom pattern to its design-system replacement, and hands back a phased build schedule |
+| [`product-inspection`](skills/product-design/product-inspection/SKILL.md) | Inspects a *product* as real users meet it — 10 stations covering adoption, usability, accessibility, performance, and more |
 
 More to come!
 
