@@ -1,6 +1,6 @@
 ---
 name: limits-setup
-description: A short guided interview that establishes your personal limits for AI usage — quiet hours, a sessions-per-day ceiling, how sessions end — then wires them into whatever your tools can actually enforce and tells you plainly where enforcement stops. Use when the user says "set my limits", "set up my AI limits", "limits setup", "help me stop using AI at 2am", or right after installing the limits skills.
+description: START HERE after installing the limits kit — say "set my limits" to begin. A short guided interview that establishes your personal limits for AI usage — quiet hours, a sessions-per-day ceiling, how sessions end — then wires them into whatever your tools can actually enforce and tells you plainly where enforcement stops. Use when the user says "set my limits", "set up my AI limits", "limits setup", "help me stop using AI at 2am", right after installing the limits skills, or when the limits skills are installed but no config exists yet at ~/.config/ai-limits/.
 ---
 
 # Limits: setup

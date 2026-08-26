@@ -10,8 +10,8 @@ AI companies are incentivized to keep you using AI, so the user experience is de
 "Just exercise more self discipline" is bullshit, especially when there's increasing pressure to rely on AI to work. That's why **this first family of AI skills helps you use AI on your own terms and set healthy limits to your AI use.** 
 
 Here's how it works:
-1. Install the skill
-2. Answer a few questions to determine your own terms of engagement and define your own limits for AI usage.
+1. Install the skill (see [Install](#install) below)
+2. Say **"set my limits"** to your AI agent, then answer a few questions to determine your own terms of engagement and define your own limits for AI usage.
 3. AI will honor the your stated limits as far as is technically possible, and where it technically can't, this kit documents the gap loudly instead of papering over it with willpower.
 
 > **It's important to say this cannot completely stop you from using AI, but it can provide a healthier user experience and boundaries for working with AI.**
@@ -47,8 +47,12 @@ git/GitHub CLI auth can already reach it. (Manual fallback: clone the repo
 and copy `skills/mental-health/<skill>/` into your agent's skills
 directory, e.g. `~/.claude/skills/<skill>/`.)
 
-Then say **"set my limits"** to run the setup interview. It will walk you through one
-question at a time, suggesting some sensible defaults that you can adopt or change based on your preferences and needs.
+**Then, the step the installer won't tell you about:** open your agent and
+say **"set my limits"** (in Claude Code, `/limits-setup` also works). That
+runs the setup interview — one question at a time, with sensible defaults
+you can adopt or change based on your preferences and needs. Installing
+the skills does nothing on its own; the interview is where your limits get
+set and wired up.
 
 ## Planned categories
 
