@@ -1,25 +1,19 @@
-# Skills
+# Brad Frost Skills
 
-Brad Frost's agent skills — installable, self-contained instructions for AI
-agents, spanning many dimensions of work and life.
+These agent skills are installable, self-contained instructions for AI
+agents, spanning different dimensions of work and life. Inspired by [mattpocock/skills](https://github.com/mattpocock/skills).
 
-Modeled on [mattpocock/skills](https://github.com/mattpocock/skills).
+## Limit your use of AI
 
-## The limits kit
+AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions almost never definitely end; there's always next steps (e.g. "want me to tackle this next?") dangled out in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658). 
 
-The first family of skills here helps you set your own terms of engagement
-with AI — and it makes you one promise, kept small on purpose:
+"Just exercise more self discipline" is bullshit, especially when there's increasing pressure to rely on AI to work. That's why **this first family of AI skills helps you use AI less.** Here's how it works:
+1. Install the skill
+2. Answer a few questions to determine your own terms of engagement and limits with AI
+3. AI will honor the your stated limits as far as is technically possible — and where it technically can't, this kit documents the gap loudly instead of papering over it with willpower. 
 
-> **It cannot stop you. It can make stopping the default and drifting
+> **It's important to say it cannot stop you from using AI, but it can provide healthier guardrails
 > deliberate.**
-
-AI tools ship with affordances that keep you prompting — trailing "want me
-to also…?" hooks, endless sessions, a fresh allowance every time you open a
-new window. The standard advice ("use Screen Time, put the laptop away") is
-the manufacturer telling you to hide your own cigarettes. The power is in
-the tool, so the tool should honor your stated limits as far as is
-technically possible — and where it technically can't, this kit documents
-the gap loudly instead of papering over it with willpower.
 
 | Skill | What it does |
 |---|---|
@@ -52,13 +46,14 @@ git/GitHub CLI auth can already reach it. (Manual fallback: clone the repo
 and copy `skills/mental-health/<skill>/` into your agent's skills
 directory, e.g. `~/.claude/skills/<skill>/`.)
 
-Then say **"set my limits"** to run the setup interview. Ten minutes, one
-question at a time, sensible defaults you can accept or change. Your
-numbers, not mine.
+Then say **"set my limits"** to run the setup interview. It will walk you through one
+question at a time, suggesting some sensible defaults that you can adopt or change based on your preferences and needs.
 
 ## Planned categories
 
 - **design-systems** — design system inspection and health-check skills
 - **product-design** — product analysis and inspection skills
 
-More to come.
+More to come!
+
+- Brad
