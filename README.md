@@ -7,13 +7,14 @@ agents, spanning different dimensions of work and life. Inspired by [mattpocock/
 
 AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions always dangle next steps (e.g. "want me to tackle this next?") in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658). 
 
-"Just exercise more self discipline" is bullshit, especially when there's increasing pressure to rely on AI to work. That's why **this first family of AI skills helps you use AI less.** Here's how it works:
-1. Install the skill
-2. Answer a few questions to determine your own terms of engagement and limits with AI
-3. AI will honor the your stated limits as far as is technically possible — and where it technically can't, this kit documents the gap loudly instead of papering over it with willpower. 
+"Just exercise more self discipline" is bullshit, especially when there's increasing pressure to rely on AI to work. That's why **this first family of AI skills helps you use AI on your own terms and set healthy limits to your AI use.** 
 
-> **It's important to say it cannot stop you from using AI, but it can provide healthier guardrails
-> deliberate.**
+Here's how it works:
+1. Install the skill
+2. Answer a few questions to determine your own terms of engagement and define your own limits for AI usage.
+3. AI will honor the your stated limits as far as is technically possible, and where it technically can't, this kit documents the gap loudly instead of papering over it with willpower.
+
+> **It's important to say this cannot completely stop you from using AI, but it can provide a healthier user experience and > boundaries for working with AI.**
 
 | Skill | What it does |
 |---|---|
