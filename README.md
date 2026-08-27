@@ -3,6 +3,19 @@
 [Brad Frost](https://bradfrost.com/)'s agent skills are installable, self-contained instructions for AI
 agents, spanning different dimensions of work and life. Inspired by [mattpocock/skills](https://github.com/mattpocock/skills).
 
+## What's inside
+
+- **Mental health**
+  - [`limits-setup`](skills/mental-health/limits-setup/SKILL.md)
+  - [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md)
+  - [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md)
+  - [`limits-endings`](skills/mental-health/limits-endings/SKILL.md)
+- **Design systems**
+  - [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md)
+  - [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)
+- **Product design**
+  - [`product-inspection`](skills/product-design/product-inspection/SKILL.md)
+
 ## Limit your use of AI
 
 AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions always dangle next steps (e.g. "want me to tackle this next?") in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658). 
