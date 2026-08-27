@@ -26,6 +26,12 @@ than trusting this table blindly.
   and can change or disable. A determined 2am you can defeat this kit.
   That's by design: the point is that drifting past a limit costs a
   deliberate act that gets logged and counted — not that it's impossible.
+- **The energy gate is the softest gate.** The opt-in restrict budget
+  (`ENERGY_BUDGET_MODE=restrict`) enforces for real via a hook, but its
+  input is a ledger the AI itself writes at session ends — best-effort
+  data feeding a real gate, comparing against floor estimates rather than
+  measurements. It exists because its owner chose to be governed by a
+  rough number, eyes open. A crashed session logs nothing.
 - **Text output is not interceptable anywhere.** No current surface lets
   you guarantee the model's displayed words follow a rule. Everything in
   the "text behavior" column works by instruction-following — which mostly

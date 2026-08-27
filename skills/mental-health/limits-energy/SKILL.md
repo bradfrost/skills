@@ -13,10 +13,12 @@ Pairs with `limits-setup`, which writes the config this skill reads.
 
 ## The honesty contract (binding on you, the agent)
 
-1. **Inform, never gate.** Energy numbers never block work — not at the
-   budget line, not anywhere. Blocking on a number with error bars this
-   wide would be fake precision with consequences. Sessions and schedules
-   enforce; energy informs.
+1. **Inform by default; gate only by explicit opt-in.** Energy numbers
+   inform. The one exception is a budget the user set with
+   `ENERGY_BUDGET_MODE=restrict`, chosen eyes-open in the interview —
+   then the gate is theirs, and the honesty burden doubles: they are
+   being governed by a floor estimate on purpose, and every refusal says
+   so.
 2. **Cited figures only, provenance inline.** The two published anchors,
    with what they cover:
    - **~0.24 Wh** — Google's published median for a Gemini Apps text
@@ -82,21 +84,33 @@ Rules:
 Like everything text-shaped, the footer is **advisory on every surface**
 (see the enforcement matrix in `limits-setup`). It works by being followed.
 
-## The weekly budget (optional, inform-only)
+## The weekly budget (optional, three modes)
 
-If `ENERGY_BUDGET_WH_WEEK` is set in the config:
+The interview offers four paths; config records them:
+
+| Choice | Config | Behavior |
+|---|---|---|
+| No thanks | `ENERGY_FOOTER=no` | Energy never comes up |
+| Inform only | footer on, no budget | The footer, nothing else |
+| Budget + warn | `ENERGY_BUDGET_MODE=warn` | Crossing the budget gets one plain heads-up per week — no gate, no lecture, no repeat |
+| Budget + restrict | `ENERGY_BUDGET_MODE=restrict` | The `energy-gate.sh` hook refuses further prompts once the week's floor crosses the budget — terse, identical, overridable via `ai-limits override energy-budget` (typed phrase, logged, 8 hours) |
+
+Always, in any budget mode:
 
 - Where a filesystem exists, append one line per session to
   `~/.config/ai-limits/state/energy-ledger.log`:
   `2026-08-27  wh=2+  turns=8  <one-word context>` — keep this format
-  stable and parseable; it is the data source for reviewing usage over
-  time
-- When the week's running floor crosses the budget, say so **once**,
-  plainly: the tally, the budget, nothing else. No gate, no lecture, no
-  repeat. The count is the instrument.
+  stable and parseable; it is the data source for the budget math and for
+  reviewing usage over time.
 - Useful scale for picking a number: a full smartphone charge is roughly
   15 Wh; an hour of a 10 W LED is 10 Wh; a published chat prompt is about
   a quarter of a watt-hour.
+- **Restrict mode's honest label:** it is the softest of the kit's three
+  gates. Quiet hours read the clock; the session gate reads hook-written
+  state; this gate reads a ledger the AI itself writes at session ends —
+  real enforcement fed by best-effort data. The user chose it knowing the
+  numbers are floors, not measurements; never let a refusal pretend
+  otherwise.
 
 ## Weekly report
 

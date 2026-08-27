@@ -38,90 +38,107 @@ Run these rounds in order, one question at a time. Offer each default and
 make clear it's just a starting point. Keep the whole thing under ten
 minutes.
 
-Open by saying how many questions are coming (six — or five, if Round 6
-gets skipped), and number every question — "(1 of 6)" — so no single
-screen ever implies the interview is over when it isn't. Client UI chrome
-(a "Submit answers" button on a multi-select) can suggest completion;
-the numbering is what counters it.
+**The script is the whole script.** The quoted copy below is everything
+you say — the user's voice, not yours. Acknowledge an answer in five words
+or fewer ("Got it — 11pm to 7am."), then ask the next question. No
+commentary, no restating what an answer means, no encouragement, no
+honesty notes beyond the ones scripted into a round. Number every question
+— "(1 of 6)" — so no single screen ever implies the interview is over when
+it isn't (client UI chrome like a "Submit answers" button can suggest
+completion; the numbering counters it).
+
+Open with exactly:
+
+> "Answer 6 quick questions to establish healthy limits with AI. For each
+> question, you can choose the suggested default or tweak to your
+> preferences. Let's go!"
+
+(Say 5 if Round 6 will be skipped.)
 
 ### Round 1 — Motivation
 
 > "**(1 of 6)** Why do you want to be intentional about your AI usage? Check all that
 > apply:
 >
-> - **My mental health** — I want AI in my life on my terms, not the tool's
-> - **Sleep** — "one more prompt" at midnight keeps costing me
-> - **Clarity around my work** — I want sessions that end cleanly, not
->   endless dangling next steps
-> - **The environment** — every prompt burns real energy and water
-> - **Something else** — tell me in your own words"
+> - **Mental health:** I want to establish healthier boundaries with AI
+> - **Sleep:** I want to prioritize sleep and not feel pulled into
+>   prompting through the night
+> - **Clarity around AI sessions:** I want sessions that end cleanly
+>   without never-ending, confusing, dangling next steps
+> - **The environment:** I want better awareness of how my AI use impacts
+>   the environment
+> - **Anything else?** Feel free to share anything else around why you
+>   want to be intentional about your AI use."
 
 Multi-select; there's no wrong combination. Their picks shape the rest of
-the interview: **sleep** → lean into quiet hours (Round 2); **mental
-health** → give the session ceiling (Round 3) real attention; **clarity**
-→ Round 4 endings is their headline; **environment** → the energy
-footer in Round 5 is their headline. Quote their checked
-reasons — plus any "something else" in their own words — at the top of the
-contract, so the config always says why it exists.
+the interview SILENTLY — never narrate what a pick means: **sleep** →
+lean into quiet hours (Round 2); **mental health** → the session ceiling
+(Round 3); **clarity** → endings (Round 4); **environment** → the energy
+footer (Round 5). Quote their checked reasons — plus anything else in
+their own words — at the top of the contract, so the config always says
+why it exists. Spoken response to their answer: "Got it." and the next
+question.
 
 ### Round 2 — Quiet hours
 
-> "**(2 of 6)** When do you want AI tools to be off-limits to protect sleep & balance?
-> Default is **10pm to 7am daily**."
+> "**(2 of 6)** When do you want quiet hours when AI tools are off-limits to protect
+> your sleep & balance? During quiet hours, Claude Code will refuse to run
+> tools against your prompts (e.g. "Build this feature" will be refused),
+> while Chat/Cowork can only remind you. Default: **10pm to 7am daily**."
 
-If they checked **Sleep** in Round 1, tie the default to their own words
-instead of a generic pitch. Capture start and end — a window that wraps
-midnight is fine. Then the honesty note, plainly: on Claude Code this
-actually refuses to work during those hours; on chat and mobile it's
-advisory, and the real tool there is Do Not Disturb on their phone.
+Capture start and end — a window that wraps midnight is fine. The
+enforcement note is already in the script; add nothing to it.
 
 ### Round 3 — Sessions per day
 
 > "**(3 of 6)** Do you want to set an upper limit on how many AI sessions you can start
-> in a day? Default: **monitor usage for the first week** to get an honest
-> count, and then you pick an upper limit number that you feel comfortable
-> with."
+> in a day? If you reach your daily session limit, Claude Code will refuse
+> to run more sessions. Session count resets at 4AM, and raising your
+> limit requires friction & intention. Default: **For the first week, AI
+> sessions are counted, but not limited.** Then you review your actual
+> session numbers and set a healthy & realistic session number limit."
 
-If they pick a number now, take it. Explain the deal either way, in three
-plain beats:
-
-1. A session counts the first time you prompt in it — opening one costs
-   nothing.
-2. The day resets at 4am, so a late night doesn't hand you a fresh
-   allowance at midnight.
-3. At your limit, new sessions get the same short refusal every time — and
-   raising the limit means typing a phrase that says you're doing it on
-   purpose, with the change kicking in next session, not the one that just
-   got refused.
+If they pick a number now, take it. The mechanics are already in the
+script; add nothing to them. (Fine print you know but don't recite: a
+session counts on its first prompt, refused sessions stay refused after a
+raise, raises go through `ai-limits raise` with a typed phrase.)
 
 ### Round 4 — Session endings
 
-> "**(4 of 6)** How should AI sessions end? Default: **definitively** — the task that
-> started the session is seen through until completion, with additional
-> tasks captured in your task tracker instead of dangled in front of you."
+> "**(4 of 6)** How should AI sessions end? Default: **definitively**. The task that
+> started the session is seen through to completion, with no dangling
+> loose ends. Any new tasks that emerged during the session will be filed
+> and linked, but they won't be dangled in front of you."
 
-If they checked **Clarity around my work** in Round 1, this round is their
-headline — say so. If they opt in, point to the `limits-endings` skill for
-the full contract, including the Signal Flags close-out block. Then offer
-the optional closing ritual: one fixed final beat at the end of a
-wrapped-up session that points away from the machine — their own chosen
-phrase, or quotes from a source they supply and can verify. Never invent
-one.
+If they opt in, the `limits-endings` skill carries the full contract,
+including the Signal Flags close-out block — apply it; don't narrate it.
+The closing ritual is no longer offered in the interview: it stays
+available in `limits-endings` for anyone who asks, with its guardrail
+intact — their own chosen phrase, or quotes from a source they supply and
+can verify. Never invent one.
 
 ### Round 5 — Energy
 
-> "**(5 of 6)** Do you want to see the environmental cost of your AI usage? Default:
-> **show a rough energy estimate at the end of working sessions** — built
-> from published per-prompt figures, always labeled a floor, never a guilt
-> trip. You can also set a weekly energy budget if you want a number to
-> steer by."
+> "**(5 of 6)** Do you want to see the environmental cost of your AI usage? This is
+> meant to _inform_ you, not _shame_ you. Default: **show a rough energy
+> estimate (e.g. 💡💡💡 3+ Wh this session) at the end of your session**."
 
-If they checked **The environment** in Round 1, this is their headline.
-The estimates come from the `limits-energy` skill; be honest up front that
-they carry wide error bars and inform without ever blocking. If they want
-the footer, set `ENERGY_FOOTER=yes`; if they name a weekly budget in
-watt-hours, set `ENERGY_BUDGET_WH_WEEK` (useful scale: a full phone charge
-is roughly 15 Wh; a published chat prompt is about a quarter of one).
+If they decline: `ENERGY_FOOTER=no`, skip 5a, go to Round 6. If they
+accept, `ENERGY_FOOTER=yes` and follow up:
+
+> "**(5a)** Do you want to set a weekly energy budget? Note: energy usage is a
+> rough estimate, so take numbers with a grain of salt. Pick an option:
+>
+> - Don't set a budget; just inform me
+> - Set budget, and only warn me when I've exceeded the budget
+> - Set budget, and restrict my usage when I've exceeded the budget
+>   (Claude Code will refuse to continue when budget is exceeded)"
+
+If they pick a budget option, ask the amount — "What's your weekly budget
+in watt-hours? (For scale: a full phone charge is about 15 Wh.)" — then
+set `ENERGY_BUDGET_WH_WEEK` and `ENERGY_BUDGET_MODE=warn` or `restrict`.
+No budget: leave both empty. The `limits-energy` skill owns everything
+else; say nothing more here.
 
 ### Round 6 — Automation
 
@@ -154,7 +171,8 @@ QUIET_END=07:00
 DAY_BOUNDARY=04:00     # the day rolls over at 4am, not midnight
 DEFINITIVE_ENDINGS=yes
 ENERGY_FOOTER=yes      # end-of-session energy floor estimate (limits-energy)
-ENERGY_BUDGET_WH_WEEK= # empty = no budget; informs, never blocks
+ENERGY_BUDGET_WH_WEEK= # empty = no budget
+ENERGY_BUDGET_MODE=    # warn = heads-up only; restrict = opt-in gate
 AUTOMATION_IN_QUIET=run-silent
 ```
 
@@ -171,6 +189,8 @@ If they use Claude Code and want the enforced layer:
    - `bin/ai-limits` (from this skill's directory) → `~/.config/ai-limits/bin/ai-limits`
    - `limits-sessions/hooks/sessions-gate.sh` → `~/.config/ai-limits/hooks/sessions-gate.sh`
    - `limits-quiet-hours/hooks/quiet-hours.sh` → `~/.config/ai-limits/hooks/quiet-hours.sh`
+   - `limits-energy/hooks/energy-gate.sh` → `~/.config/ai-limits/hooks/energy-gate.sh`
+     (inert unless they chose the restrict budget mode)
 
    (The hooks ship with their skills; install what they installed.)
 
@@ -182,7 +202,8 @@ If they use Claude Code and want the enforced layer:
     "UserPromptSubmit": [
       {
         "hooks": [
-          { "type": "command", "command": "$HOME/.config/ai-limits/hooks/sessions-gate.sh" }
+          { "type": "command", "command": "$HOME/.config/ai-limits/hooks/sessions-gate.sh" },
+          { "type": "command", "command": "$HOME/.config/ai-limits/hooks/energy-gate.sh" }
         ]
       }
     ],
