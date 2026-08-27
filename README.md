@@ -10,6 +10,7 @@ agents, spanning different dimensions of work and life. Inspired by [mattpocock/
   - [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md)
   - [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md)
   - [`limits-endings`](skills/mental-health/limits-endings/SKILL.md)
+  - [`limits-energy`](skills/mental-health/limits-energy/SKILL.md)
 - **Design systems**
   - [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md)
   - [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)
@@ -35,6 +36,7 @@ Here's how it works:
 | [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) | The sessions-per-day ceiling: honest counting, terse identical refusals past the limit, raises that cost a typed phrase and a logged reason |
 | [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) | Hours where AI tools are off-limits — enforced as refused tool calls where hooks exist, with a deliberate logged override |
 | [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) | Sessions end definitively: land it or park it, no trailing hooks, close with a Signal Flags block |
+| [`limits-energy`](skills/mental-health/limits-energy/SKILL.md) | Makes the environmental cost visible: floor estimates from published per-prompt figures, rendered as lightbulb time, with an optional weekly energy budget that informs but never blocks |
 
 Every limit is labeled with what it honestly is on each surface —
 **enforced**, **advisory**, or **nothing**. That's the
@@ -42,9 +44,6 @@ Every limit is labeled with what it honestly is on each surface —
 it's the loudest document in this repo on purpose. Per-surface wiring
 (including Cowork and claude.ai chat) is in
 [SURFACES.md](skills/mental-health/limits-setup/SURFACES.md).
-
-Fast-follow: `limits-energy` — making the environmental cost of usage
-visible, with cited figures and honest error bars.
 
 ## Install
 

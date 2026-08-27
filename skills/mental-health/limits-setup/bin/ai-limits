@@ -82,7 +82,7 @@ case "$cmd" in
     else
       echo "today ($day): $used sessions used (no ceiling set — measuring)"
     fi
-    for log in changes overrides; do
+    for log in changes overrides energy-ledger; do
       if [ -s "$STATE/$log.log" ]; then
         echo
         echo "recent $log:"

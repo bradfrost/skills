@@ -38,15 +38,15 @@ Run these rounds in order, one question at a time. Offer each default and
 make clear it's just a starting point. Keep the whole thing under ten
 minutes.
 
-Open by saying how many questions are coming (five — or four, if Round 5
-gets skipped), and number every question — "(1 of 5)" — so no single
+Open by saying how many questions are coming (six — or five, if Round 6
+gets skipped), and number every question — "(1 of 6)" — so no single
 screen ever implies the interview is over when it isn't. Client UI chrome
 (a "Submit answers" button on a multi-select) can suggest completion;
 the numbering is what counters it.
 
 ### Round 1 — Motivation
 
-> "**(1 of 5)** Why do you want to be intentional about your AI usage? Check all that
+> "**(1 of 6)** Why do you want to be intentional about your AI usage? Check all that
 > apply:
 >
 > - **My mental health** — I want AI in my life on my terms, not the tool's
@@ -59,14 +59,14 @@ the numbering is what counters it.
 Multi-select; there's no wrong combination. Their picks shape the rest of
 the interview: **sleep** → lean into quiet hours (Round 2); **mental
 health** → give the session ceiling (Round 3) real attention; **clarity**
-→ Round 4 endings is their headline; **environment** → note the session
-ceiling helps today and `limits-energy` is coming. Quote their checked
+→ Round 4 endings is their headline; **environment** → the energy
+footer in Round 5 is their headline. Quote their checked
 reasons — plus any "something else" in their own words — at the top of the
 contract, so the config always says why it exists.
 
 ### Round 2 — Quiet hours
 
-> "**(2 of 5)** When do you want AI tools to be off-limits to protect sleep & balance?
+> "**(2 of 6)** When do you want AI tools to be off-limits to protect sleep & balance?
 > Default is **10pm to 7am daily**."
 
 If they checked **Sleep** in Round 1, tie the default to their own words
@@ -77,7 +77,7 @@ advisory, and the real tool there is Do Not Disturb on their phone.
 
 ### Round 3 — Sessions per day
 
-> "**(3 of 5)** Do you want to set an upper limit on how many AI sessions you can start
+> "**(3 of 6)** Do you want to set an upper limit on how many AI sessions you can start
 > in a day? Default: **monitor usage for the first week** to get an honest
 > count, and then you pick an upper limit number that you feel comfortable
 > with."
@@ -96,7 +96,7 @@ plain beats:
 
 ### Round 4 — Session endings
 
-> "**(4 of 5)** How should AI sessions end? Default: **definitively** — the task that
+> "**(4 of 6)** How should AI sessions end? Default: **definitively** — the task that
 > started the session is seen through until completion, with additional
 > tasks captured in your task tracker instead of dangled in front of you."
 
@@ -108,13 +108,29 @@ wrapped-up session that points away from the machine — their own chosen
 phrase, or quotes from a source they supply and can verify. Never invent
 one.
 
-### Round 5 — Automation
+### Round 5 — Energy
 
-> "**(5 of 5)** Should scheduled/automated AI tasks keep running inside your quiet
+> "**(5 of 6)** Do you want to see the environmental cost of your AI usage? Default:
+> **show a rough energy estimate at the end of working sessions** — built
+> from published per-prompt figures, always labeled a floor, never a guilt
+> trip. You can also set a weekly energy budget if you want a number to
+> steer by."
+
+If they checked **The environment** in Round 1, this is their headline.
+The estimates come from the `limits-energy` skill; be honest up front that
+they carry wide error bars and inform without ever blocking. If they want
+the footer, set `ENERGY_FOOTER=yes`; if they name a weekly budget in
+watt-hours, set `ENERGY_BUDGET_WH_WEEK` (useful scale: a full phone charge
+is roughly 15 Wh; a published chat prompt is about a quarter of one).
+
+### Round 6 — Automation
+
+> "**(6 of 6)** Should scheduled/automated AI tasks keep running inside your quiet
 > hours? Default: **scheduled/automated tasks run during your defined
 > quiet hours, but they do not notify you**."
 
-Skip this round entirely if they have no automation. If they take the
+Skip this round entirely if they have no automation (and adjust the
+question count you announced). If they take the
 default, note it in the contract as `run-silent`: automations may proceed
 inside quiet hours, but reports, pings, and messages hold until the window
 ends.
@@ -137,6 +153,8 @@ QUIET_START=22:00
 QUIET_END=07:00
 DAY_BOUNDARY=04:00     # the day rolls over at 4am, not midnight
 DEFINITIVE_ENDINGS=yes
+ENERGY_FOOTER=yes      # end-of-session energy floor estimate (limits-energy)
+ENERGY_BUDGET_WH_WEEK= # empty = no budget; informs, never blocks
 AUTOMATION_IN_QUIET=run-silent
 ```
 
