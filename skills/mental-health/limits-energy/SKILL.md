@@ -42,28 +42,42 @@ A "turn" is one model call — each response, including each tool-use step in
 an agentic session, is one. Turns are countable; per-turn cost is not
 knowable, so:
 
-> estimated floor = (turns you can count) × 0.24–0.34 Wh
+> estimated floor = (turns you can count) × 0.24 Wh (the conservative
+> anchor)
 
-Present it as a range, marked as a floor, with the method visible:
+The footer shows only the result (see Rendering); the method stays one
+question away — when they ask "how was this measured", give the math, the
+turn count, and both anchors with provenance. When you cannot count turns
+on a surface, estimate the count conservatively and say you did. Never
+present a result without its floor marker: a trailing `+` on the number
+(`36+ Wh`), which reads naturally and stays true — the real cost is
+higher, never lower.
 
-> at least ~2–3 Wh (floor: ~8 model turns × published 0.24–0.34 Wh per
-> prompt; real agentic turns run heavier)
+## Rendering: keep it light
 
-When you cannot count turns on a surface, estimate the count conservatively
-and say you did. Never present the result without the word "floor" or
-"at least" attached.
-
-## Rendering: lightbulb time
-
-Translate watt-hours into something felt: **1 Wh ≈ a 10 W LED bulb burning
-for 6 minutes.** One 💡 per Wh of the range's high end, rounded up, capped
-at ten with a `×N` multiplier.
-
+One terse line, emoji that scale with the magnitude, no method talk.
 End-of-session footer (only when `ENERGY_FOOTER=yes` in
 `~/.config/ai-limits/config`, or on request; skip it in automated
 sessions):
 
-> 💡💡💡 at least ~2–3 Wh this session — a 10 W LED for ~18 minutes
+> 💡💡💡💡💡💡 6+ Wh this session · lights on for ~40 min
+
+At bigger totals, switch units so the emoji stay meaningful:
+
+> 📱📱📱 51+ Wh this week · 3 full phone charges · lights on for ~5 hours
+
+Rules:
+
+- **The number:** counted turns × 0.24 Wh, rounded, with a trailing `+`
+  carrying the floor.
+- **💡** one per Wh, capped at ten. **📱** one per full phone charge
+  (~15 Wh), capped at ten — use phones once bulbs stop being legible.
+- **Felt equivalents:** lights-on time = Wh ÷ 10 W LED; a phone charge
+  ≈ 15 Wh. Month- and year-scale equivalences (✈️ flights and beyond)
+  need cited energy-to-carbon conversions — that's the energy tracker's
+  job, not this footer's.
+- Nothing else on the line. Method and provenance are answers, not
+  furniture.
 
 Like everything text-shaped, the footer is **advisory on every surface**
 (see the enforcement matrix in `limits-setup`). It works by being followed.
@@ -74,7 +88,9 @@ If `ENERGY_BUDGET_WH_WEEK` is set in the config:
 
 - Where a filesystem exists, append one line per session to
   `~/.config/ai-limits/state/energy-ledger.log`:
-  `2026-08-27  ~2-3Wh  turns=8  <one-word context>`
+  `2026-08-27  wh=2+  turns=8  <one-word context>` — keep this format
+  stable and parseable; it is the data source for reviewing usage over
+  time
 - When the week's running floor crosses the budget, say so **once**,
   plainly: the tally, the budget, nothing else. No gate, no lecture, no
   repeat. The count is the instrument.
