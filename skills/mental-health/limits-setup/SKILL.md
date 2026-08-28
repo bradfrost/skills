@@ -128,27 +128,29 @@ can verify. Never invent one.
 If they decline: `ENERGY_FOOTER=no`, skip 5a, go to Round 6. If they
 accept, `ENERGY_FOOTER=yes` and follow up:
 
-> "**(5a)** Do you want to set a weekly energy budget? Note: energy usage is a
-> rough estimate, so take numbers with a grain of salt. Default: **For
-> the first week, energy usage is measured but no budget is set** (most
-> people have no idea what a watt-hour means or what their rough AI
-> energy usage is!) After a week, you can review your actual estimated
-> energy usage and then set a realistic budget."
+> "**(5a)** Do you want to set a weekly energy budget? Note: since almost nobody
+> knows their AI energy usage (or what a watt-hour feels like!), budgets
+> start with a 1-week baseline: your energy usage is measured for a week,
+> then you review your actual numbers and set a realistic budget."
 
-Default: leave `ENERGY_BUDGET_WH_WEEK` and `ENERGY_BUDGET_MODE` empty and
-skip 5b — the ledger accrues from day one, so the week's numbers are the
-baseline they set a budget against. If they want a budget now, ask 5b:
+There is no set-a-number-now path — the baseline week is the on-ramp, by
+design; never link out to calculators. If no: footer only, leave all
+budget keys empty, skip 5b. If yes, ask 5b:
 
-> "**(5b)** What's your weekly budget in watt-hours, and how should it be
-> handled? (For scale: a full phone charge is about 15 Wh.)
+> "**(5b)** Once you have an energy baseline after a week of use, you can then
+> set your energy budget limit. How would you like to enforce your energy
+> limit?
 >
-> - **Warn only:** you get a heads-up when you exceed your budget
-> - **Restrict:** Claude Code will refuse to continue working once your
->   budget is exceeded (you can always deliberately adjust)"
+> - ⚠️ **Warn only:** you get a heads-up when you exceed your budget
+> - 🚫 **Restrict:** Claude Code will refuse to continue working once your
+>   budget is exceeded (you can always deliberately adjust)
+> - **I'm not sure right now;** ask me again when I see my actual numbers"
 
-Set `ENERGY_BUDGET_WH_WEEK` to their number and `ENERGY_BUDGET_MODE=warn`
-or `restrict`. The `limits-energy` skill owns everything else; say
-nothing more here.
+Record intent only: `ENERGY_BUDGET_MODE=warn` or `restrict` (leave empty
+for "not sure"), and leave `ENERGY_BUDGET_WH_WEEK` empty — nothing warns
+or gates until the number is set at the baseline review, which the
+`limits-energy` skill runs when a week of ledger data exists. Say nothing
+more here.
 
 ### Round 6 — Automation
 

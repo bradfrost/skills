@@ -117,6 +117,16 @@ Always, whenever the footer is on — budget or not:
   numbers are floors, not measurements; never let a refusal pretend
   otherwise.
 
+## The baseline review
+
+When the config has `ENERGY_FOOTER=yes` and no `ENERGY_BUDGET_WH_WEEK`,
+and the ledger holds a week of data: the next limits/energy report opens
+with the baseline — the week's floor total, rendered honestly — and asks
+them to set their budget number against it (and the enforcement mode, if
+5b recorded "not sure"). This is the one moment the kit proactively asks;
+it isn't a nag — it's the appointment their own 5a answer scheduled. If
+they defer, defer; ask again only at the next report they request.
+
 ## Weekly report
 
 When asked ("energy report", or as part of a limits report): sum the
