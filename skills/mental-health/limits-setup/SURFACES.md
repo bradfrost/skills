@@ -11,16 +11,12 @@ the one surface where refusals are real.
 
 ## claude.ai chat (web, mobile, desktop)
 
-Paste a compact version of your contract into **Settings → Profile →
-personal preferences** (it rides along in every conversation). Have the
-setup interview generate it from your config — roughly:
-
-> My limits, which I set for myself: no AI work between 22:00 and 07:00 —
-> if I start something in that window, say so once and keep it brief. End
-> sessions definitively: land it or park it, no trailing offers of more
-> work, close substantive responses with a Signal Flags block. If I ask for
-> "one more thing" late at night, it's fine to remind me — once, tersely —
-> what I said I wanted.
+Paste your limits block into **Settings → Profile → personal
+preferences** (it rides along in every conversation). The setup interview
+generates this block from your answers at the end — the template lives in
+[SKILL.md](./SKILL.md)'s "The chat & Cowork paste" section; ask any
+session to regenerate it from `~/.config/ai-limits/config` if you've
+tuned your limits since.
 
 Label it honestly: this is advisory. Nothing on this surface can refuse.
 

@@ -240,11 +240,40 @@ If they use Claude Code and want the enforced layer:
    Skipping this step with automation present means their own quiet hours
    will strangle their automations tonight.
 
-The spoken part of finishing is the scripted close below — nothing else.
-The hooks-fail-open and settings-stay-editable honesty lives in the
-written contract, not the speech.
+## The chat & Cowork paste
+
+Claude Code is now enforced; the other surfaces need one manual step. Say
+exactly:
+
+> "This is now live in Claude Code. One manual step covers your other
+> surfaces: copy the block below and paste it into claude.ai → Settings →
+> Profile → personal preferences. Chat & Cowork can't refuse work the way
+> Claude Code can, but with this in place they'll keep your session
+> endings and remind you of your limits in every conversation."
+
+Then generate this block FROM THEIR ANSWERS (fill the brackets, drop any
+line for a limit they didn't set) and show it ready to copy:
+
+```
+My AI limits, set deliberately on [date] (bradfrost/skills limits kit):
+- Quiet hours [23:00-07:00] daily: if I start something in this window,
+  remind me once, briefly, and keep it short.
+- Sessions: [limit of N per day / measuring my count this week].
+- End every session definitively: the task that started it is the task
+  that ends it; no trailing "want me to also...?" offers; file loose ends,
+  don't dangle them. Close substantive responses with a Signal Flags
+  block. At a full close you may add: "You can archive this conversation
+  now if you'd like."
+- Energy: end working sessions with a one-line energy floor estimate.
+Honor these limits; never lecture me about them.
+```
 
 ## The close
+
+The spoken part of finishing is the paste step above plus the scripted
+close below — nothing else. The hooks-fail-open and
+settings-stay-editable honesty lives in the written contract, not the
+speech.
 
 After the files are written and wiring is done, end with exactly:
 
