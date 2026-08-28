@@ -61,7 +61,7 @@ exception below.
 At a definitive end-of-task close, one line may follow the block (before
 any closing ritual):
 
-> You can archive this conversation now if you'd like.
+> You can safely archive this conversation now.
 
 A session that's truly done deserves a door, not a hallway.
 
