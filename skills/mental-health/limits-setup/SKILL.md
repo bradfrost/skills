@@ -100,8 +100,11 @@ enforcement note is already in the script; add nothing to it.
 > sessions are counted, but not limited.** Then you review your actual
 > session numbers and set a healthy & realistic session number limit."
 
-If they pick a number now, take it. The mechanics are already in the
-script; add nothing to them. (Fine print you know but don't recite: a
+If they pick a number now, take it. If they decline entirely ("no
+thanks"), honor it fully: set `SESSIONS_TRACKING=off` — no ceiling AND no
+counting; declining measurement is a real choice, not a lesser
+measure-first. The mechanics are already in the script; add nothing to
+them. (Fine print you know but don't recite: a
 session counts on its first prompt, refused sessions stay refused after a
 raise, raises go through `ai-limits raise` with a typed phrase.)
 
@@ -178,6 +181,7 @@ by the enforcement hooks and the `ai-limits` CLI:
 # Raising one goes through 'ai-limits raise' — typed phrase, logged
 # reason, takes effect in a new session.
 SESSIONS_PER_DAY=      # empty = measure first (count, never block)
+SESSIONS_TRACKING=     # off = don't even count (declined in Round 3)
 QUIET_START=22:00
 QUIET_END=07:00
 DAY_BOUNDARY=04:00     # the day rolls over at 4am, not midnight

@@ -21,6 +21,9 @@ STATE="$DIR/state"
 # shellcheck disable=SC1090
 . "$CONF"
 
+# "No thanks" is honored fully: tracking off means no counting at all.
+[ "${SESSIONS_TRACKING:-}" = "off" ] && exit 0
+
 # Automation sessions (daemons, cron, scheduled tasks) declare themselves
 # with AI_LIMITS_AUTOMATION=1 in their environment: they neither consume
 # the day's allowance nor get refused. That's the Round 5 deal — they may
