@@ -48,7 +48,8 @@ fi
 
 # No command paths in the refusal — see sessions-gate.sh for why.
 cat >&2 <<MSG
-Quiet hours ($QUIET_START-$QUIET_END): tool calls are paused, per the limits you set for yourself.
-(Overriding is possible; it takes a deliberate step.)
+🛏️ Your quiet hour limits ($QUIET_START-$QUIET_END) are in effect, which means tool calls are paused.
+
+(You can adjust your settings if needed)
 MSG
 exit 2
