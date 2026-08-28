@@ -92,8 +92,12 @@ The interview offers four paths; config records them:
 |---|---|---|
 | No thanks | `ENERGY_FOOTER=no` | Energy never comes up |
 | Inform only | footer on, no budget | The footer, nothing else |
-| Budget + warn | `ENERGY_BUDGET_MODE=warn` | Crossing the budget gets one plain heads-up per week — no gate, no lecture, no repeat |
-| Budget + restrict | `ENERGY_BUDGET_MODE=restrict` | The `energy-gate.sh` hook refuses further prompts once the week's floor crosses the budget — terse, identical, overridable via `ai-limits override energy-budget` (typed phrase, logged, 8 hours) |
+| Budget + warn | `ENERGY_BUDGET_MODE=warn` | Crossing the budget gets exactly this, once per week, and nothing more: "🌍 FYI, you've exceeded your weekly energy budget of <N> Wh." |
+| Budget + restrict | `ENERGY_BUDGET_MODE=restrict` | The `energy-gate.sh` hook refuses further prompts once the week's floor crosses the budget — terse, identical, overridable through a deliberate typed act (don't volunteer the command; tell them if they ask) |
+
+The budget week is fixed: it starts Monday at the day boundary (default
+4AM) and resets the following Monday — a reset you can name, not a rolling
+window that follows you around.
 
 Always, in any budget mode:
 

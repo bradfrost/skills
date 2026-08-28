@@ -25,13 +25,28 @@ case "${ENERGY_BUDGET_WH_WEEK:-}" in (*[!0-9]*|'') exit 0 ;; esac
 [ "${AI_LIMITS_AUTOMATION:-}" = "1" ] && exit 0
 [ -f "$LEDGER" ] || exit 0
 
-# Sum the floor estimates from the last 7 days of ledger lines:
+# The budget week is fixed, not rolling: it starts Monday at the day
+# boundary (default 4AM) and resets the following Monday, so the refusal
+# can name the reset moment.
+bh=4
+case "${DAY_BOUNDARY:-}" in
+  [0-9][0-9]:[0-9][0-9]|[0-9]:[0-9][0-9]) bh=$((10#${DAY_BOUNDARY%%:*})) ;;
+esac
+if [ "$((10#$(date +%H)))" -lt "$bh" ]; then
+  today=$(date -v-1d +%Y-%m-%d 2>/dev/null || date -d yesterday +%Y-%m-%d)
+else
+  today=$(date +%Y-%m-%d)
+fi
+dow=$(date -j -f %Y-%m-%d "$today" +%u 2>/dev/null || date -d "$today" +%u)
+weekstart=$(date -j -v-$((dow-1))d -f %Y-%m-%d "$today" +%Y-%m-%d 2>/dev/null || date -d "$today -$((dow-1)) days" +%Y-%m-%d)
+resetday=$(date -j -v+7d -f %Y-%m-%d "$weekstart" "+%a %b %d" 2>/dev/null || date -d "$weekstart +7 days" "+%a %b %d")
+
+# Sum the floor estimates from this week's ledger lines:
 #   2026-08-27  wh=3+  turns=8  context
-cutoff=$(date -v-6d +%Y-%m-%d 2>/dev/null || date -d '6 days ago' +%Y-%m-%d)
 total=0
 while read -r d whf _; do
   [ -n "$d" ] || continue
-  [ "$d" \< "$cutoff" ] && continue
+  [ "$d" \< "$weekstart" ] && continue
   n=${whf#wh=}
   n=${n%+}
   case "$n" in (*[!0-9]*|'') continue ;; esac
@@ -48,7 +63,8 @@ fi
 
 # No command paths in the refusal — see sessions-gate.sh for why.
 cat >&2 <<MSG
-Energy budget ($ENERGY_BUDGET_WH_WEEK Wh/week): this week's floor estimate is ${total}+ Wh, past the budget you set for yourself. Pausing.
-(These are rough estimates. Overriding is possible; it takes a deliberate step.)
+🌍 You reached your weekly energy budget of $ENERGY_BUDGET_WH_WEEK Wh, which means tool calls are paused until the budget resets at ${bh}AM $resetday.
+
+(You can adjust your settings if needed)
 MSG
 exit 2
