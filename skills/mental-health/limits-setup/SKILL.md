@@ -176,10 +176,75 @@ ENERGY_BUDGET_MODE=    # warn = heads-up only; restrict = opt-in gate
 AUTOMATION_IN_QUIET=run-silent
 ```
 
-**2. `~/.config/ai-limits/limits.md`** — the human contract: their Round 1
-motivations quoted at the top, then each limit with its honest enforcement label
-(**enforced** / **advisory** / **nothing**) for each surface they use, per
-[ENFORCEMENT.md](./ENFORCEMENT.md).
+**2. `~/.config/ai-limits/limits.md`** — the human contract. Fixed
+template below: fill the brackets from their answers, drop table rows for
+limits they declined, pick the matching energy-row variant, and quote
+their Round 1 reasons verbatim (the one first-person section — their
+words quoted back; everything else stays second person). Add nothing.
+
+````markdown
+# Your AI Limit Preferences
+
+You deliberately set these limits on [date] at [time] using Brad Frost's
+[AI limits skill](https://github.com/bradfrost/skills)
+
+## Why I set these limits
+
+- [their checked Round 1 reasons, verbatim, one per line]
+- [anything else they shared, in their own words]
+
+## The limits
+
+| Limit | Your setting | Claude Code | Chat & Cowork |
+|---|---|---|---|
+| Quiet hours | [23:00-07:00 daily] | 🚫 tool calls refused | ⚠️ reminded of limits |
+| Sessions per day | [measuring this week / limit of N] | 🚫 new sessions refused [add "(once a number is set)" while measuring] | — (can't count sessions) |
+| Session endings | [Definitive] | loaded into every session | loaded once pasted into settings |
+| Energy | [footer on, no budget / budget of N Wh/week, warn / budget of N Wh/week, restrict] | [estimate shown at session end / ⚠️ warned when budget exceeded / 🚫 tool calls refused when budget exceeded] | shown via pasted preference |
+| Automation in quiet hours | [runs, but can't notify me] | honored by exempted automations | n/a |
+
+## Changing your limits
+
+You can update any of your limits by editing `~/.config/ai-limits/config`.
+It's important to know that loosening a limit requires going through some
+deliberate friction.
+
+- You need to provide a reason for raising your `SESSIONS_PER_DAY` limit
+  or shortening your `quiet-hours` window
+- You'll need to type `I'M AWARE I'M INCREASING MY AI USAGE`
+- The updated settings will take effect in the next new session
+- Every raise and override is logged and shows up in your weekly AI
+  session count.
+
+```
+ai-limits raise SESSIONS_PER_DAY <n> --reason "why"
+ai-limits override quiet-hours --reason "why"
+```
+
+## You control your own limits
+
+- These gates are merely speed bumps to steer you to healthier limits;
+  the point isn't to make it impossible to venture outside of your
+  limits, it's just that it should be an intentional and documented act
+  rather than an impulsive override
+- Claude Code can refuse work, but that isn't technically possible in
+  Chat & Cowork. But by pasting your limit preferences into your
+  settings, sessions will adhere to your session endings format and
+  remind you of your limits
+- The energy numbers are rough estimates; AI companies don't publish how
+  much energy each prompt actually burns 🥵. The real cost is almost
+  certainly higher than the numbers suggest.
+
+## Checking in
+
+In any session, you can say "limits report" to see your:
+
+- weekly session number
+- raises & overrides
+- energy usage
+
+Again, this is about understanding, not shaming.
+````
 
 ## Wiring enforcement (Claude Code)
 
