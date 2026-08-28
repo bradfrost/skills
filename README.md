@@ -1,10 +1,11 @@
 # Brad Frost Skills
 
-[Brad Frost](https://bradfrost.com/)'s agent skills contain a variety of skills across different dimensions of work and life. Most skills come from our online courses:
+These agent skills by [Brad Frost](https://bradfrost.com/) have mostly emerged from creating our [online courses](https://bradfrost.com/courses/):
 - [AI & Design Systems](https://aianddesign.systems/)
 - [Subatomic: The Complete Guide To Design Tokens](https://designtokenscourse.com/)
 - [Atomic Design Certification Course](https://atomicdesigncourse.com/)
 
+But the goal is to provide skills to help you in many dimensions of work and life. This will continue to be an organic and iterative adventure, and I hope you find them useful.
 
 ## Table of contents
 
