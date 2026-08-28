@@ -99,13 +99,14 @@ The budget week is fixed: it starts Monday at the day boundary (default
 4AM) and resets the following Monday — a reset you can name, not a rolling
 window that follows you around.
 
-Always, in any budget mode:
+Always, whenever the footer is on — budget or not:
 
 - Where a filesystem exists, append one line per session to
   `~/.config/ai-limits/state/energy-ledger.log`:
   `2026-08-27  wh=2+  turns=8  <one-word context>` — keep this format
-  stable and parseable; it is the data source for the budget math and for
-  reviewing usage over time.
+  stable and parseable; it is the data source for the budget math, the
+  weekly report, and the first-week baseline a person sets their budget
+  against.
 - Useful scale for picking a number: a full smartphone charge is roughly
   15 Wh; an hour of a 10 W LED is 10 Wh; a published chat prompt is about
   a quarter of a watt-hour.

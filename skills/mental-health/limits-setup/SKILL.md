@@ -82,9 +82,11 @@ question.
 ### Round 2 — Quiet hours
 
 > "**(2 of 6)** When do you want quiet hours when AI tools are off-limits to protect
-> your sleep & balance? During quiet hours, Claude Code will refuse to run
-> tools against your prompts (e.g. "Build this feature" will be refused),
-> while Chat/Cowork can only remind you. Default: **10pm to 7am daily**."
+> your sleep & balance? During quiet hours, if you prompt Claude Code
+> instructions (like "Build this feature"), it will REFUSE to execute
+> that work. Refusal isn't technically possible in Chat/Cowork, but it
+> will remind you you are in your quiet hours. Default: **10pm to 7am
+> daily**."
 
 Capture start and end — a window that wraps midnight is fine. The
 enforcement note is already in the script; add nothing to it.
@@ -127,18 +129,23 @@ If they decline: `ENERGY_FOOTER=no`, skip 5a, go to Round 6. If they
 accept, `ENERGY_FOOTER=yes` and follow up:
 
 > "**(5a)** Do you want to set a weekly energy budget? Note: energy usage is a
-> rough estimate, so take numbers with a grain of salt. Pick an option:
+> rough estimate, so take numbers with a grain of salt. Default: **For
+> the first week, energy usage is measured, but no budget is set** —
+> most people have no idea what a watt-hour means until they've seen
+> their own numbers. Then you review your actual usage and set a
+> realistic budget. Or pick a budget now:
 >
-> - Don't set a budget; just inform me
 > - Set budget, and only warn me when I've exceeded the budget
 > - Set budget, and restrict my usage when I've exceeded the budget
 >   (Claude Code will refuse to continue when budget is exceeded)"
 
-If they pick a budget option, ask the amount — "What's your weekly budget
-in watt-hours? (For scale: a full phone charge is about 15 Wh.)" — then
-set `ENERGY_BUDGET_WH_WEEK` and `ENERGY_BUDGET_MODE=warn` or `restrict`.
-No budget: leave both empty. The `limits-energy` skill owns everything
-else; say nothing more here.
+Default: leave `ENERGY_BUDGET_WH_WEEK` and `ENERGY_BUDGET_MODE` empty —
+the ledger accrues from day one, so the week's numbers are the baseline
+they set a budget against. If they pick a budget option now, ask the
+amount — "What's your weekly budget in watt-hours? (For scale: a full
+phone charge is about 15 Wh.)" — then set `ENERGY_BUDGET_WH_WEEK` and
+`ENERGY_BUDGET_MODE=warn` or `restrict`. The `limits-energy` skill owns
+everything else; say nothing more here.
 
 ### Round 6 — Automation
 
