@@ -50,12 +50,15 @@ SESSIONS="$STATE/sessions-$day"
 REFUSED="$STATE/refused-$day"
 touch "$SESSIONS"
 
+# Deliberately no command paths in the refusal: printed commands become a
+# TAB+ENTER autosuggestion, and friction is the point. Finding the way to
+# change the limit is itself the intentional next step.
 refuse() {
   grep -qxF "$sid" "$REFUSED" 2>/dev/null || echo "$sid" >> "$REFUSED"
-  used=$(sort -u "$SESSIONS" | wc -l | tr -d ' ')
+  noun=sessions; [ "$SESSIONS_PER_DAY" = "1" ] && noun=session
   cat >&2 <<MSG
-You set a limit of $SESSIONS_PER_DAY sessions per day; all $used are used. This session stays closed.
-The count resets at $(printf '%02d:00' "$bh"). To change the limit: edit ~/.config/ai-limits/config or run ~/.config/ai-limits/bin/ai-limits raise. Either way it takes effect in a new session, not this one.
+🚫 You've reached your limit of $SESSIONS_PER_DAY AI $noun per day that you set for yourself. This session won't run, and the daily session count resets at ${bh}AM.
+(You can update your session limit number if desired.)
 MSG
   exit 2
 }

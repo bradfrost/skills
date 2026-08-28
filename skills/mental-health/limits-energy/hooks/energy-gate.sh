@@ -46,8 +46,9 @@ if [ -f "$OVERRIDE" ] && [ -n "$(find "$OVERRIDE" -mmin -480 2>/dev/null)" ]; th
   exit 0
 fi
 
+# No command paths in the refusal — see sessions-gate.sh for why.
 cat >&2 <<MSG
-Energy budget ($ENERGY_BUDGET_WH_WEEK Wh/week): this week's floor estimate is ${total}+ Wh, past the budget you set. Pausing per your own config.
-These are rough estimates, and this gate is yours: to override, run ~/.config/ai-limits/bin/ai-limits override energy-budget --reason "why". Honored for 8 hours, logged, counted.
+Energy budget ($ENERGY_BUDGET_WH_WEEK Wh/week): this week's floor estimate is ${total}+ Wh, past the budget you set for yourself. Pausing.
+(These are rough estimates. Overriding is possible; it takes a deliberate step.)
 MSG
 exit 2

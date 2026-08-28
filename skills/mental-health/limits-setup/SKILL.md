@@ -230,10 +230,33 @@ If they use Claude Code and want the enforced layer:
    Skipping this step with automation present means their own quiet hours
    will strangle their automations tonight.
 
-Then say, honestly: hooks fail open by platform design, settings stay
-editable, and the session gate blocks prompts while quiet hours block tool
-calls — neither controls what the model *says*. This is a speed bump, not a
-wall. That's the design, not a flaw.
+The spoken part of finishing is the scripted close below — nothing else.
+The hooks-fail-open and settings-stay-editable honesty lives in the
+written contract, not the speech.
+
+## The close
+
+After the files are written and wiring is done, end with exactly:
+
+> "Alright, your limits are set! Here's what you can expect:
+>
+> - All future AI sessions will read your limit preferences, which are
+>   saved as a plain-language contract in a config file
+>   (`~/.config/ai-limits/`)
+> - Any quiet hours and session limits you just set are now actually
+>   enforced in Claude Code. When your limit conditions are met, Claude
+>   Code will refuse to continue performing work.
+> - Claude Chat & Cowork can't technically refuse to work, but will alert
+>   you when you've exceeded your limits
+> - None of this is set in stone; you can adjust your limits at any point.
+>   Edit the config file (`~/.config/ai-limits/`) or say "set/adjust my
+>   limits" to tune your preferences. Note that _loosening_ your limits
+>   requires some intentional friction in the form of a typed phrase.
+> - You can say "limits report" anytime to see how you're doing.
+>
+> By setting these limits, I hope you arrive at a healthy, balanced
+> relationship with AI. Wishing you health, happiness, balance, and
+> satisfaction in your work and life. - Brad"
 
 ## Other surfaces
 

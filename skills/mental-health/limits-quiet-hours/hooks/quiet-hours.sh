@@ -46,8 +46,9 @@ if [ -f "$OVERRIDE" ] && [ -n "$(find "$OVERRIDE" -mmin -480 2>/dev/null)" ]; th
   exit 0
 fi
 
+# No command paths in the refusal — see sessions-gate.sh for why.
 cat >&2 <<MSG
-Quiet hours ($QUIET_START-$QUIET_END): tool calls are paused per your own config.
-To override deliberately: ~/.config/ai-limits/bin/ai-limits override quiet-hours --reason "why". Honored for 8 hours, logged, counted.
+Quiet hours ($QUIET_START-$QUIET_END): tool calls are paused, per the limits you set for yourself.
+(Overriding is possible; it takes a deliberate step.)
 MSG
 exit 2

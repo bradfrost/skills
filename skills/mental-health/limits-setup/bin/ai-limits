@@ -47,6 +47,12 @@ limits_day() {
 }
 
 require_phrase() {
+  # The phrase is a human act: no pipes, no scripts, no agents typing it
+  # for you. Friction is the feature.
+  if [ ! -t 0 ]; then
+    echo "This confirmation must be typed by you at a terminal — piped or automated input doesn't count."
+    exit 1
+  fi
   echo
   echo "Type the following line, exactly, to confirm:"
   echo "  $PHRASE"
