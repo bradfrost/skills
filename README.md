@@ -1,21 +1,22 @@
 # Brad Frost Skills
 
-[Brad Frost](https://bradfrost.com/)'s agent skills are installable, self-contained instructions for AI
-agents, spanning different dimensions of work and life. Inspired by [mattpocock/skills](https://github.com/mattpocock/skills).
+[Brad Frost](https://bradfrost.com/)'s agent skills contain a variety of skills across different dimensions of work and life. 
 
-## What's inside
+## Table of contents
 
 - **Mental health**
-  - [`limits-setup`](skills/mental-health/limits-setup/SKILL.md)
-  - [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md)
-  - [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md)
-  - [`limits-endings`](skills/mental-health/limits-endings/SKILL.md)
-  - [`limits-energy`](skills/mental-health/limits-energy/SKILL.md)
-- **Design systems**
-  - [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md)
-  - [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)
-- **Product design**
-  - [`product-inspection`](skills/product-design/product-inspection/SKILL.md)
+  - Set healthy limits for AI usage  
+    - [`limits-setup`](skills/mental-health/limits-setup/SKILL.md)
+    - [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md)
+    - [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md)
+    - [`limits-endings`](skills/mental-health/limits-endings/SKILL.md)
+    - [`limits-energy`](skills/mental-health/limits-energy/SKILL.md)
+- **Design & Development**
+  - **Design Systems** 
+    - [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md)
+    - [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)
+  - **Product Design**
+    - [`product-inspection`](skills/product-design/product-inspection/SKILL.md)
 
 ## Limit your use of AI
 
