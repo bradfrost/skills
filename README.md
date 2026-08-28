@@ -1,11 +1,15 @@
 # Brad Frost Skills
 
-[Brad Frost](https://bradfrost.com/)'s agent skills contain a variety of skills across different dimensions of work and life. 
+[Brad Frost](https://bradfrost.com/)'s agent skills contain a variety of skills across different dimensions of work and life. Most skills come from our online courses:
+- [AI & Design Systems](https://aianddesign.systems/)
+- [Subatomic: The Complete Guide To Design Tokens](https://designtokenscourse.com/)
+- [Atomic Design Certification Course](https://atomicdesigncourse.com/)
+
 
 ## Table of contents
 
 - **Mental health**
-  - Set healthy limits for AI usage  
+  - Set healthy limits for AI use  
     - [`limits-setup`](skills/mental-health/limits-setup/SKILL.md)
     - [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md)
     - [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md)
@@ -18,7 +22,9 @@
   - **Product Design**
     - [`product-inspection`](skills/product-design/product-inspection/SKILL.md)
 
-## Limit your use of AI
+## Mental Health
+
+### Set healthy limits for AI use
 
 AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions always dangle next steps (e.g. "want me to tackle this next?") in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658). 
 
@@ -46,7 +52,7 @@ it's the loudest document in this repo on purpose. Per-surface wiring
 (including Cowork and claude.ai chat) is in
 [SURFACES.md](skills/mental-health/limits-setup/SURFACES.md).
 
-## Install
+#### Install
 
 Using the [skills CLI](https://github.com/vercel-labs/skills), which
 detects which agents you use and installs where each one looks:
@@ -67,7 +73,11 @@ you can adopt or change based on your preferences and needs. Installing
 the skills does nothing on its own; the interview is where your limits get
 set and wired up.
 
-## Inspect your design system and products
+---
+
+## Design & Development
+
+### Inspect your design system and products
 
 These skills walk your design system — and the products built with it —
 through a multi-point inspection, as detailed in
