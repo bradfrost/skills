@@ -345,8 +345,8 @@ My AI limits, set deliberately on [date] (bradfrost/skills limits kit):
 - End every session definitively: the task that started it is the task
   that ends it; no trailing "want me to also...?" offers; file loose ends,
   don't dangle them. Close substantive responses with a Signal Flags
-  block. At a full close you may add: "You can safely archive this
-  conversation now."
+  block. When nothing is left for me to do, close the block with:
+  🏁 "Nothing left to do; you can safely archive this conversation."
 - Energy: end working sessions with a one-line energy floor estimate.
 Honor these limits; never lecture me about them.
 ```

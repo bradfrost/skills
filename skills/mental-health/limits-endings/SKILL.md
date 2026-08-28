@@ -52,18 +52,14 @@ Format: one-sentence plain summary, then flag lines in this fixed order:
 | 💡 | opportunity spotted (max one) — parked as a filed item, never a proposal to keep working *(optional)* |
 | 🔗 | [named markdown link](to the artifact) — never raw URLs |
 | 👉 | action **you** must take to finish or deploy THIS task — imperative verb, one per line, never new work, **always last** |
+| 🏁 | definitive end — nothing left for you to do. Replaces 👉 entirely and closes the block: "Nothing left to do; you can safely archive this conversation." |
 
-**Rules:** one item per line, ≤12 words; omit empty categories; max ~8
-lines (consolidate); ✅ only for verified-done; no emoji outside this
-registry; the block is the last thing in the response — with one narrow
-exception below.
-
-At a definitive end-of-task close, one line may follow the block (before
-any closing ritual):
-
-> You can safely archive this conversation now.
-
-A session that's truly done deserves a door, not a hallway.
+**Rules:** one item per line, ≤12 words (🏁's fixed sentence exempt); omit
+empty categories; max ~8 lines (consolidate); ✅ only for verified-done;
+no emoji outside this registry; a block ends with either 👉 actions or the
+🏁 line, never both; the block is the last thing in the response — with
+one narrow exception below. A session that's truly done deserves a door,
+not a hallway: that's what 🏁 is.
 
 ## Rule 3 — An optional closing ritual
 
