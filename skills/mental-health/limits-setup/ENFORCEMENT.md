@@ -35,7 +35,10 @@ than trusting this table blindly.
 - **Text output is not interceptable anywhere.** No current surface lets
   you guarantee the model's displayed words follow a rule. Everything in
   the "text behavior" column works by instruction-following — which mostly
-  works, and sometimes doesn't.
+  works, and sometimes doesn't. On Claude Code the endings contract's
+  *loading* is deterministic (a SessionStart hook injects it every
+  session); its *effect* stays advisory. Guaranteed loading, probabilistic
+  following — the honest ceiling for text behavior.
 - **The population most exposed gets the least protection.** Cowork and
   chat users — many of them non-technical — currently get only the
   advisory layer. This kit documents that gap loudly and links the

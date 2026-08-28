@@ -191,6 +191,9 @@ If they use Claude Code and want the enforced layer:
    - `limits-quiet-hours/hooks/quiet-hours.sh` → `~/.config/ai-limits/hooks/quiet-hours.sh`
    - `limits-energy/hooks/energy-gate.sh` → `~/.config/ai-limits/hooks/energy-gate.sh`
      (inert unless they chose the restrict budget mode)
+   - `limits-endings/hooks/endings-context.sh` → `~/.config/ai-limits/hooks/endings-context.sh`
+     (loads the endings contract into every session; inert unless
+     `DEFINITIVE_ENDINGS=yes`)
 
    (The hooks ship with their skills; install what they installed.)
 
@@ -204,6 +207,13 @@ If they use Claude Code and want the enforced layer:
         "hooks": [
           { "type": "command", "command": "$HOME/.config/ai-limits/hooks/sessions-gate.sh" },
           { "type": "command", "command": "$HOME/.config/ai-limits/hooks/energy-gate.sh" }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "$HOME/.config/ai-limits/hooks/endings-context.sh" }
         ]
       }
     ],

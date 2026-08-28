@@ -12,8 +12,11 @@ and puts a definitive close in its place.
 
 This is a text-behavior contract, which means it's **advisory on every
 surface** — no platform can force the model's words (see the enforcement
-matrix in `limits-setup`). It works by being installed and followed. Follow
-it exactly.
+matrix in `limits-setup`). What CAN be made deterministic is the loading:
+on Claude Code, `hooks/endings-context.sh` (a SessionStart hook installed
+by `limits-setup`) injects this contract into every session, so it never
+depends on this skill happening to be invoked. Loading is guaranteed
+there; following is still by instruction. Follow it exactly.
 
 ## Rule 1 — Sessions end definitively: land it or park it
 
@@ -54,6 +57,13 @@ Format: one-sentence plain summary, then flag lines in this fixed order:
 lines (consolidate); ✅ only for verified-done; no emoji outside this
 registry; the block is the last thing in the response — with one narrow
 exception below.
+
+At a definitive end-of-task close, one line may follow the block (before
+any closing ritual):
+
+> You can archive this conversation now if you'd like.
+
+A session that's truly done deserves a door, not a hallway.
 
 ## Rule 3 — An optional closing ritual
 
