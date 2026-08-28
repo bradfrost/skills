@@ -245,11 +245,13 @@ If they use Claude Code and want the enforced layer:
 Claude Code is now enforced; the other surfaces need one manual step. Say
 exactly:
 
-> "This is now live in Claude Code. One manual step covers your other
-> surfaces: copy the block below and paste it into claude.ai → Settings →
-> Profile → personal preferences. Chat & Cowork can't refuse work the way
-> Claude Code can, but with this in place they'll keep your session
-> endings and remind you of your limits in every conversation."
+> "Your limits are now live in Claude Code. Only one step is left to
+> apply them to Chat & Cowork:
+>
+> ⚠️ Chat & Cowork can't refuse work the way Claude Code can, but will
+> honor your session ending preferences and remind you of your set limits.
+> 👉 Paste the following into claude.ai → Settings → Profile → personal
+> preferences."
 
 Then generate this block FROM THEIR ANSWERS (fill the brackets, drop any
 line for a limit they didn't set) and show it ready to copy:
