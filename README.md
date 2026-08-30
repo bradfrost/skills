@@ -1,11 +1,11 @@
 # [Brad Frost](https://bradfrost.com) Skills
 
-These agent skills have mostly emerged from creating our [online courses](https://bradfrost.com/courses/):
+These agent skills are aimed to help you in different dimensions of work and life. Right now, these skills have mostly emerged from creating our [online courses](https://bradfrost.com/courses/):
 - [AI & Design Systems](https://aianddesign.systems/)
 - [Subatomic: The Complete Guide To Design Tokens](https://designtokenscourse.com/)
 - [Atomic Design Certification Course](https://atomicdesigncourse.com/)
 
-The ultimate goal is to provide you useful skills to help in many dimensions of work and life. This will continue to be an organic and iterative adventure, so if you have feedback, thoughts, or ideas, feel free to reach out.
+This will continue to be an organic and iterative adventure, so if you have feedback, thoughts, or ideas, feel free to [get in touch](https://bradfrost.com/contact/).
 
 ## Install
 Follow this process to install Brad Frost skills:
@@ -92,15 +92,19 @@ What you get after the interview:
 Every limit is labeled with what it honestly is on each surface — **enforced**, **advisory**, or **nothing**. That's the [enforcement matrix](skills/mental-health/limits-setup/ENFORCEMENT.md), and it's the loudest document in this repo on purpose. Per-surface wiring (including Cowork and claude.ai chat) is in [SURFACES.md](skills/mental-health/limits-setup/SURFACES.md).
 
 ### Inspect your design system and products
+These skills are practical accompaniments to detailed video lessons covered in [AI & Design Systems](https://aianddesign.systems/) by me, Ian Frost, and [TJ Pitre](https://github.com/southleft/). Learn how to use AI & Design Systems together to help your team make better digital products:
 <a href="https://aianddesign.systems/" target="_blank"><img width="3217" height="1800" alt="card" src="https://github.com/user-attachments/assets/4bccb599-a4bc-4563-bebd-5e6fe7ec9fae" /></a>
 
+The following skills are 
 
-These skills walk your design system — and the products built with it — through a multi-point inspection, as detailed in [AI & Design Systems](https://aianddesign.systems/), the course by Brad Frost, Ian Frost, and TJ Pitre. They're designed to run in sequence: inspect the system, inspect what got shipped on top of it, then plan the rebuild.
+- **[`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md)** puts your *design system* through a 10-station inspection and produces a graded report and a prioritized work order. 
+- **[`product-inspection`](skills/product-design/product-inspection/SKILL.md)** inspects a *product* 10 stations covering design system adoption, usability, accessibility, performance, and more. 
+- **[`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)** analyzes a product to find bespoke user interface components, maps those components to design system equivalents, and then constructs a prioritized strategy to implement the design system adoption. 
 
-- **[`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md)** puts your *design system* on the lift: a 10-station inspection producing a graded report and a prioritized work order.
-- **[`product-inspection`](skills/product-design/product-inspection/SKILL.md)** inspects a *product* as real users meet it — 10 stations covering adoption, usability, accessibility, performance, and more.
-- **[`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)** hands back the restoration estimate: it tears down a product's bespoke UI, maps every custom pattern to its design-system replacement, and gives you a phased build schedule.
+**Detailed tutorials, workflows, concepts and lessons for this skill are is covered in Chapters 3 and 4 of the [AI & Design Systems](https://aianddesign.systems/) course.**
 
-More to come!
+## A living project
+I'll continue adding and iterative over skills with the goal to provide you useful skills to help people in many dimensions of work and life. If you have feedback, thoughts, or ideas, feel free to [get in touch](https://bradfrost.com/contact/). If you'd like to support this work, please consider checking out [our online courses](https://bradfrost.com/courses/), and if you want to follow along you can subscribe to [my newsletter](https://bradfrost.com/newsletter/).
 
+Thanks so much!
 - Brad
