@@ -176,5 +176,4 @@ These skills are practical accompaniments to detailed video lessons covered in [
 ## A living project
 I'll continue adding and iterating on skills with the goal to provide you useful skills to help people in many dimensions of work and life. If you have feedback, thoughts, or ideas, feel free to [get in touch](https://bradfrost.com/contact/). If you'd like to support this work, please consider checking out [our online courses](https://bradfrost.com/courses/), and if you want to follow along you can subscribe to [my newsletter](https://bradfrost.com/newsletter/).
 
-Thanks so much!
-- Brad
+Thanks so much! — Brad
