@@ -7,98 +7,82 @@ These agent skills by [Brad Frost](https://bradfrost.com/) have mostly emerged f
 
 But the goal is to provide skills to help you in many dimensions of work and life. This will continue to be an organic and iterative adventure, and I hope you find them useful.
 
-## Table of contents
+## Install
 
-- **Mental health**
-  - Set healthy limits for AI use  
-    - [`limits-setup`](skills/mental-health/limits-setup/SKILL.md)
-    - [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md)
-    - [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md)
-    - [`limits-endings`](skills/mental-health/limits-endings/SKILL.md)
-    - [`limits-energy`](skills/mental-health/limits-energy/SKILL.md)
-- **Design & Development**
-  - **Design Systems** 
-    - [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md)
-    - [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)
-  - **Product Design**
-    - [`product-inspection`](skills/product-design/product-inspection/SKILL.md)
-
-## Mental Health
-
-### Set healthy limits for AI use
-
-AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions always dangle next steps (e.g. "want me to tackle this next?") in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658). 
-
-"Just exercise more self discipline" is bullshit, especially when there's increasing pressure to rely on AI to work. That's why **this first family of AI skills helps you use AI on your own terms and set healthy limits to your AI use.** 
-
-Here's how it works:
-1. Install the skill (see [Install](#install) below)
-2. Say **"set my limits"** to your AI agent, then answer a few questions to determine your own terms of engagement and define your own limits for AI usage.
-3. AI will honor the your stated limits as far as is technically possible, and where it technically can't, this kit documents the gap loudly instead of papering over it with willpower.
-
-> **It's important to say this cannot completely stop you from using AI, but it can provide a healthier user experience and boundaries for working with AI.**
-
-| Skill | What it does |
-|---|---|
-| [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) | A short interview that establishes *your* limits — quiet hours, a sessions-per-day ceiling, how sessions end — then wires them into what your tools can actually enforce |
-| [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) | The sessions-per-day ceiling: honest counting, terse identical refusals past the limit, raises that cost a typed phrase and a logged reason |
-| [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) | Hours where AI tools are off-limits — enforced as refused tool calls where hooks exist, with a deliberate logged override |
-| [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) | Sessions end definitively: land it or park it, no trailing hooks, close with a Signal Flags block |
-| [`limits-energy`](skills/mental-health/limits-energy/SKILL.md) | Makes the environmental cost visible: floor estimates from published per-prompt figures, rendered as lightbulb time, with an optional weekly energy budget that informs but never blocks |
-
-Every limit is labeled with what it honestly is on each surface —
-**enforced**, **advisory**, or **nothing**. That's the
-[enforcement matrix](skills/mental-health/limits-setup/ENFORCEMENT.md), and
-it's the loudest document in this repo on purpose. Per-surface wiring
-(including Cowork and claude.ai chat) is in
-[SURFACES.md](skills/mental-health/limits-setup/SURFACES.md).
-
-#### Install
-
-Using the [skills CLI](https://github.com/vercel-labs/skills), which
-detects which agents you use and installs where each one looks:
+These skills work with Claude Code, Codex, Cursor, Gemini CLI, and other agents. The [skills CLI](https://github.com/vercel-labs/skills) figures out which agents you use and puts the skills where each one looks for them:
 
 ```bash
 npx skills add bradfrost/skills
 ```
 
-While this repo is private, that command works for collaborators whose
-git/GitHub CLI auth can already reach it. (Manual fallback: clone the repo
-and copy `skills/mental-health/<skill>/` into your agent's skills
-directory, e.g. `~/.claude/skills/<skill>/`.)
+Add `-g` to install them for every project instead of just the current one:
 
-**Bring your own installer if you have one.** Skills are plain folders
-with a `SKILL.md` inside — any process that gets them into your agent's
-skills directory works (symlinks included). Keep the folder names as-is:
-the folder name becomes the command. The enforcement plumbing (hooks, the
-`ai-limits` CLI) isn't installed by any installer either way — the setup
-interview wires that up when you say "set my limits."
+```bash
+npx skills add bradfrost/skills -g
+```
 
-**Then, the step the installer won't tell you about:** open your agent and
-say **"set my limits"** (in Claude Code, `/limits-setup` also works). That
-runs the setup interview — one question at a time, with sensible defaults
-you can adopt or change based on your preferences and needs. Installing
-the skills does nothing on its own; the interview is where your limits get
-set and wired up.
+**Already have your own way of installing skills? Use it.** Skills are plain folders with a `SKILL.md` inside — however they get into your agent's skills directory, symlinks and all, they'll work. Just keep the folder names as-is, because the folder name becomes the command.
 
----
+### Setting your AI limits
 
-## Design & Development
+Installing the skills doesn't do anything on its own. To set your limits, open your agent and say:
 
-### Inspect your design system and products
+> **set my limits**
 
-These skills walk your design system — and the products built with it —
-through a multi-point inspection, as detailed in
-[AI & Design Systems](https://aianddesign.systems/), the course by Brad
-Frost, Ian Frost, and TJ Pitre. They're designed to run in sequence:
-inspect the system, inspect what got shipped on top of it, then plan the
-rebuild.
+That kicks off a short interview — 6 questions, about 5 minutes — that establishes your limits and wires them into whatever your tools can actually enforce. In Claude Code, `/limits-setup` works too.
+
+## Available skills
+
+**Mental health**
 
 | Skill | What it does |
 |---|---|
-| [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md) | Puts your *design system* on the lift: a 10-station inspection producing a graded report and a prioritized work order |
-| [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md) | The restoration estimate: tears down a product's bespoke UI, maps every custom pattern to its design-system replacement, and hands back a phased build schedule |
-| [`product-inspection`](skills/product-design/product-inspection/SKILL.md) | Inspects a *product* as real users meet it — 10 stations covering adoption, usability, accessibility, performance, and more |
+| [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) | The interview that establishes your limits and wires them up. Start here. |
+| [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) | Caps how many AI sessions you can start in a day |
+| [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) | Sets hours where AI tools are off-limits |
+| [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) | Ends sessions definitively, with no dangling next steps |
+| [`limits-energy`](skills/mental-health/limits-energy/SKILL.md) | Shows you the environmental cost of your AI usage |
+
+**Design & development**
+
+| Skill | What it does |
+|---|---|
+| [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md) | Puts your design system through a 10-station inspection |
+| [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md) | Plans a product's move onto your design system |
+| [`product-inspection`](skills/product-design/product-inspection/SKILL.md) | Inspects a shipping product the way real users meet it |
+
+## Skill details
+
+### Set healthy limits for AI use
+
+AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions always dangle next steps (e.g. "want me to tackle this next?") in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658).
+
+"Just exercise more self discipline" is bullshit, especially when there's increasing pressure to rely on AI to work. That's why **this first family of AI skills helps you use AI on your own terms and set healthy limits to your AI use.**
+
+Here's how it works:
+1. Install the skills (see [Install](#install) above)
+2. Say **"set my limits"** to your AI agent, then answer a few questions to determine your own terms of engagement and define your own limits for AI usage.
+3. AI will honor your stated limits as far as is technically possible, and where it technically can't, this kit documents the gap loudly instead of papering over it with willpower.
+
+> **It's important to say this cannot completely stop you from using AI, but it can provide a healthier user experience and boundaries for working with AI.**
+
+What you get after the interview:
+
+- **Quiet hours** — the hours you've declared off-limits. In Claude Code, prompting during them gets refused; in Chat & Cowork you get reminded.
+- **A daily session limit** — start with a week of just counting, then set a number you're comfortable with. Past it, new sessions are refused.
+- **Definitive endings** — the task that started the session is the task that ends it, and anything new gets filed instead of dangled in front of you.
+- **Energy estimates** — a one-line estimate at the end of your sessions, with an optional weekly budget once you've seen what your usage actually looks like.
+- **Friction where it counts** — tightening a limit is easy. Loosening one takes a reason, a typed phrase, and a new session. That's the whole point.
+
+Every limit is labeled with what it honestly is on each surface — **enforced**, **advisory**, or **nothing**. That's the [enforcement matrix](skills/mental-health/limits-setup/ENFORCEMENT.md), and it's the loudest document in this repo on purpose. Per-surface wiring (including Cowork and claude.ai chat) is in [SURFACES.md](skills/mental-health/limits-setup/SURFACES.md).
+
+### Inspect your design system and products
+
+These skills walk your design system — and the products built with it — through a multi-point inspection, as detailed in [AI & Design Systems](https://aianddesign.systems/), the course by Brad Frost, Ian Frost, and TJ Pitre. They're designed to run in sequence: inspect the system, inspect what got shipped on top of it, then plan the rebuild.
+
+- **[`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md)** puts your *design system* on the lift: a 10-station inspection producing a graded report and a prioritized work order.
+- **[`product-inspection`](skills/product-design/product-inspection/SKILL.md)** inspects a *product* as real users meet it — 10 stations covering adoption, usability, accessibility, performance, and more.
+- **[`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)** hands back the restoration estimate: it tears down a product's bespoke UI, maps every custom pattern to its design-system replacement, and gives you a phased build schedule.
 
 More to come!
 
