@@ -1,15 +1,14 @@
-# Brad Frost Skills
+# [Brad Frost](https://bradfrost.com) Skills
 
-These agent skills by [Brad Frost](https://bradfrost.com/) have mostly emerged from creating our [online courses](https://bradfrost.com/courses/):
+These agent skills have mostly emerged from creating our [online courses](https://bradfrost.com/courses/):
 - [AI & Design Systems](https://aianddesign.systems/)
 - [Subatomic: The Complete Guide To Design Tokens](https://designtokenscourse.com/)
 - [Atomic Design Certification Course](https://atomicdesigncourse.com/)
 
-But the goal is to provide skills to help you in many dimensions of work and life. This will continue to be an organic and iterative adventure, and I hope you find them useful.
+The ultimate goal is to provide you useful skills to help in many dimensions of work and life. This will continue to be an organic and iterative adventure, so if you have feedback, thoughts, or ideas, feel free to reach out.
 
 ## Install
-
-Works with Claude Code, Codex, Cursor, Gemini CLI, and other agents.
+Follow this process to install Brad Frost skills:
 
 ### 1. Add the skills
 
@@ -19,25 +18,25 @@ Run this in your terminal:
 npx skills add bradfrost/skills -g
 ```
 
-The [skills CLI](https://github.com/vercel-labs/skills) will ask you which skills you want and which agents to install them on, then put them where each agent looks for them. The `-g` makes them available in every project — drop it to install into just the one you're in.
+The [skills CLI](https://github.com/vercel-labs/skills) will ask you which skills you want and which agents to install them on, then put them where each agent looks for them. The `-g` makes them available in every project — drop it to install into just the one you're in. The goal is for them to work with Claude Code, Codex, Cursor, Gemini CLI, and other agents, but Claude is the best-tested avenue here.
 
-### 2. Run `/setup-brad-frost-skills`
+### 2. Run the setup
 
-In your agent, run it once:
+Once the skills are installed, in a new agent session, run:
 
 ```
 /setup-brad-frost-skills
 ```
 
-Installing the skills doesn't do anything on its own — this is the step that sets them up. It finds which ones you installed and runs the setup they need. For the limits skills that's a short interview (6 questions, about 5 minutes) that wires your answers into whatever your tools can actually enforce.
+This finds which skills you installed and runs the setup they need. For the limits skills, that's a short (6 questions, 5 minutes) interview to [set healthy limits with AI](#set-healthy-limits-for-ai-use), which then wires your answers into whatever your tools can actually enforce. (Saying "set my limits" jumps straight to that interview.)
 
-### 3. That's it!
+### 3. Use the skills
 
-If you set limits, they're live now. Say **"limits report"** any time to see how you're doing, or **"adjust my limits"** to change them.
+Once you're set up, you can say **"limits report"** any time to see how you're doing, or **"adjust my limits"** to change them.
 
-The inspection skills need no setup at all — run `/ds-inspection`, `/product-inspection`, or `/ds-adoption-plan` from inside the project you want inspected.
+Design system and product design skills can be called by name (`/ds-inspection`, `/product-inspection`, `/ds-adoption-plan`) from inside the project you want inspected.
 
-> **Already have your own way of installing skills?** Use it. Skills are plain folders with a `SKILL.md` inside — however they get into your agent's skills directory, symlinks and all, they'll work. Just keep the folder names as-is, because the folder name becomes the command. You'll still want step 2.
+> **You can use your own process to install these skills**. Skills are plain folders with a `SKILL.md` inside; you can manually add them to your agent's skills directory. Please keep the folder names as-is, because the folder name becomes the command. Either way, you'll still want to run step 2.
 
 ## Available skills
 
