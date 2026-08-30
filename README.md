@@ -50,7 +50,7 @@ Design system and product design skills can be called by name (`/ds-inspection`,
 
 | Skill | What it does |
 |---|---|
-| [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) | The interview that establishes your limits and wires them up |
+| [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) | A brief interview to set and wire up your AI limits |
 | [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) | Caps how many AI sessions you can start in a day |
 | [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) | Sets hours where AI tools are off-limits |
 | [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) | Ends sessions definitively, with no dangling next steps |
@@ -60,9 +60,11 @@ Design system and product design skills can be called by name (`/ds-inspection`,
 
 | Skill | What it does |
 |---|---|
-| [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md) | Puts your design system through a 10-station inspection |
-| [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md) | Plans a product's move onto your design system |
-| [`product-inspection`](skills/product-design/product-inspection/SKILL.md) | Inspects a shipping product the way real users meet it |
+| [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md) | Runs your design system through the 10-station inspection, detailed in Chapter 3 of our [AI & Design Systems course](https://aianddesign.systems) |
+| [`product-inspection`](skills/product-design/product-inspection/SKILL.md) | Runs your product through a multi-point health inspection, detailed in Chapter 4 of [AI & Design Systems](https://aianddesign.systems/) |
+| [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md) | Establishes a plan to migrate your product's existing UI over to your design system, detailed in Chapter 4 of [AI & Design Systems](https://aianddesign.systems/) |
+
+---
 
 ## Skill details
 
