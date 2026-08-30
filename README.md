@@ -67,6 +67,13 @@ git/GitHub CLI auth can already reach it. (Manual fallback: clone the repo
 and copy `skills/mental-health/<skill>/` into your agent's skills
 directory, e.g. `~/.claude/skills/<skill>/`.)
 
+**Bring your own installer if you have one.** Skills are plain folders
+with a `SKILL.md` inside — any process that gets them into your agent's
+skills directory works (symlinks included). Keep the folder names as-is:
+the folder name becomes the command. The enforcement plumbing (hooks, the
+`ai-limits` CLI) isn't installed by any installer either way — the setup
+interview wires that up when you say "set my limits."
+
 **Then, the step the installer won't tell you about:** open your agent and
 say **"set my limits"** (in Claude Code, `/limits-setup` also works). That
 runs the setup interview — one question at a time, with sensible defaults
