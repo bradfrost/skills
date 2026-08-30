@@ -68,7 +68,7 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 
 AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions always dangle next steps (e.g. "want me to tackle this next?") in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658).
 
-"Just exercise more self discipline" is bullshit, especially when there's increasing pressure to rely on AI to work. That's why **this first family of AI skills helps you use AI on your own terms and set healthy limits to your AI use.**
+That's why "just exercise more self discipline" is bullshit; we actually need to steer and change AI's behavior to arrive at a healthier working relationship with it. **This suite of AI skills helps you use AI on your own terms and set healthy limits to your AI use.**
 
 Here's how it works:
 1. Install the skills (see [Install](#install) above)
