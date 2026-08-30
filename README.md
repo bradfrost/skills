@@ -21,27 +21,37 @@ npx skills add bradfrost/skills -g
 
 The [skills CLI](https://github.com/vercel-labs/skills) will ask you which skills you want and which agents to install them on, then put them where each agent looks for them. The `-g` makes them available in every project — drop it to install into just the one you're in.
 
-### 2. Say "set my limits" to your agent
+### 2. Run `/setup-brad-frost-skills`
 
-Installing the skills doesn't do anything on its own — this is the step that actually sets your limits.
+In your agent, run it once:
 
-It kicks off a short interview (6 questions, about 5 minutes), then wires your answers into whatever your tools can actually enforce. In Claude Code, `/limits-setup` does the same thing.
+```
+/setup-brad-frost-skills
+```
+
+Installing the skills doesn't do anything on its own — this is the step that sets them up. It finds which ones you installed and runs the setup they need. For the limits skills that's a short interview (6 questions, about 5 minutes) that wires your answers into whatever your tools can actually enforce.
 
 ### 3. That's it!
 
-Your limits are live. Say **"limits report"** any time to see how you're doing, or **"adjust my limits"** to change them.
+If you set limits, they're live now. Say **"limits report"** any time to see how you're doing, or **"adjust my limits"** to change them.
 
-The inspection skills don't need any setup — just ask for them by name (`/ds-inspection`, `/product-inspection`, `/ds-adoption-plan`) from inside the project you want inspected.
+The inspection skills need no setup at all — run `/ds-inspection`, `/product-inspection`, or `/ds-adoption-plan` from inside the project you want inspected.
 
 > **Already have your own way of installing skills?** Use it. Skills are plain folders with a `SKILL.md` inside — however they get into your agent's skills directory, symlinks and all, they'll work. Just keep the folder names as-is, because the folder name becomes the command. You'll still want step 2.
 
 ## Available skills
 
+**Start here**
+
+| Skill | What it does |
+|---|---|
+| [`setup-brad-frost-skills`](skills/setup-brad-frost-skills/SKILL.md) | Sets up whichever of these skills you installed. Run it once. |
+
 **Mental health**
 
 | Skill | What it does |
 |---|---|
-| [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) | The interview that establishes your limits and wires them up. Start here. |
+| [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) | The interview that establishes your limits and wires them up |
 | [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) | Caps how many AI sessions you can start in a day |
 | [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) | Sets hours where AI tools are off-limits |
 | [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) | Ends sessions definitively, with no dangling next steps |
@@ -65,7 +75,7 @@ AI companies are incentivized to keep you using AI, so the user experience is de
 
 Here's how it works:
 1. Install the skills (see [Install](#install) above)
-2. Say **"set my limits"** to your AI agent, then answer a few questions to determine your own terms of engagement and define your own limits for AI usage.
+2. Run **`/setup-brad-frost-skills`**, then answer a few questions to determine your own terms of engagement and define your own limits for AI usage.
 3. AI will honor your stated limits as far as is technically possible, and where it technically can't, this kit documents the gap loudly instead of papering over it with willpower.
 
 > **It's important to say this cannot completely stop you from using AI, but it can provide a healthier user experience and boundaries for working with AI.**
