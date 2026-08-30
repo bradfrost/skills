@@ -92,6 +92,8 @@ What you get after the interview:
 Every limit is labeled with what it honestly is on each surface — **enforced**, **advisory**, or **nothing**. That's the [enforcement matrix](skills/mental-health/limits-setup/ENFORCEMENT.md), and it's the loudest document in this repo on purpose. Per-surface wiring (including Cowork and claude.ai chat) is in [SURFACES.md](skills/mental-health/limits-setup/SURFACES.md).
 
 ### Inspect your design system and products
+<a href="https://aianddesign.systems/" target="_blank"><img width="3217" height="1800" alt="card" src="https://github.com/user-attachments/assets/4bccb599-a4bc-4563-bebd-5e6fe7ec9fae" /></a>
+
 
 These skills walk your design system — and the products built with it — through a multi-point inspection, as detailed in [AI & Design Systems](https://aianddesign.systems/), the course by Brad Frost, Ian Frost, and TJ Pitre. They're designed to run in sequence: inspect the system, inspect what got shipped on top of it, then plan the rebuild.
 
