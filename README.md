@@ -5,7 +5,7 @@ These agent skills are aimed to help you in different dimensions of work and lif
 - [Subatomic: The Complete Guide To Design Tokens](https://designtokenscourse.com/)
 - [Atomic Design Certification Course](https://atomicdesigncourse.com/)
 
-This will continue to be an organic and iterative adventure, so if you have feedback, thoughts, or ideas, feel free to [get in touch](https://bradfrost.com/contact/).
+My plan is to add to these skills over time, so feel free to subscribe to my [website](https://bradfrost.com/feed/feed.xml) & [newsletter](https://bradfrost.com/newsletter/) for updates. And if you have feedback or ideas for additional skills, I'd love to hear from you; Feel free to [get in touch](https://bradfrost.com/contact/)!
 
 ## Install
 Follow this process to install Brad Frost skills:
