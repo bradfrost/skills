@@ -64,9 +64,7 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 
 ---
 
-## Skill details
-
-### Set healthy limits for AI use
+## Set healthy limits for AI use
 
 AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions always dangle next steps (e.g. "want me to tackle this next?") in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658).
 
@@ -84,7 +82,7 @@ Every limit is labeled with what it honestly is on each surface — **enforced**
 
 Here's each skill, and what you can expect from it.
 
-#### [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) — the interview
+### [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) — the interview
 
 This is the one that asks the questions and wires everything up. Six questions, about five minutes, and every one has a default you can accept or change. It opens like this:
 
@@ -94,7 +92,7 @@ It starts by asking *why* you're doing this — mental health, sleep, clarity, t
 
 **What you'll end up with:** a config file your agent reads, and a plain-language contract at `~/.config/ai-limits/limits.md` that spells out each limit, what it does on each surface, and how to change it. Run the setup again any time to adjust.
 
-#### [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) — hours when AI is off-limits
+### [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) — hours when AI is off-limits
 
 **What you'll set:**
 
@@ -108,7 +106,7 @@ It starts by asking *why* you're doing this — mental health, sleep, clarity, t
 (You can adjust your settings if needed)
 ```
 
-#### [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) — a daily cap on AI sessions
+### [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) — a daily cap on AI sessions
 
 **What you'll set:**
 
@@ -123,7 +121,7 @@ It starts by asking *why* you're doing this — mental health, sleep, clarity, t
 
 Raising the limit is always possible, but never frictionless: it takes a reason, and you have to type `I'M AWARE I'M INCREASING MY AI USAGE` yourself, at a real keyboard. The new number applies to your *next* session, not the one that just got refused.
 
-#### [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) — sessions that end cleanly
+### [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) — sessions that end cleanly
 
 **What you'll set:**
 
@@ -146,7 +144,7 @@ Only the flags that apply show up, so most blocks run four or five lines. And wh
 🏁 Nothing left to do; you can safely archive this conversation.
 ```
 
-#### [`limits-energy`](skills/mental-health/limits-energy/SKILL.md) — the environmental cost, made visible
+### [`limits-energy`](skills/mental-health/limits-energy/SKILL.md) — the environmental cost, made visible
 
 **What you'll set:**
 
@@ -164,7 +162,7 @@ You can also set a weekly energy budget — but not on day one, because nobody k
 
 After that week you choose whether going over the budget just warns you, or actually pauses your work. Fair warning about the numbers themselves: they're rough estimates built from the few figures AI companies have published, and the real cost is almost certainly higher than they suggest.
 
-### Inspect your design system and products
+## Inspect your design system and products
 These skills are practical accompaniments to detailed video lessons covered in [AI & Design Systems](https://aianddesign.systems/) by me, Ian Frost, and [TJ Pitre](https://github.com/southleft/). Learn how to use AI & Design Systems together to help your team make better digital products:
 <a href="https://aianddesign.systems/" target="_blank"><img width="3217" height="1800" alt="card" src="https://github.com/user-attachments/assets/4bccb599-a4bc-4563-bebd-5e6fe7ec9fae" /></a>
 
