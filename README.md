@@ -77,28 +77,28 @@ Here's how it works:
 
 > **It's important to say this cannot completely stop you from using AI, but it can provide a healthier user experience and boundaries for working with AI.**
 
-Every limit is labeled with what it honestly is on each surface — **enforced**, **advisory**, or **nothing**. That's the [enforcement matrix](skills/mental-health/limits-setup/ENFORCEMENT.md), and it's the loudest document in this repo on purpose. Per-surface wiring (including Cowork and claude.ai chat) is in [SURFACES.md](skills/mental-health/limits-setup/SURFACES.md).
+Every limit is labeled with what it honestly does on each surface: **enforced**, **advisory**, or **nothing**. That's the [enforcement matrix](skills/mental-health/limits-setup/ENFORCEMENT.md), and it's the loudest document in this repo on purpose. Per-surface wiring (including Cowork and claude.ai chat) is in [SURFACES.md](skills/mental-health/limits-setup/SURFACES.md).
 
 
-Here's each skill, and what you can expect from it.
+Here's each skill and what you can expect from it.
 
-### [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) — the interview
+### [`limits-setup`](skills/mental-health/limits-setup/SKILL.md): the interview that sets everything up
 
-This is the one that asks the questions and wires everything up. Six questions, about five minutes, and every one has a default you can accept or change. It opens like this:
+Everything starts here. It's 6 questions, takes about 5 minutes, and every question comes with a suggested default you can accept or tweak. Here's how it kicks off:
 
 > Answer 6 quick questions to establish healthy limits with AI. For each question, you can choose the suggested default or tweak to your preferences. Let's go!
 
-It starts by asking *why* you're doing this — mental health, sleep, clarity, the environment, or something in your own words — and your answer gets quoted at the top of everything it writes, so your limits always say why they exist.
+The first question asks why you want to be intentional about your AI usage in the first place (mental health, sleep, clarity around your sessions, the environment, or something in your own words). Your answer gets quoted at the top of everything the skill writes, so your limits always say why they exist.
 
-**What you'll end up with:** a config file your agent reads, and a plain-language contract at `~/.config/ai-limits/limits.md` that spells out each limit, what it does on each surface, and how to change it. Run the setup again any time to adjust.
+**What you'll end up with:** a config file your agent reads, plus a plain-language contract at `~/.config/ai-limits/limits.md` that spells out each of your limits, what it does on each surface, and how to change it. You can run the setup again any time you want to adjust things.
 
-### [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) — hours when AI is off-limits
+### [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md): hours when AI is off-limits
 
 **What you'll set:**
 
 > (2 of 6) When do you want quiet hours when AI tools are off-limits to protect your sleep & balance? During quiet hours, if you prompt Claude Code instructions (like "Build this feature"), it will REFUSE to execute that work. Refusal isn't technically possible in Chat/Cowork, but it will remind you you are in your quiet hours. Default: **10pm to 7am daily**.
 
-**What you'll see** if you try to work during them:
+**What you'll see** if you prompt during your quiet hours:
 
 ```
 🛏️ Your quiet hour limits (23:00-07:00) are in effect, which means tool calls are paused.
@@ -106,7 +106,7 @@ It starts by asking *why* you're doing this — mental health, sleep, clarity, t
 (You can adjust your settings if needed)
 ```
 
-### [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) — a daily cap on AI sessions
+### [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md): a daily cap on AI sessions
 
 **What you'll set:**
 
@@ -119,32 +119,32 @@ It starts by asking *why* you're doing this — mental health, sleep, clarity, t
 (You can update your session limit number if desired.)
 ```
 
-Raising the limit is always possible, but never frictionless: it takes a reason, and you have to type `I'M AWARE I'M INCREASING MY AI USAGE` yourself, at a real keyboard. The new number applies to your *next* session, not the one that just got refused.
+You can always raise your limit, but it requires some deliberate friction: you provide a reason, and you type `I'M AWARE I'M INCREASING MY AI USAGE` yourself. Your new number kicks in for your next session, not the one that just got refused.
 
-### [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) — sessions that end cleanly
+### [`limits-endings`](skills/mental-health/limits-endings/SKILL.md): sessions that end cleanly
 
 **What you'll set:**
 
 > (4 of 6) How should AI sessions end? Default: **definitively**. The task that started the session is seen through to completion, with no dangling loose ends. Any new tasks that emerged during the session will be filed and linked, but they won't be dangled in front of you.
 
-**What you'll see** at the end of every session — a Signal Flags block instead of "want me to tackle this next?":
+**What you'll see** at the end of every session: a Signal Flags block instead of "want me to tackle this next?"
 
-- ✅ **Done** — verified, not just attempted
-- ⏳ **In flight** — running or waiting on something
-- ⚠️ **Heads up** — a caveat, risk, or judgment call made for you
-- 🚫 **Blocked** — what failed, never buried in prose
-- 💡 **Opportunity** — spotted and filed, never a pitch to keep working
-- 🔗 **Links** — named links to whatever was made or changed
-- 👉 **Your turn** — what you need to do to finish this, always last
-- 🏁 **Finished** — nothing left for you to do; safe to archive
+- ✅ **Done:** verified, not just attempted
+- ⏳ **In flight:** running or waiting on something
+- ⚠️ **Heads up:** a caveat, a risk, or a judgment call made for you
+- 🚫 **Blocked:** what failed, never buried in prose
+- 💡 **Opportunity:** spotted and filed, never a pitch to keep working
+- 🔗 **Links:** named links to whatever got made or changed
+- 👉 **Your turn:** what you need to do to finish, always last
+- 🏁 **Finished:** nothing left for you to do, so you can safely archive
 
-Only the flags that apply show up, so most blocks run four or five lines. And when a session is genuinely over, it says so:
+You'll only see the flags that apply, so most blocks run 4 or 5 lines. And when a session is truly finished, it says so:
 
 ```
 🏁 Nothing left to do; you can safely archive this conversation.
 ```
 
-### [`limits-energy`](skills/mental-health/limits-energy/SKILL.md) — the environmental cost, made visible
+### [`limits-energy`](skills/mental-health/limits-energy/SKILL.md): the environmental cost of your AI use
 
 **What you'll set:**
 
@@ -156,11 +156,11 @@ Only the flags that apply show up, so most blocks run four or five lines. And wh
 💡💡💡💡💡💡 6+ Wh this session · lights on for ~40 min
 ```
 
-You can also set a weekly energy budget — but not on day one, because nobody knows what a watt-hour feels like until they've seen their own numbers:
+You can also set a weekly energy budget, but not on day one. Almost nobody knows what a watt-hour feels like until they've seen their own numbers, so budgets start with a baseline week:
 
 > (5a) Do you want to set a weekly energy budget? Note: since almost nobody knows their AI energy usage (or what a watt-hour feels like!), budgets start with a 1-week baseline: your energy usage is measured for a week, then you review your actual numbers and set a realistic budget.
 
-After that week you choose whether going over the budget just warns you, or actually pauses your work. Fair warning about the numbers themselves: they're rough estimates built from the few figures AI companies have published, and the real cost is almost certainly higher than they suggest.
+After that week, you decide whether going over your budget just warns you or actually pauses your work. It's important to know these numbers are rough estimates; AI companies don't publish how much energy each prompt actually burns 🥵, and the real cost is almost certainly higher than the numbers suggest.
 
 ## Inspect your design system and products
 These skills are practical accompaniments to detailed video lessons covered in [AI & Design Systems](https://aianddesign.systems/) by me, Ian Frost, and [TJ Pitre](https://github.com/southleft/). Learn how to use AI & Design Systems together to help your team make better digital products:
