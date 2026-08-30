@@ -9,27 +9,31 @@ But the goal is to provide skills to help you in many dimensions of work and lif
 
 ## Install
 
-These skills work with Claude Code, Codex, Cursor, Gemini CLI, and other agents. The [skills CLI](https://github.com/vercel-labs/skills) figures out which agents you use and puts the skills where each one looks for them:
+Works with Claude Code, Codex, Cursor, Gemini CLI, and other agents.
 
-```bash
-npx skills add bradfrost/skills
-```
+### 1. Add the skills
 
-Add `-g` to install them for every project instead of just the current one:
+Run this in your terminal:
 
 ```bash
 npx skills add bradfrost/skills -g
 ```
 
-**Already have your own way of installing skills? Use it.** Skills are plain folders with a `SKILL.md` inside — however they get into your agent's skills directory, symlinks and all, they'll work. Just keep the folder names as-is, because the folder name becomes the command.
+The [skills CLI](https://github.com/vercel-labs/skills) will ask you which skills you want and which agents to install them on, then put them where each agent looks for them. The `-g` makes them available in every project — drop it to install into just the one you're in.
 
-### Setting your AI limits
+### 2. Say "set my limits" to your agent
 
-Installing the skills doesn't do anything on its own. To set your limits, open your agent and say:
+Installing the skills doesn't do anything on its own — this is the step that actually sets your limits.
 
-> **set my limits**
+It kicks off a short interview (6 questions, about 5 minutes), then wires your answers into whatever your tools can actually enforce. In Claude Code, `/limits-setup` does the same thing.
 
-That kicks off a short interview — 6 questions, about 5 minutes — that establishes your limits and wires them into whatever your tools can actually enforce. In Claude Code, `/limits-setup` works too.
+### 3. That's it!
+
+Your limits are live. Say **"limits report"** any time to see how you're doing, or **"adjust my limits"** to change them.
+
+The inspection skills don't need any setup — just ask for them by name (`/ds-inspection`, `/product-inspection`, `/ds-adoption-plan`) from inside the project you want inspected.
+
+> **Already have your own way of installing skills?** Use it. Skills are plain folders with a `SKILL.md` inside — however they get into your agent's skills directory, symlinks and all, they'll work. Just keep the folder names as-is, because the folder name becomes the command. You'll still want step 2.
 
 ## Available skills
 
