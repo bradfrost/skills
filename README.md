@@ -42,7 +42,7 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 
 | Skill | What it does |
 |---|---|
-| [`setup-brad-frost-skills`](skills/setup-brad-frost-skills/SKILL.md) | Run to set up these skills. |
+| [`setup-brad-frost-skills`](skills/setup-brad-frost-skills/SKILL.md) | Set up these skills once installed |
 
 **Mental health**
 
