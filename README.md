@@ -12,13 +12,14 @@ Follow this process to install Brad Frost skills:
 
 ### 1. Add the skills
 
-Run this in your terminal:
+Run this in your terminal to install these skills everywhere (recommended):
 
 ```bash
 npx skills add bradfrost/skills -g
 ```
+You can also drop the `-g` to install only in the project you're currently in.
 
-The [skills CLI](https://github.com/vercel-labs/skills) will ask you which skills you want and which agents to install them on, then put them where each agent looks for them. The `-g` makes them available in every project — drop it to install into just the one you're in. The goal is for them to work with Claude Code, Codex, Cursor, Gemini CLI, and other agents, but Claude is the best-tested avenue here.
+The [skills CLI](https://github.com/vercel-labs/skills) will ask you which skills you want and which agents to install them on, then put them where each agent looks for them. The goal is for them to work with Claude Code, Codex, Cursor, Gemini CLI, and other agents, but Claude is the best-tested avenue here.
 
 ### 2. Run the setup
 
@@ -28,15 +29,12 @@ Once the skills are installed, in a new agent session, run:
 /setup-brad-frost-skills
 ```
 
-This finds which skills you installed and runs the setup they need. For the limits skills, that's a short (6 questions, 5 minutes) interview to [set healthy limits with AI](#set-healthy-limits-for-ai-use), which then wires your answers into whatever your tools can actually enforce. (Saying "set my limits" jumps straight to that interview.)
+This finds which skills you installed and runs any required setup. For the limits skills, you'll take a short (6 questions, 5 minutes) interview to [set healthy limits with AI](#set-healthy-limits-for-ai-use), which then wires your answers into whatever your tools can actually enforce. (Alternatively, saying "set my limits" will jump you straight into that interview.)
 
 ### 3. Use the skills
+With the skills set up, you're good to go! You'll see your preferred AI limits in action, and you can call all of these skills can be called by name in AI sessions.
 
-Once you're set up, you can say **"limits report"** any time to see how you're doing, or **"adjust my limits"** to change them.
-
-Design system and product design skills can be called by name (`/ds-inspection`, `/product-inspection`, `/ds-adoption-plan`) from inside the project you want inspected.
-
-> **You can use your own process to install these skills**. Skills are plain folders with a `SKILL.md` inside; you can manually add them to your agent's skills directory. Please keep the folder names as-is, because the folder name becomes the command. Either way, you'll still want to run step 2.
+> **Note: you can use your own process to install these skills**. Skills are plain folders with a `SKILL.md` inside; you can manually add them to your agent's skills directory. Please keep the folder names as-is, because the folder name becomes the command. Either way, you'll still want to run step 2.
 
 ## Available skills
 
