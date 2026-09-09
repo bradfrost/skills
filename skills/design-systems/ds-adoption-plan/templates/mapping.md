@@ -7,11 +7,11 @@ Effort: XS / S / M / L — basis: instances × templates touched × API distance
 
 ## A. Styled patterns
 
-| # | Pattern | Disposition | Target & evidence | Effort |
-|---|---|---|---|---|
-| A1 | <pattern> | <disposition> | <system target, the `[verified]` evidence, and — when the catalog overruled the intuitive pick — both: "→ ~~intuitive~~ actual, because <the catalog's own guidance>"> | <XS/S/M/L> |
+| # | Pattern | Disposition | Target & evidence | Design side | Effort (code / design) |
+|---|---|---|---|---|---|
+| A1 | <pattern> | <disposition> | <system target, the `[verified]` evidence, and — when the catalog overruled the intuitive pick — both: "→ ~~intuitive~~ actual, because <the catalog's own guidance>"> | <library component the design file should use · "no counterpart" · "n/a, code-only"> | <XS/S/M/L> / <XS/S/M/L or —> |
 
-_Roll-up: <n> rows — <n> S, <n> M, <n> blocked…_
+_Roll-up: <n> rows — <n> S, <n> M, <n> blocked… · design effort: <n> rows carrying design work_
 
 ## B. Orphaned hooks (templates only — no CSS today)
 
@@ -27,6 +27,13 @@ _Roll-up: <n> rows — <n> S, <n> M, <n> blocked…_
 
 | # | Item | Disposition | Notes (expiry issues for temporary glue) |
 |---|---|---|---|
+
+## E. Design-only patterns (in the design file, not in code)
+
+_Detached instances, local components duplicating the library, off-library frames. Design effort, no engineering effort._
+
+| # | Pattern | Disposition | Library target & evidence | Effort |
+|---|---|---|---|---|
 
 ## Upstream filings this mapping produces
 

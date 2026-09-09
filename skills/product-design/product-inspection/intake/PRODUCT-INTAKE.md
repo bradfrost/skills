@@ -45,7 +45,7 @@ For each asset, establish what the agent can reach **right now**, and record it 
 | Running instance | `live` (loaded via a browser bridge / dev server — name it) / `screenshot` / `interview` |
 | Codebase | `live` (repo open or reachable) / `export` (pasted files) / `interview` |
 | Instrumentation | `live` (dashboard reachable) / `export` (pasted metrics) / `interview` |
-| Design source | `live` (design-tool bridge) / `export` / `screenshot` / `interview` |
+| Design source | `live` (design-tool bridge — name it, and note whether you can sweep the whole file or only linked frames) / `export` / `screenshot` / `interview` / `none — no design source exists`. Probe it, don't just ask: see `reference/FIGMA-ACCESS.md`. Stations 1 and 6 both spend this. |
 | Support & feedback | `live` (tracker/reviews reachable) / `export` / `interview` |
 
 **Agent: test, don't assume.** If a browser bridge appears available, load the product and confirm you see the real thing. If repo access seems available, read one real file. If an analytics dashboard is reachable, pull one real view. Record what worked. If everything lands on `interview`, say so plainly: the inspection will run, findings will be `[reported]`, and the first work-order item should be getting the agent a running instance.
@@ -101,7 +101,7 @@ _Checked in: <date> · Re-confirm at next inspection_
 | Running instance | live / screenshot / interview | <e.g. "loaded staging URL in the browser bridge"> |
 | Codebase | live / export / interview | <e.g. "read src/pages/checkout.vue"> |
 | Instrumentation | live / export / interview | <…> |
-| Design source | live / export / screenshot / interview | <…> |
+| Design source | live / export / screenshot / interview / none | <e.g. "read the checkout frame via the Figma bridge"; note whole-file vs linked-frames-only> |
 | Support & feedback | live / export / interview | <…> |
 
 ## Known symptoms

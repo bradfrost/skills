@@ -4,12 +4,18 @@ _Written <date> from `MAPPING.md` · re-run the teardown after each wave and app
 
 **End state:** <the measurable finish line — e.g. custom CSS from <n> → under <n> lines (sanctioned reset + documented Keeps); zero orphaned hooks; every remaining custom line carries a Keep rationale or upstream issue link.>
 
-## Wave 1 — <name> (Effort: <roll-up>)
+## Wave 1 — <name> (Effort: <code roll-up> / <design roll-up>)
+
+**Design lane (lands first):**
+
+- [ ] <mapping row ID> — <one-line design action; these unblock the code rows in this wave or the next>
+
+**Code lane:**
 
 - [ ] <mapping row ID> — <one-line action>
 - [ ] File upstream: <the System gap / Recipe candidate issues, filed now so later waves aren't blocked>
 
-**Done when:** <observable conditions> · **Verify:** <what gets run>
+**Done when:** <observable conditions, both sides> · **Verify:** <what gets run>
 
 ## Wave 2 — <name> (Effort: <roll-up>)
 

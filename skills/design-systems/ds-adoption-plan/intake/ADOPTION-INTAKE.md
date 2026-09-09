@@ -6,6 +6,8 @@ Before the teardown, check the vehicle in. This step builds `ds-adoption-plan/GA
 
 **First question, before anything else — can you reach the design system's catalog?** An adoption plan whose mappings aren't checked against the system's real APIs is a guess with a table of contents. Open with: *"Which design system are we adopting, and how can I reach its catalog — an MCP server, a components manifest, a docs site?"* Then **make one real call**: look up one component you expect to exist and confirm you get real props/slots/guidance back. Record the outcome. If the chain bottoms out at interview, say so plainly: the plan will still run, mappings will be `[reported]`, and the first work-order item is getting the agent catalog access.
 
+**Second question, in the same breath — is there a design file, on either side?** Ask: *"Does the design system have a Figma or other design library, and does this product have its own design file? Is a Figma MCP or bridge connected so I can read either one live?"* Then check your own available tools for anything Figma-shaped and **make one real call** against their actual file, because people frequently have a bridge running that you won't notice unless you look. `reference/FIGMA-ACCESS.md` covers what each bridge can see and what the four access states cost you. Record the result either way. Skipping this is how a plan prices half the work and calls it an estimate: the design side is real work that costs real time (ground rule 2), and "the product has no design file" is a perfectly good answer that you still have to *get* rather than assume.
+
 ## 1. The vehicle
 
 - Product name, what it does, audience and rough scale (pages/screens/routes)
@@ -30,6 +32,8 @@ Test, don't assume — make one real probe per row and record what worked:
 | Asset | Access level to record |
 |---|---|
 | DS catalog | `live-mcp` (name the tools) / `export` (manifest pasted) / `docs` (URL readable) / `interview` |
+| Design library (the system's) | `live-figma` (name the bridge) / `export` / `screenshot` / `interview` — see `reference/FIGMA-ACCESS.md` |
+| Product's design file | `live-figma` (name the bridge and whether you can sweep the whole file or only linked frames) / `screenshot` / `interview` / `none — product has no design file` |
 | Product codebase | `live` (repo open) / `export` (pasted files) / `interview` |
 | Running instance | `live` (browser bridge / dev server) / `screenshot` / `interview` |
 | Issue tracker | `live` (gh/MCP — list the open issues) / `export` (pasted list) / `interview` |
@@ -73,6 +77,8 @@ _Checked in: <date> · Method: ds-adoption-plan · Technician: <agent + catalog 
 | Source | Status |
 |---|---|
 | DS catalog | <live-mcp: tool names / export / docs / interview> — verified by <the real probe you made> |
+| Design library (system's) | <live-figma: bridge name + whole-file or linked-frames-only / export / screenshot / interview> — verified by <the real probe> |
+| Product's design file | <live-figma / screenshot / interview / none> — verified by <the real probe> |
 | Repo | <access + branch> |
 | Running instance | <URL / local / none> |
 | Issue tracker | <live via gh/MCP · export · interview — note open-issue count> |

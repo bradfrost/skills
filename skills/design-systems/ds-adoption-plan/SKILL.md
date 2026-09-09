@@ -10,22 +10,24 @@ You are the service technician writing a **restoration estimate**. The vehicle o
 ## Ground rules (read first, apply at every phase)
 
 1. **Evidence before judgment.** Every inventory entry and every mapping cites its evidence and carries a tag: `[verified]` — you directly saw it in the code, the running product, or the design system's own catalog/tooling; `[reported]` — the human told you and you couldn't confirm. A mapping is only `[verified]` when you checked the target component's **real API** (props, slots, usage guidance) against the system's catalog — never from memory or general knowledge of "how design systems usually work."
-2. **The catalog overrules intuition — check the don'ts.** The intuitively-named component is often the wrong one. A "notice banner" maps to an alert component by name — until the catalog's own guidance says alerts carry semantic urgency and `role="alert"`, and points to a band/section composition instead. Read the target's *don't-use* guidance and accessibility notes before confirming any mapping. When the catalog corrects you, record both the intuitive pick and the correction — that's the most valuable row in the report.
-3. **Source truth beats built output.** Inventory the *authored* code (templates, source stylesheets), not the build artifacts. Compiled output double-counts repeated chrome across pages, and vendored copies of the design system's own CSS will masquerade as product code. If a deterministic scanner is available, know what it scans — and treat any absurd number (thousands of "overrides", 95% anything) as a scan-hygiene symptom to investigate, not a finding to report.
-4. **Hunt the invisible gaps.** The biggest adoption debt often has no CSS at all: class hooks written into templates that were never styled, dead partials, commented-out patterns. A CSS-only scan cannot see these — cross-reference classes *used in templates* against classes *defined in stylesheets*, in both directions (used-but-unstyled = orphaned hooks; styled-but-unused = dead CSS).
-5. **System gaps are findings, not failures.** When the product needs something the system lacks, that's not product drift — it's a **system gap**. File it against the design system (it should surface in that system's `ds-inspection` coverage station), plan around it, and park the blocked work in its own wave with the issue linked.
-6. **The tracker got there first — cite, don't duplicate.** Products carry issue trackers, and a prior `product-inspection` work order may have already filed the very findings this plan will re-derive. Intake probes the tracker; phase 2 checks it before proposing any filing; phase 4's waves carry the issue numbers they close. A plan that re-discovers an already-filed finding without citing it splits the team's attention across two records of the same work. Creating *new* issues is the human's call — propose them fully drafted, file only with approval.
-7. **Respect the sacred.** Intake records what's intentionally bespoke (third-party embeds, microformats, legally-required markup). Those get a **Keep** disposition with rationale — not a mapping.
-8. **The human makes the calls.** You inventory, map, estimate, and propose an order. Prioritization and the final schedule belong to the team.
+2. **Adoption has two sides, and the design side is not optional.** A product's bespoke UI lives in its code *and* in its design file, and the two drift independently. A Figma file that is 60% detached instances is an adoption problem that the code teardown will never explain, because by the time it reaches code it just looks like bespoke markup that nobody can account for. Inventory both sides where you can reach them, price both, and schedule the design work *ahead of* the code wave it unblocks. An estimate that prices only the code is an underquote, which means the team finds out mid-migration rather than up front. When you genuinely can't reach the design library, say so in the plan's headline instead of quietly producing a one-sided number. `reference/FIGMA-ACCESS.md` is the access ladder.
+3. **The catalog overrules intuition — check the don'ts.** The intuitively-named component is often the wrong one. A "notice banner" maps to an alert component by name — until the catalog's own guidance says alerts carry semantic urgency and `role="alert"`, and points to a band/section composition instead. Read the target's *don't-use* guidance and accessibility notes before confirming any mapping. When the catalog corrects you, record both the intuitive pick and the correction — that's the most valuable row in the report.
+4. **Source truth beats built output.** Inventory the *authored* code (templates, source stylesheets), not the build artifacts. Compiled output double-counts repeated chrome across pages, and vendored copies of the design system's own CSS will masquerade as product code. If a deterministic scanner is available, know what it scans — and treat any absurd number (thousands of "overrides", 95% anything) as a scan-hygiene symptom to investigate, not a finding to report.
+5. **Hunt the invisible gaps.** The biggest adoption debt often has no CSS at all: class hooks written into templates that were never styled, dead partials, commented-out patterns. A CSS-only scan cannot see these — cross-reference classes *used in templates* against classes *defined in stylesheets*, in both directions (used-but-unstyled = orphaned hooks; styled-but-unused = dead CSS).
+6. **System gaps are findings, not failures.** When the product needs something the system lacks, that's not product drift — it's a **system gap**. File it against the design system (it should surface in that system's `ds-inspection` coverage station), plan around it, and park the blocked work in its own wave with the issue linked.
+7. **The tracker got there first — cite, don't duplicate.** Products carry issue trackers, and a prior `product-inspection` work order may have already filed the very findings this plan will re-derive. Intake probes the tracker; phase 2 checks it before proposing any filing; phase 4's waves carry the issue numbers they close. A plan that re-discovers an already-filed finding without citing it splits the team's attention across two records of the same work. Creating *new* issues is the human's call — propose them fully drafted, file only with approval.
+8. **Respect the sacred.** Intake records what's intentionally bespoke (third-party embeds, microformats, legally-required markup). Those get a **Keep** disposition with rationale — not a mapping.
+9. **The human makes the calls.** You inventory, map, estimate, and propose an order. Prioritization and the final schedule belong to the team.
 
 ## The design-system catalog: the evidence chain
 
 This skill is design-system-agnostic. At every phase, reach the system's catalog down this chain — use what exists, never require a vendor:
 
 1. **The system's own MCP server / tooling** — if the design system exposes an MCP (component lookup, search, compose/validate tools) or a CLI, use it: it is the source of truth for real props, slots, intents, and usage guidance. This is what makes mappings `[verified]`.
-2. **Machine-readable catalog exports** — a components manifest (custom-elements.json, component JSON, token JSON) the user pastes or points you at.
-3. **Docs site** — read the component pages for API + guidance.
-4. **Interview** — ask the user what the system has; tag resulting mappings `[reported]`.
+2. **The published design library** — most systems have a Figma (or other design-tool) library, and it is a real catalog source, not a nice-to-have. It is authoritative for what the system *contains* (components, variants, variables, published styles) and for every design-side mapping. It is *not* authoritative for code APIs: a variant named `Primary` tells you nothing about whether the prop is `variant` or `appearance`. Use it for coverage and design-side targets, use source 1 or 3 for props and slots. `reference/FIGMA-ACCESS.md` covers how to reach it and what each bridge can actually see.
+3. **Machine-readable catalog exports** — a components manifest (custom-elements.json, component JSON, token JSON) the user pastes or points you at.
+4. **Docs site** — read the component pages for API + guidance.
+5. **Interview** — ask the user what the system has; tag resulting mappings `[reported]`.
 
 A knowledge MCP covering the industry's mature systems (e.g. Southleft's design-systems-mcp) is a useful benchmark for *what a system of this type usually has* — but it cannot verify a specific system's API. Only the system's own catalog can.
 
@@ -39,6 +41,7 @@ A knowledge MCP covering the industry's mature systems (e.g. Southleft's design-
 - `phases/phase-3-estimate.md` — level of effort per mapping (folds into `MAPPING.md`)
 - `phases/phase-4-build-schedule.md` — the phased plan → `plans/<date>-ds-adoption-plan.md`
 - `templates/baseline.md`, `templates/mapping.md`, `templates/ds-adoption-plan.md` — output shells
+- `reference/FIGMA-ACCESS.md` — what each Figma bridge can actually see, the four access states, and what to do when you have none of them
 
 ## State (in the user's project)
 
@@ -75,14 +78,16 @@ After a wave ships: re-run phase 1 fresh (don't peek at the old baseline while i
 
 Every inventoried pattern gets exactly one:
 
-| Disposition | Meaning |
-|---|---|
-| **Swap** | A direct replacement exists in the system |
-| **Compose** | Assemble from existing system parts (components + slots) |
-| **Recipe candidate** | Product-specific pattern that belongs *in* the system as a recipe/composition — propose it upstream |
-| **System gap** | The system lacks it — file upstream, plan around it, park in the gap-blocked wave |
-| **Delete** | Dead code — remove, don't migrate |
-| **Keep** | Intentionally bespoke or third-party glue — document the rationale |
+| Disposition | In code | In the design file |
+|---|---|---|
+| **Swap** | A direct replacement exists in the system | Replace the local component or frame with a library instance |
+| **Compose** | Assemble from existing system parts (components + slots) | Rebuild from library instances plus auto-layout |
+| **Recipe candidate** | Product-specific pattern that belongs *in* the system as a recipe/composition — propose it upstream | Same pattern, proposed as a published library component |
+| **System gap** | The system lacks it — file upstream, plan around it, park in the gap-blocked wave | Same gap, filed once, not twice |
+| **Delete** | Dead code — remove, don't migrate | Unused pages, abandoned explorations, superseded frames |
+| **Keep** | Intentionally bespoke or third-party glue — document the rationale | Deliberately custom art direction, marketing one-offs |
+
+A pattern that exists on both sides gets **one row**, not two, with both sides' evidence and both sides' effort. Splitting it into two rows double-counts the work and hides the dependency between them.
 
 ## Voice
 

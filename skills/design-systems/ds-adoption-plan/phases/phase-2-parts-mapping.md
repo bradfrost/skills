@@ -29,12 +29,14 @@ The heart of the estimate. Every pattern from the teardown gets exactly one **di
 5. **Search before declaring a gap.** A System gap row must cite the search that came up empty ("no video/embed component in catalog; nearest prior art: X"). Name what the proposed component/recipe would be, so the upstream filing is concrete.
 6. **Route the recipe candidates.** A pattern used across many routes (a dated post list, a bio block) that the system *almost* covers is a proposal, not a gap: map it to the composition it would formalize, and note the upstream proposal.
 7. **Honor the sacred list.** Keep rows cite their GARAGE.md rationale or expiry issue. Don't map what the team has declared intentional.
+8. **Map the design side into the same row.** For every pattern the teardown found on both sides, the row carries one disposition and both targets: the code component *and* the library component the design file should be using. They're usually the same component wearing two hats, and when they aren't, that mismatch is itself a finding worth naming (the library publishes a `Card` the code has no equivalent for, or vice versa). Design-only patterns get their own rows and are usually **Swap** or **Delete**; they cost design time and no engineering time, which phase 3 needs to know. Code-only patterns get a note that the design file has no counterpart, because somebody will have to design it before it can be rebuilt properly.
 
 ## Cross-cutting checks
 
 - **Semantics & a11y parity:** the replacement must preserve landmarks, heading order, link/button semantics, and any microformats/structured data the pattern carries. A visual match that loses semantics is a regression, not an adoption.
 - **State coverage:** if the custom pattern handled states (active, error, empty), confirm the target covers them or note the delta.
 - **Behavioral JS:** patterns with behavior map to components that own that behavior — or the JS delta goes in the row's notes (it prices into phase 3).
+- **Design/code target agreement:** when a row's design target and code target are different components, one of the two libraries is missing something. Say which, and route it the same way as any other system gap.
 
 ## Output
 

@@ -13,17 +13,29 @@ Turn the priced parts list into waves the team can ship. Order by **dependency a
 
 Adapt to the product — most adoptions want some version of:
 
-1. **Foundation** — tokens, fonts, theme wiring, page shell, DS package current. Skip what's already adopted (per the baseline); if foundation is missing, nothing else lands cleanly, so it's always wave 1.
+1. **Foundation** — tokens, fonts, theme wiring, page shell, DS package current. Skip what's already adopted (per the baseline); if foundation is missing, nothing else lands cleanly, so it's always wave 1. On the design side, foundation means the file is actually consuming the published library and its variables, because re-attaching instances after the fact is more expensive than starting attached.
 2. **Quick swaps & deletes** — the XS/S rows with `[verified]` targets, plus all Delete rows. Visible wins, builds momentum, shrinks the surface before the harder work. **Also: file every upstream issue now** (System gaps, Recipe candidates) — filing early means later waves aren't waiting on triage.
 3. **Compositions** — the M rows: listing pages, grids, cards, the slot-contract work. Sequence within the wave by leverage: shared partials first (one edit, many routes), most-bespoke pages last (they reuse the motifs the earlier items establish).
 4. **Content archaeology** — stored-content transforms (build-time rewrites + verification scripts, not hand-edits). Can start in parallel once its target patterns exist; gate on any upstream gap it depends on.
 5. **Gap-blocked & upstream-paced** — a parking table, not a wave: each row names its blocking issue and the local action when unblocked. Reviewed at each re-run; items graduate into waves as upstream ships.
 
+## The design lane runs half a wave ahead
+
+Design work isn't a separate track bolted on at the end, and it isn't a wave of its own either. It's a lane inside each wave that has to land *before* the code it unblocks. A component can't be rebuilt on the library until somebody has decided what it looks like on the library, which means a row graded `M / M` needs its design half scheduled in the wave before its code half, or the engineers sit idle holding a ticket.
+
+Three rules keep the lane honest:
+
+- **Rows where design leads.** Anything with a design grade and a code grade ships its design half in the prior wave. Say so explicitly in the wave's row list rather than assuming people will infer it.
+- **Rows with no code work at all** (detached instances, local components duplicating the library, dead frames) can run in parallel with anything. They're the design equivalent of the quick-swaps wave, and they're the cheapest way to show visible progress in the design file early.
+- **Rows with no design work** (stored-content transforms, JS glue) never wait on design. Don't let the lane become a queue for work that doesn't need it.
+
+If the design side went uninventoried in phase 1, the schedule says so up front and treats every design grade as unknown rather than zero. An unknown that gets discovered in wave 3 is how adoption plans slip.
+
 ## Per wave, write
 
 - The mapping rows it contains (by ID — the plan cites the mapping, never restates it)
 - **The issues it closes:** existing tracker issues covered by this wave's rows (from the phase 2 tracker check) — the wave's PR carries `Closes #N` so the tracker and the plan converge instead of drifting apart
-- **Done when:** observable conditions — lines deleted, hooks closed, routes visually verified, scanner delta
+- **Done when:** observable conditions — lines deleted, hooks closed, routes visually verified, scanner delta, and on the design side, instances re-attached and local styles resolved to variables
 - **Verification:** what gets run (build, visual check against prod, a11y/perf scripts, the deterministic scanner re-run)
 - Ship unit: a wave should be a mergeable PR (or a small stack) — no long-lived adoption branches
 
