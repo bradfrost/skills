@@ -55,6 +55,22 @@ shipped SKILL.md files. Never paraphrase, tighten, or "improve" them in the
 docs** — if the README and the skill disagree, the skill wins and the README
 is wrong.
 
+## FIGMA-ACCESS.md is triplicated on purpose
+
+`reference/FIGMA-ACCESS.md` ships identically inside `ds-inspection`,
+`product-inspection`, and `ds-adoption-plan`. That's deliberate: skills
+install as standalone folders, so a cross-skill reference would break for
+anyone who installed only one of them. `ds-inspection` holds the canonical
+copy.
+
+**If you edit one, sync the other two in the same commit.** Check with:
+
+```bash
+md5 -q skills/*/*/reference/FIGMA-ACCESS.md | sort -u | wc -l   # must print 1
+```
+
+Keep it short. Every line in it is written three times.
+
 ## Honesty rules that outrank good marketing copy
 
 - Never claim enforcement that doesn't exist. Every limit is labeled

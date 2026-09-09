@@ -2,7 +2,7 @@
 
 _Inventoried <date> from source (not built output) · findings tagged `[verified]` / `[reported]` · run: `plans/<date>-ds-adoption-plan.md`_
 
-**Headline:** <one paragraph: greenfield or mid-adoption? total custom surface? the single largest gap category?>
+**Headline:** <one paragraph: greenfield or mid-adoption? total custom surface across code *and* design? the single largest gap category? If the design side couldn't be inventoried, say so here — it changes how the estimate should be read.>
 
 ## 1. Foundation (already adopted)
 
@@ -35,6 +35,19 @@ Dead code (inverse): <styled-but-unused CSS · dead partials no route includes>
 ## 6. Content archaeology
 
 <legacy markup in stored content: pattern → instance count. Transform territory, not hand-edits.>
+
+## 7. Design file surface
+
+_Access: <live-figma (name the bridge) / screenshot / interview — per `reference/FIGMA-ACCESS.md`> · scope: <whole file, or the frames linked>_
+
+| What | Count | Notes |
+|---|---|---|
+| Detached instances | <n> | <which components they drifted from> |
+| Local components duplicating the library | <n> | <names> |
+| Local styles / hardcoded values where variables exist | <n> | <color, type, spacing…> |
+| Off-library frames built from scratch | <n> | <which screens> |
+
+Cross-reference with sections 2 and 3: <which named patterns exist on both sides (one problem, two costs) · design-only (unbuilt work) · code-only (design-undocumented)>
 
 ## Scanner cross-check (if a deterministic analyzer ran)
 

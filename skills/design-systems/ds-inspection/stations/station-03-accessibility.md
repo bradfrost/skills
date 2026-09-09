@@ -16,6 +16,7 @@ question: Do design system assets embody accessibility best practices and delive
 | Component markup & behavior | Repo: read interactive components (focus, ARIA, keyboard handlers) | Pasted source · rendered HTML |
 | Contrast | Token/variable values across themes — compute ratios | Pasted palette · screenshots |
 | Automated checks | CI config: axe-core/Lighthouse/pa11y steps; test files | Interview: "what runs on every PR?" |
+| Design-side a11y | Figma bridge: contrast of the library's own variables across modes, annotation kits, documented focus order and keyboard specs on the components themselves (`reference/FIGMA-ACCESS.md`) | Screenshots of the variables panel · interview |
 | A11y documentation | Docs: per-component a11y notes + org-level guidance | Interview |
 | Real-world signal | Support tickets, user feedback, audit/legal history | Interview |
 
@@ -25,7 +26,8 @@ question: Do design system assets embody accessibility best practices and delive
 2. **Compute contrast from the tokens.** Body text 4.5:1, large text and non-text 3:1 — across *every theme/mode*, not just the default. Dark mode is where contrast quietly dies.
 3. **Check the testing wiring:** automated a11y checks (axe-core or similar) in CI on every change? Keyboard-navigation assertions in component tests? A screen-reader test plan anywhere?
 4. **Check the docs:** per-component a11y notes (keyboard interactions, screen-reader behavior, dos/don'ts)? Org-level accessibility guidance? Is "accessible" part of the definition of done?
-5. **Read the culture** (interview): is a11y in the workflow, or "we'll get to it"? Any legal exposure or user complaints? Does the team communicate to product teams that the system is a leg up, not a hall pass?
+5. **Check the design side.** Accessibility that only exists in code is accessibility a designer can't design with, which means it gets rediscovered in code review every single time. Where you can reach the library: do the *design* variables pass contrast in every mode (this is step 2's check run against the design source rather than the code tokens, and the two can disagree)? Is there an annotation kit, or any way for a designer to spec focus order, keyboard behavior, and alt text without writing prose in a sticky note? Do the components themselves carry a11y guidance in their descriptions? A system whose Figma library is silent on accessibility is handing designers a leg up they can't see.
+6. **Read the culture** (interview): is a11y in the workflow, or "we'll get to it"? Any legal exposure or user complaints? Does the team communicate to product teams that the system is a leg up, not a hall pass?
 
 ## Warning lights
 
@@ -34,6 +36,8 @@ question: Do design system assets embody accessibility best practices and delive
 - Theme colors never validated for contrast
 - Few or no per-component a11y notes
 - No screen reader test plan
+- No a11y annotation kit, and no way for a designer to spec focus order or keyboard behavior in the design file
+- Design variables and code tokens disagree on contrast, so one side is passing while the other ships
 
 ## Scoring anchors
 
@@ -53,7 +57,7 @@ question: Do design system assets embody accessibility best practices and delive
 
 ```markdown
 ### Station 3 — Accessibility: <RED|YELLOW|GREEN> (<n>/10)
-- Sampled: <components, themes checked>
+- Sampled: <components, themes checked> · Design side: <variables contrast-checked, annotation kit present? — or "not reachable">
 - Evidence level: <live / export / screenshot / interview, per asset>
 - Findings:
   - [verified|reported] <finding + evidence, WCAG criterion where applicable>

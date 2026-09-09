@@ -22,6 +22,7 @@ It's distinct from adoption (are the right parts used?) and clarity (do the word
 | Visual hierarchy | Rendered: type scale, weight, and emphasis guide the eye | Screenshots · interview |
 | Cross-page consistency | Same patterns rendered the same way across pages | Side-by-side screenshots · interview |
 | Design language & brand | Rendered pages vs. stated brand/design ideal: distinctness, personality, art direction | Brand guidelines · reference products · interview |
+| The designed intent itself | Figma bridge: read the actual designed screens and their variables, so "shipped vs intended" is a real comparison instead of a recollection (`reference/FIGMA-ACCESS.md`) | Exported PNGs · pasted mockups · interview |
 | Composition | Page-level layout variety and balance — or template monotony | Full-page screenshots · interview |
 | Optical details | Icon sizing/alignment, border/radius consistency, image crops | Zoomed screenshots · interview |
 | Theme/dark-mode | If supported: both themes rendered and checked | Screenshots per theme |
@@ -41,6 +42,7 @@ It's distinct from adoption (are the right parts used?) and clarity (do the word
 6. **Assess distinctness.** Cover the logo: could this be any product built with the same component library, or does it have an identifiable visual voice — color use, type character, imagery, motion, layout personality? Generic-but-tidy is a real finding, not a pass.
 7. **Assess composition.** Is there page-level art direction — varied, intentional layouts matched to content — or does every page fall back to the same stack of section-heading + cards? Template monotony is the "spray of stacked text and cards" tell.
 8. **Compare against the stated ideal.** If brand guidelines, reference products, or north-star designs exist (intake), put shipped screens side-by-side with them. Name the specific gaps — this converts the most subjective checks into evidence.
+9. **Read the design source directly, where you can reach it.** A Figma file the intake captured is the strongest version of step 8: pull the designed screen and the shipped screen side by side and diff them for real. Ask for links to the specific frames that match the pages you walked, because a native bridge works a node at a time. Then check the two kinds of gap separately, because they get different work-order items: **implementation gaps** (the design says 24px, the build ships 16px, the type ramp is off) are engineering fixes and usually trace back to Station 1's drift; **design gaps** (the shipped screen matches the file exactly, and the file itself is the anonymous, template-monotony version) are a design investment and no amount of engineering fixes them. It's important to say which one you found, because "it doesn't match the design" and "the design doesn't have a point of view" are opposite problems with opposite owners.
 
 ## Warning lights
 
@@ -50,6 +52,7 @@ It's distinct from adoption (are the right parts used?) and clarity (do the word
 - Every page the same template: heading, stack of cards, repeat — no compositional intent
 - No identifiable visual voice — the product could be any other built on the same system
 - Shipped screens visibly short of the team's own stated brand/design ideal
+- Shipped screens that match the design file exactly, where the design file itself is the anonymous version (a design problem, not a build problem)
 - Misaligned/mis-sized icons, inconsistent radii/borders, squished images; polish that breaks in one theme
 
 ## Scoring anchors
@@ -69,7 +72,7 @@ It's distinct from adoption (are the right parts used?) and clarity (do the word
 
 ```markdown
 ### Station 6 — Visual design: <RED|YELLOW|GREEN> (<n>/10)
-- Pages reviewed: <n> · Craft (spacing/alignment/consistency): <summary> · Design language (hierarchy/distinctness/composition): <summary> · Ideal compared: <stated ideal or "none provided"> · Themes checked: <list>
+- Pages reviewed: <n> · Craft (spacing/alignment/consistency): <summary> · Design language (hierarchy/distinctness/composition): <summary> · Ideal compared: <stated ideal or "none provided"> · Design source: <frames diffed, or "not reachable" / "none"> · Themes checked: <list>
 - Evidence level: <live / screenshot / interview, per check>
 - Findings:
   - [verified|reported] <finding + evidence>

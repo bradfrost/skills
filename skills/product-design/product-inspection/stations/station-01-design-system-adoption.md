@@ -18,6 +18,7 @@ question: Is the product actually consuming the design system — correctly, as 
 | Dependency & version | Codebase: is the system imported as a versioned package, and how far behind latest? | `package.json` paste · interview |
 | One-off styles | Repo: app-level CSS that should not exist (custom component classes, raw font/color/spacing) | Interview |
 | Detached / forked components | Diff a sample of rendered components against the system's canonical version | Interview |
+| Design-side adoption | Figma bridge: is the product's design file consuming the published library, or full of detached instances and local components? (`reference/FIGMA-ACCESS.md`) | Screenshot of the layers/assets panel · interview |
 
 ## Inspection procedure
 
@@ -26,6 +27,7 @@ question: Is the product actually consuming the design system — correctly, as 
 3. **Check the dependency.** Is the system consumed as a published, versioned artifact — and how far behind latest is it? (If a paired `ds-inspection` ran, cross-reference its adoption/version findings.)
 4. **Hunt app-level CSS that shouldn't exist.** Custom component classes, raw font/color/spacing declarations in the product's own stylesheets are drift by definition.
 5. **Sample for detached components** — pieces that started as the system's and were forked locally, now drifting from canon.
+6. **Check adoption on the design side.** If the product has a design file you can reach, look for the same drift one step upstream: detached instances, local components that duplicate published ones, local styles where variables should resolve. This matters because design-side drift is the *explanation* for a lot of what steps 1 through 5 find. Bespoke markup that nobody can account for usually traces back to a designer working from a detached copy, and a fix that only lands in code will be re-drifted by the next handoff. Scope the claim to what you actually swept: a native Figma bridge reads the frames you link it to, not the whole file.
 
 ## Warning lights
 
@@ -34,6 +36,7 @@ question: Is the product actually consuming the design system — correctly, as 
 - System pinned well behind latest, or vendored/copy-pasted instead of installed
 - App-level custom component CSS
 - Forked/detached components drifting from the canonical version
+- A design file full of detached instances and local styles, which quietly re-supplies the drift every handoff
 
 ## Scoring anchors
 
@@ -53,6 +56,7 @@ question: Is the product actually consuming the design system — correctly, as 
 ```markdown
 ### Station 1 — Design system adoption: <RED|YELLOW|GREEN> (<n>/10)
 - Sampled: <n> components / <n> screens · System version: <in product> vs <latest>
+- Design side: <n detached instances / n local components, scope swept — or "no design file" / "not reachable">
 - Evidence level: <live / screenshot / interview, per asset>
 - Findings:
   - [verified|reported] <finding + evidence>

@@ -14,6 +14,7 @@ question: Can a machine actually consume the system's knowledge, not just a huma
 | What to look at | Best source | Fallbacks |
 |---|---|---|
 | Machine-consumable formats | Repo: tokens as JSON/CSS vars, typed component APIs, component metadata files | Pasted samples · interview |
+| Design-side metadata | Figma bridge: variables as a real token source, and whether component descriptions are filled in or empty (`reference/FIGMA-ACCESS.md`) | Screenshot of the variables panel · interview |
 | AI-facing context surfaces | llms.txt, agent rules files (CLAUDE.md/AGENTS.md/.cursorrules), schemas, component descriptions written for machines | Repo/docs scan · interview |
 | Structure of the docs | Docs source: structured/parseable, or prose-only walls? | Pasted pages |
 | The proof | A generation test — see procedure step 4 | Interview about past AI attempts |
