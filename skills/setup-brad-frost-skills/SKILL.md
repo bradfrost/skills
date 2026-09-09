@@ -23,6 +23,7 @@ them):
 |---|---|---|
 | Limits | `limits-setup`, `limits-sessions`, `limits-quiet-hours`, `limits-endings`, `limits-energy` | **Yes** — the interview |
 | Design systems | `ds-inspection`, `ds-adoption-plan` | No |
+| Design systems | `ds-ascii` | **Yes** — build the design system profile |
 | Product design | `product-inspection` | No |
 
 If none of them are present, say so plainly and stop — tell them to
@@ -49,6 +50,14 @@ around them.
 If a config already exists at `~/.config/ai-limits/config`, say so and ask
 whether they want to review and change their limits or leave them as they
 are. Never silently overwrite limits someone already set.
+
+**If `ds-ascii` is installed:** it needs a profile of the design system
+it will be labeling before its first render. Ask whether they have a design
+system they want it pointed at. If they do, run that skill's
+`intake/PROFILE-INTAKE.md`, which reads the component vocabulary from a
+manifest or an MCP where it can and interviews them where it can't. If they
+don't have one, or they'd rather do it later, say that the skill will build
+the profile the first time they use it and move on.
 
 **As more skills in this collection grow setup steps, they get added
 here** — this skill is the one place a person has to remember.
