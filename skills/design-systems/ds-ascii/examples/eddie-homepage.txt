@@ -1,0 +1,71 @@
+PROOF GATE — one brief, rendered against: Eddie
+Brief: a homepage for a product that helps teams ship faster.
+Fidelity: wireframe · Frame: 52 inner
+
+╔═ [1] <ed-r-site-header> ═══════════════════════════╗
+║ BRANDMARK    Product  Pricing  Docs   [ Sign in ]  ║
+╠═ [2] <ed-hero> ════════════════════════════════════╣
+║                                                    ║
+║               · now in public beta ·               ║
+║               S H I P   F A S T E R                ║
+║               ═════════════════════                ║
+║   One place for the work your team keeps losing.   ║
+║                                                    ║
+║       ▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜   ┌─────────────────┐       ║
+║       ▌ START FREE ▸ ▐   │  Read the docs  │       ║
+║       ▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟   └─────────────────┘       ║
+║                                                    ║
+╠═ [3] <ed-section> › <ed-grid> ═════════════════════╣
+║                                                    ║
+║                    What You Get                    ║
+║                    ────────────                    ║
+║                                                    ║
+║   ┏━━━━━━━━━━━━┓  ┏━━━━━━━━━━━━┓  ┏━━━━━━━━━━━━┓   ║
+║   ┃▒▒▒▒▒▒▒▒▒▒▒▒┃  ┃▒▒▒▒▒▒▒▒▒▒▒▒┃  ┃▒▒▒▒▒▒▒▒▒▒▒▒┃   ║
+║   ┃░░░[###]░░░░┃  ┃░░░/░/░/░░░░┃  ┃░░░(-o-)░░░░┃   ║
+║   ┃▒▒▒▒▒▒▒▒▒▒▒▒┃  ┃▒▒▒▒▒▒▒▒▒▒▒▒┃  ┃▒▒▒▒▒▒▒▒▒▒▒▒┃   ║
+║   ┣━━━━━━━━━━━━┫  ┣━━━━━━━━━━━━┫  ┣━━━━━━━━━━━━┫   ║
+║   ┃  Capture   ┃  ┃  Organize  ┃  ┃    Ship    ┃   ║
+║   ┃            ┃  ┃            ┃  ┃            ┃   ║
+║   ┃ Everything ┃  ┃ Boards that┃  ┃ Close the  ┃   ║
+║   ┃ in one     ┃  ┃ match how  ┃  ┃ loop where ┃   ║
+║   ┃ inbox.     ┃  ┃ you work.  ┃  ┃ it started.┃   ║
+║   ┃ »2 sec«    ┃  ┃ »no setup« ┃  ┃ »1 click«  ┃   ║
+║   ┣━━━━━━━━━━━━┫  ┣━━━━━━━━━━━━┫  ┣━━━━━━━━━━━━┫   ║
+║   ┃  [ Tour ]  ┃  ┃  [ Tour ]  ┃  ┃  [ Tour ]  ┃   ║
+║   ┗━━━━━━━━━━━━┛  ┗━━━━━━━━━━━━┛  ┗━━━━━━━━━━━━┛   ║
+║                                                    ║
+╠═ [4] <ed-single-field-form> ═══════════════════════╣
+║                                                    ║
+║                Get the monthly note                ║
+║                ────────────────────                ║
+║   What we shipped, what broke, what we learned.    ║
+║                                                    ║
+║     [ you@email.com________ ]  ▐ Subscribe ▸ ▌     ║
+║                                                    ║
+╠═ [5] <ed-r-site-footer> ═══════════════════════════╣
+║ BRANDMARK          hello@example.com               ║
+║ Product · Pricing · Docs · Terms · © 2026          ║
+╚════════════════════════════════════════════════════╝
+
+ANATOMY
+[1] <ed-r-site-header>  [verified]
+    · <ed-logo> · <ed-primary-nav> › <ed-primary-nav-item>
+[2] <ed-hero> align="center"  [verified]
+    · h1 + <ed-text-passage> + <ed-button-group>
+[3] <ed-section> › <ed-grid variant="3up">  [verified]
+    · 3 × <ed-grid-item> › <ed-card>
+    · header slot → media (media only) · default → body
+      · footer slot → actions
+[4] <ed-single-field-form>  [verified]
+    · <ed-text-field> + <ed-button variant="primary">
+[5] <ed-r-site-footer>  [verified]
+
+All 14 archetypes bind. Eddie ships page-level composition
+alongside its primitives.
+
+WIDTH CHECK
+rows: 45
+widths: [54] (expected [54])
+clipped: none
+RESULT: PASS
