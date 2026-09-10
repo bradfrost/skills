@@ -45,6 +45,21 @@ chain to exports, screenshots, or the interview, and tag findings
 | Read component descriptions and metadata | **Live** (`get_metadata`) | **Live** (`figma_get_component_details`) |
 | See what changed since last time | **None** | **Live** (`figma_get_design_changes`) |
 
+Two Console-side gotchas, both verified on 2026-09-10:
+
+- **`figma_get_variables` with `resolveAliases: true` can return empty
+  `resolvedValuesByMode`** when it serves from cache. When you need real
+  values, go straight to `figma_execute` and walk `valuesByMode` yourself,
+  following `VARIABLE_ALIAS` entries to their target. That also hands you the
+  alias *structure*, which is usually the more interesting finding.
+- **Don't relay `figma_audit_design_system` subscores as findings.** On Forma
+  36 it returned Accessibility 49/100, while computing WCAG ratios from the
+  same file's variables showed all four semantic colors passing 4.5:1 on
+  white and zero of 67 colors failing against both white and black. The
+  subscore is measuring something other than contrast. Use the audit to aim
+  your attention, then verify the specific claim yourself before it reaches a
+  report.
+
 One trap worth knowing: `search_design_system` searches the *operator's own*
 subscribed libraries, not the file key you hand it. Point it at someone
 else's system and it will cheerfully return your own components with no
@@ -157,9 +172,20 @@ open a link in the browser says nothing about whether the bridge can read it.
 `whoami` reports the account's plans and seats when you need to see what
 you're actually working with.
 
-**A Community file returns only a "Cover" page.** Published Figma Community
-files expose almost nothing through the API until they're duplicated into
-your own drafts or team. If `get_metadata` lists a single page called Cover,
-that's what happened. Ask the user to duplicate the file first, then work
-from their copy's file key. Note that the copy is a *different file* with
-different node ids, which matters for anything Code Connect touches.
+**A Community file returns only a "Cover" page (native only).** Published
+Figma Community files expose almost nothing to the *native* bridge until
+they're duplicated. If `get_metadata` lists a single page called Cover,
+that's what happened.
+
+**The Console bridge is the fix, and it's a better one than duplicating.**
+Verified on Forma 36's Tokens Community file on 2026-09-10: native
+`get_metadata` saw one Cover page and nothing else, while the Console bridge,
+with the same file open in Desktop, read all **149 variables across 4
+collections**. The plugin runs inside the app, so it sees what the person
+sitting there sees, Community restrictions included. Duplicating also works,
+but it hands you a *different file* with different node ids, which quietly
+breaks anything Code Connect touches. Prefer the bridge.
+
+This is the clearest case for keeping both bridges around: it isn't only that
+Console does whole-file work faster, it's that Console can read files native
+cannot open at all.
