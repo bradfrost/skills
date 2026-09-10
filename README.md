@@ -61,6 +61,7 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 | [`product-inspection`](skills/product-design/product-inspection/SKILL.md) | Runs your product through a multi-point health inspection, detailed in Chapter 4 of [AI & Design Systems](https://aianddesign.systems/) |
 | [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md) | Establishes a plan to migrate your product's existing UI over to your design system, detailed in Chapter 4 of [AI & Design Systems](https://aianddesign.systems/) |
 | [`ds-ascii`](skills/design-systems/ds-ascii/SKILL.md) | Sketches a page as labeled ASCII art, where every region maps to a real component in your design system |
+| [`vibe-killer`](skills/product-design/vibe-killer/SKILL.md) | Rebuilds a vibe-coded webpage out of your design system's real components and tokens |
 
 ---
 
@@ -174,6 +175,18 @@ These skills are practical accompaniments to detailed video lessons covered in [
 - **[`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)** analyzes a product to find bespoke user interface components, maps those components to design system equivalents, and then constructs a prioritized strategy to implement the design system adoption. 
 
 **Detailed tutorials, workflows, concepts and lessons for these skills are covered in Chapters 3 and 4 of the [AI & Design Systems](https://aianddesign.systems/) course.**
+
+## Kill the vibes
+
+You've seen the page. Purple gradient hero, three cards with emoji in little rounded squares, a strip of impressive-looking numbers nobody measured, and 400 lines of CSS that exist nowhere else in the world. It looks fine! It's also a dead end, because nothing in your organization can maintain it, theme it, audit it, or reuse one pixel of it.
+
+**[`vibe-killer`](skills/product-design/vibe-killer/SKILL.md)** takes that page and rebuilds it out of your design system, so it stops being an orphan and starts being infrastructure. Same content, same job, running on the components your team already maintains.
+
+It works like this: it reads the page and works out what each region is actually *for* (a gradient band at the top means "this is the entry point," and the entry point is the thing you map). It builds a one-time profile of your design system so it knows your real component names, your real tokens, and how a page loads your runtime. Then it converts, and hands you a receipt with the honest numbers: 47 hardcoded colors and 31 bespoke class names became 11 components and 12 tokens, here's the accessibility it fixed on the way through, and here are the two things your design system doesn't cover yet.
+
+That last part is the sleeper feature. A conversion that surfaces three real holes in your design system did something useful beyond converting a page.
+
+It works with any design system it can read, not just mine, and the field guide it uses to spot a vibe-coded page ([`THE-TELLS.md`](skills/product-design/vibe-killer/reference/THE-TELLS.md)) is worth a read on its own.
 
 ## A living project
 I'll continue adding and iterating on skills with the goal to provide you useful skills to help people in many dimensions of work and life. If you have feedback, thoughts, or ideas, feel free to [get in touch](https://bradfrost.com/contact/). If you'd like to support this work, please consider checking out [our online courses](https://bradfrost.com/courses/), and if you want to follow along you can subscribe to [my newsletter](https://bradfrost.com/newsletter/).
