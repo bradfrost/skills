@@ -12,19 +12,13 @@ Follow this process to install Brad Frost skills:
 
 ### 1. Add the skills
 
-If you use Claude Code, run this in your terminal:
+Run this in your terminal to install these skills for any Claude Code session:
 
 ```bash
 npx skills add bradfrost/skills -g -a claude-code
 ```
 
-That `-a claude-code` matters more than it looks. Without it, the [skills CLI](https://github.com/vercel-labs/skills) asks which agents you want, and if Claude Code doesn't get picked, your skills land in a shared `~/.agents/skills/` folder that Claude never reads. The files download fine, they just end up somewhere Claude won't look. Naming the agent puts them in `~/.claude/skills/`, which is the one place it checks.
-
-On a different agent, swap in your own: `-a codex`, `-a cursor`, `-a copilot`, `-a gemini-cli`. You can name more than one at a time. The goal is for these to work everywhere, though Claude is the best-tested avenue here.
-
-You can also drop the `-g` to install only in the project you're currently in.
-
-**Installed them and Claude can't find them?** Start a new session first, because skills load when a session starts. If they're still missing, look in `~/.agents/skills/`; if they're sitting there, re-run the command above with `-a claude-code` and they'll go where they belong. It's safe to run twice.
+For other agents, swap in `-a codex`, `-a cursor`, `-a github-copilot`, `-a gemini-cli`, which will install into `~/.agents/skills/`. You can also drop the `-g` to install only in the project you're currently in.
 
 ### 2. Run the setup
 
