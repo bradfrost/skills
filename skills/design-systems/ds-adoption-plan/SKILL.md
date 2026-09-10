@@ -65,6 +65,13 @@ Determine which mode the user wants; when ambiguous, ask one short question.
 2. **Announce the plan.** Four phases, what evidence each will use, expected outputs. Let the user narrow scope.
 3. **Run phases 1 → 4 in order**, writing each output file as you go. Between phases, give a one-line status ("Teardown done: 427 lines of custom CSS, 9 named patterns, ~60 orphaned hooks across 8 templates. Mapping next.").
 4. **Close the loop.** Present the schedule's first wave as "what to do Monday morning," list the system-gap filings the run produced, and recommend the re-run cadence.
+5. **Confirm the outputs before you report back.** Check that every artifact the run was supposed to produce exists on disk, each built from its template:
+   - `ds-adoption-plan/GARAGE.md`
+   - `ds-adoption-plan/BASELINE.md` (from `templates/baseline.md`)
+   - `ds-adoption-plan/MAPPING.md` (from `templates/mapping.md`, carrying phase 3's effort grades)
+   - `ds-adoption-plan/plans/<date>-ds-adoption-plan.md` (from `templates/ds-adoption-plan.md`)
+
+   Summarizing a phase in conversation is not the same as writing its file, and a plan that cites a baseline nobody wrote is a plan nobody can re-run. If you can't write files, produce each as its own message rather than folding them together.
 
 ### Mode 2 — Single phase
 
