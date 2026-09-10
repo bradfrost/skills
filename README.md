@@ -145,6 +145,8 @@ You'll only see the flags that apply, so most blocks run 4 or 5 lines. And when 
 🏁 Nothing left to do; you can safely archive this conversation.
 ```
 
+That flag has a test behind it, which means it only shows up when the request that started the session is done and verified, with nothing left on your plate. If four of your five threads landed, you get a 👉 naming the fifth instead.
+
 ### [`limits-energy`](skills/mental-health/limits-energy/SKILL.md): the environmental cost of your AI use
 
 **What you'll set:**
