@@ -73,6 +73,12 @@ Determine which mode the user wants; when ambiguous, ask one short question.
 4. **Write the report** from `templates/inspection-report.md` into `product-inspection/reports/`. Compute the /100 score. Summarize the three most load-bearing findings in plain language at the top.
 5. **Write the work order** from `templates/work-order.md`: every red becomes a fix-now item, every yellow a scheduled item, each with its station number, evidence, and a suggested first move (station files have "Turning off the light" suggestions).
 6. **Recommend a cadence.** Deep inspection each release or quarter; stations worth wiring into CI now (a11y, performance, adoption lint, dependency audit).
+7. **Confirm the outputs before you report back.** Check that all three artifacts exist on disk:
+   - `product-inspection/GARAGE.md`
+   - `product-inspection/reports/<date>-inspection.md`, built from `templates/inspection-report.md`. It must carry the **inspection sheet** and the **evidence basis**, not just station records.
+   - `product-inspection/work-orders/<date>-work-order.md`, built from `templates/work-order.md`
+
+   **A work-order-shaped table inside the report is not the work order.** The report *links* to the work order; it doesn't contain it. This is the step that gets dropped on long runs, and it's easy to miss precisely because the report reads fine without it. If you can't write files, produce all three as separate messages rather than folding them together.
 
 ### Mode 2 — Single station (ad hoc)
 

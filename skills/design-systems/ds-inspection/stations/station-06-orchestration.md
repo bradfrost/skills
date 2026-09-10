@@ -16,6 +16,7 @@ question: Are design, code, and docs assets actually connected, and are workflow
 | Design ↔ code parity | Both sides live: diff 3–5 components' variants/props/tokens/visuals | Exports of both · screenshots vs. rendered components |
 | Docs ↔ reality parity | Docs pages vs. current component APIs | Pasted docs + API tables |
 | Token sync | Token pipeline: single source flowing to design + platforms, or parallel manual copies? | Interview + both exports |
+| Token list parity | Both lists side by side: design variables (bridge) vs code tokens (repo), diffed on values, names, and set membership | One side pasted/exported · interview |
 | Published vs. repo | Latest package vs. repo head — how stale is what consumers get? | Changelog · npm metadata |
 | Workflow reality | How a change actually travels: who touches what, in what order | Interview; recent change post-mortem |
 
@@ -24,9 +25,17 @@ question: Are design, code, and docs assets actually connected, and are workflow
 1. **Diff design against code** for 3–5 components: same variants? same prop/property names and values? same token bindings? same visual result? Small mismatches here are the early smoke of big drift.
 2. **Diff docs against reality:** do documented props/guidance match the shipping component, or describe a previous version?
 3. **Trace the token pipeline:** one source of truth flowing everywhere (e.g. tokens → Style Dictionary → platforms + design variables), or parallel copies maintained by hand? Do web/iOS/Android agree?
-4. **Check for duplicated sources of truth:** the same guidance copy-pasted into design files, code comments, and a docs site is three things to maintain and a drift generator. Cross-linking beats copying.
-5. **Trace one real change end to end** (interview): when a component changed recently, how did design, code, and docs each get updated? Deliberate workflow with a definition of done spanning all three — or heroics and memory?
-6. **Look for sync mechanisms:** Code Connect or similar bridges, drift-detection checks, CI parity tests, agentic cross-referencing — anything that *notices* divergence before users do.
+4. **Diff the token lists three ways.** "Parallel copies maintained by hand" is the start of the finding, not the end of it. Pull the design library's variable list and the code's token list, then compare them on three separate axes, because they drift independently and each one has a different owner:
+   - **Values** — do the tokens present on both sides resolve to the same thing? Convert units before you compare, since `1rem` and `16` are the same number wearing different clothes. Follow aliases to their target and compare the *structure* too: a semantic token pointing at a different primitive on each side is a real divergence even when both resolve to the same hex.
+   - **Names** — same concept, same spelling? Check the delimiter (`spacing/m` vs `spacing-m`), the word break (`demibold` vs `demi-bold`), and the shape (`colors-semantic/primary` vs `color-primary`). These look cosmetic and they're what makes automated diffing impossible later.
+   - **Set membership, in both directions** — what exists in design and not code, and what exists in code and not design? This is the axis people skip and it's usually where the surprises are. A whole token family that only one side knows about will never show up in a value comparison.
+
+   **Values matching while names drift is the common case, and it reads healthier than it is.** It means two hand-maintained lists are being kept accurate by careful people. That's real work and worth crediting in the report. It's also the thing that degrades the first time someone ships in a hurry, and nothing will catch it.
+
+   No design-library access? Diff the code tokens against whatever token export the user can paste or screenshot, and say which side you couldn't reach.
+5. **Check for duplicated sources of truth:** the same guidance copy-pasted into design files, code comments, and a docs site is three things to maintain and a drift generator. Cross-linking beats copying.
+6. **Trace one real change end to end** (interview): when a component changed recently, how did design, code, and docs each get updated? Deliberate workflow with a definition of done spanning all three — or heroics and memory?
+7. **Look for sync mechanisms:** Code Connect or similar bridges, drift-detection checks, CI parity tests, agentic cross-referencing — anything that *notices* divergence before users do.
 
 ## Warning lights
 
@@ -34,6 +43,7 @@ question: Are design, code, and docs assets actually connected, and are workflow
 - Changes flow one way only — design updates never reach code, or code never reaches docs
 - No mechanism to propagate a change across all three; syncing is manual and ad hoc
 - Tokens diverge across platforms (web, iOS, Android)
+- Design and code token lists disagree on names, or on which tokens exist at all, even where the values still match
 - Detached instances or competing forks drifting on their own
 - Figma component names and variants don't match their code counterparts
 
@@ -56,6 +66,7 @@ question: Are design, code, and docs assets actually connected, and are workflow
 ```markdown
 ### Station 6 — Orchestration: <RED|YELLOW|GREEN> (<n>/10)
 - Diffed: <components/assets compared>
+- Token diff: <n design vars vs n code tokens · values: match/differ · names: match/differ · design-only: <list> · code-only: <list>, or "not run — no design-side access">
 - Evidence level: <live / export / screenshot / interview, per asset>
 - Findings:
   - [verified|reported] <drift/connection finding + evidence>

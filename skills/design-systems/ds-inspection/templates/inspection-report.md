@@ -59,5 +59,8 @@ _Vehicle profile: `ds-inspection/GARAGE.md` (checked in <date>)_
 ## Next service
 
 - Work order: `ds-inspection/work-orders/<date>-work-order.md`
+  <!-- If that file doesn't exist yet, you haven't finished the run. The work order
+       is a separate artifact built from templates/work-order.md; a prioritized
+       table pasted into this report is not it. -->
 - Recommended cadence: deep inspection <quarterly>; everyday checks to wire into CI: <stations>
 - Re-inspect by: <date>
