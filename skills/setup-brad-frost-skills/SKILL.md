@@ -25,6 +25,7 @@ them):
 | Design systems | `ds-inspection`, `ds-adoption-plan` | No |
 | Design systems | `ds-ascii` | **Yes** — build the design system profile |
 | Product design | `product-inspection` | No |
+| Product design | `vibe-killer` | **Yes** — build the design system profile |
 
 If none of them are present, say so plainly and stop — tell them to
 install first (`npx skills add bradfrost/skills -g`). Don't guess, and
@@ -58,6 +59,18 @@ system they want it pointed at. If they do, run that skill's
 manifest or an MCP where it can and interviews them where it can't. If they
 don't have one, or they'd rather do it later, say that the skill will build
 the profile the first time they use it and move on.
+
+**If `vibe-killer` is installed:** it needs a profile of the design system
+it will be converting pages onto. Ask whether they have one in mind. If they
+do, run that skill's `intake/SYSTEM-INTAKE.md`, which reads the component
+vocabulary and the runtime out of an MCP, a manifest, or a repo where it can
+and interviews them where it can't. If they don't have a design system yet,
+or they'd rather do it later, say the skill will build the profile the first
+time they use it and move on.
+
+If both `ds-ascii` and `vibe-killer` are installed, run whichever intake
+they want first and say that the second one will read the first's profile
+rather than asking everything again.
 
 **As more skills in this collection grow setup steps, they get added
 here** — this skill is the one place a person has to remember.
