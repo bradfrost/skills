@@ -55,7 +55,10 @@ inherits nothing and asks you to maintain it forever.
    clue about intent. A gradient band at the top of the page means "this is
    the entry point," and the entry point maps to your hero or page header.
    The gradient itself is not a requirement, it's an artifact of a model's
-   default taste. `reference/THE-TELLS.md` is the decoder.
+   default taste. `reference/THE-TELLS.md` is the decoder. The same goes for
+   the system side: map to the component that does the job, not the one
+   that happens to look similar. A small line of text above a heading looks
+   like a badge, and it's actually type.
 5. **Content is sacred, chrome is not.** Never rewrite the page's words to
    make the conversion easier, and never drop a section because it's awkward
    to map. If some copy has AI tells of its own, flag it in the receipt and
@@ -68,7 +71,9 @@ inherits nothing and asks you to maintain it forever.
    evidence the conversion was worth doing.
 7. **A page you never rendered is a claim, not a result.** Run the checks in
    phase 4. If you have no way to render or validate, say that plainly in
-   the receipt rather than implying it works.
+   the receipt rather than implying it works. A region you never *looked at*
+   is a claim too. A clean validator and a DOM check that says every slot
+   filled can both pass on a page a person would reject in seconds.
 8. **No shame, ever.** Somebody made a thing, and making things is good. The
    original page is not stupid and neither is the person who prompted it.
    The receipt reports counts and facts, never snark.
@@ -98,8 +103,14 @@ chain, using whatever exists. Never require a vendor.
 **Check the don'ts, not just the names.** The intuitively-named component is
 often the wrong one, and a good catalog says so in its own guidance. Read
 the target's don't-use notes and accessibility notes before you commit to a
-mapping. When the catalog corrects your first instinct, that correction is
-worth recording; it's usually the most interesting line in the autopsy.
+mapping.
+
+**Then treat that guidance as a claim, too.** Catalogs are written by people,
+and they drift from the code underneath them. A usage note can recommend a
+component for a job its own styles were never built to do. When the catalog
+corrects your first instinct, write the correction down, but don't call it a
+win until you've rendered that region and looked at it. The most useful line
+in an autopsy is often the one where the catalog and the render disagree.
 
 ## Modes
 

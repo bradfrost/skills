@@ -17,6 +17,11 @@ check can: its slot contracts, its anti-patterns, its placement rules.
 Fix what it flags, then run it again. Never report a validator's complaint
 as "expected" without saying why.
 
+**A clean validator is necessary, not sufficient.** Validators check how the
+markup is written: slot names, anti-patterns, placement rules. They can't
+see a caption rendering as a black bar or a paragraph sitting right on top
+of its buttons. Don't lead the receipt with a clean run.
+
 If there is no validator, say so in the receipt in one line. Missing tooling
 is a finding about the system, not something to paper over.
 
@@ -29,6 +34,22 @@ it, and check at a narrow width too, since vibe-coded originals are usually
 tested at exactly one desktop size and a converted page shouldn't inherit
 that.
 
+**Confirm the renderer before you trust a single number from it.** Some
+browser tools run hidden or headless, and a hidden page can report a 0px
+viewport, skip repainting after a scroll, never fire an
+`IntersectionObserver`, or hand you a stale snapshot after a reload. Every
+measurement still comes back looking plausible. Before you record anything,
+check that:
+
+- the viewport width is the width you asked for, not 0
+- the element count is roughly what the source holds (a page with 200
+  components shouldn't report 11)
+- the page reflects your last edit, not a cached copy
+
+When the renderer fails those checks, say so, and read the source directly
+for anything structural. A heading outline, a slot contract, and a nesting
+check can all be verified from the file without a browser.
+
 Watch for:
 
 - Anything that didn't render at all. Empty regions are the signature of a
@@ -37,6 +58,12 @@ Watch for:
   theme class is missing.
 - Fallback serif type, which means the theme's fonts didn't load.
 - Anything wider than the viewport at 320px.
+- Siblings with no space between them. Measure the gap between adjacent
+  elements in each region. 0px almost always means the element that owns the
+  spacing isn't the direct parent anymore, because something got wrapped
+  around the content.
+- Every region that got a catalog correction in phase 2. Look at each one,
+  then mark the correction confirmed or overturned in the autopsy.
 
 **If you cannot render in this environment, say exactly that in the
 receipt.** Do not imply a page works because it looks right in source. This
@@ -92,6 +119,10 @@ didn't have:
 - Every form field has a real label
 - Icon-only buttons have accessible names
 - `lang` on `<html>`
+- Line length: long prose stays under about 80 characters per line. That's
+  WCAG 1.4.8 (a AAA criterion, and a good default at any level). Measure the
+  widest paragraph at desktop width; anything wider belongs in the system's
+  reading-width container
 - Contrast: if you can measure it, measure it. If you can't, say which pairs
   you're relying on the system's tokens for, since a token pair the system
   ships and tests is genuinely stronger evidence than an eyeballed guess.
@@ -100,7 +131,24 @@ If you have an automated checker, run it and paste the output.
 
 ---
 
-## 5. Write the receipt
+## 5. Have a person look at it
+
+Everything above can pass on a page a person would reject in seconds. So
+before the receipt is final, put the rendered page in front of a human.
+
+Send screenshots region by region, at desktop and narrow widths, and ask
+them to scan for anything that looks wrong: text jammed against an edge,
+type that doesn't match its job, spacing that collapsed, a treatment that
+doesn't fit the region. If nobody is available, say that in the receipt's
+proof table. "No human review" is a legitimate result; leaving the row out
+is not.
+
+Fix what they find. When a problem traces back to the system itself, draft
+it as a gap like any other.
+
+---
+
+## 6. Write the receipt
 
 Fill in `templates/receipt.md`. It has to carry, at minimum:
 
@@ -116,7 +164,7 @@ Fill in `templates/receipt.md`. It has to carry, at minimum:
 
 ---
 
-## 6. Close it out
+## 7. Close it out
 
 Show the user:
 
@@ -127,6 +175,7 @@ Show the user:
 3. The gap list, with the drafted issues, and a direct question about
    whether to file them.
 4. Anything you couldn't prove.
+5. What the human review turned up, and what changed because of it.
 
 Then stop. The conversion is done. If they want another page, that's another
 run.
@@ -135,7 +184,7 @@ run.
 
 ## The honesty floor
 
-Three things this phase must never do, because each of them makes every
+Four things this phase must never do, because each of them makes every
 future receipt worthless:
 
 - **Report a count you estimated as if you measured it.** Say "estimated
@@ -143,3 +192,5 @@ future receipt worthless:
 - **Claim the page renders when you never rendered it.**
 - **Report zero bespoke CSS when a gap got quietly hand-rolled.** If you
   wrote a rule, it's in the receipt.
+- **Count a catalog correction as a win before you've looked at the
+  region.** Until it renders the way the catalog promised, it's a claim.

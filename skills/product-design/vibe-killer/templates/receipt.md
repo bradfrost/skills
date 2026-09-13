@@ -75,10 +75,15 @@ verified.>
 
 | Check | Result |
 |---|---|
-| System validator | <output, or "no validator exists for this system"> |
+| Renderer confirmed | <viewport width and element count matched the source, or **what failed, and what was checked from source instead**> |
 | Rendered in a browser | <yes, at 320 / 768 / 1280, or **not rendered, and why**> |
+| Human visual review | <who looked and what they found, or **no human review**> |
+| Catalog corrections | <n confirmed · n overturned after rendering> |
+| Line length | <widest prose measured at N characters per line> |
+| Spacing | <no adjacent siblings at 0px, or where> |
 | Deterministic counts | <measured, or estimated from a screenshot> |
 | Contrast | <measured, or relying on the system's tested token pairs> |
+| System validator | <output, or "no validator exists for this system">. Necessary, not sufficient |
 | Automated a11y check | <output, or none available> |
 
 ---

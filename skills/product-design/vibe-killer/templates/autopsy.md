@@ -50,10 +50,15 @@ HTML | rendered DOM | screenshot>
 <n> gap · <n> keep
 **Evidence:** <n> verified · <n> reported
 
-### Corrections the catalog made
+### Where the catalog corrected the mapping
 
-Where the obvious component was the wrong one, and what the system's own
-guidance said instead.
+Where the obvious component was the wrong one, what the system's own
+guidance said instead, and what the render showed. Mark each one
+**confirmed** or **overturned** in phase 4. An overturned correction is the
+catalog being wrong, and it's worth drafting as a gap.
+
+| First instinct | Catalog said | After rendering |
+|---|---|---|
 
 ---
 

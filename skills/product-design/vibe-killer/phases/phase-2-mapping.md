@@ -66,9 +66,34 @@ pages.
 
 Then check the **don'ts**. If the catalog's own guidance warns against the
 component you picked, take the correction and record both: what you reached
-for first and what the catalog said instead. That row is the most
-interesting one in the autopsy and it's a genuine finding about how the
-system teaches itself.
+for first and what the catalog said instead.
+
+**Mark it unconfirmed until phase 4.** A catalog's usage notes are a claim
+about how a component behaves, and they can be wrong. A component can be
+recommended for a job its own styles work against, or a slot can invite
+content it has no room for. Phase 4 renders every corrected region and
+either confirms the correction or overturns it. Both outcomes are findings
+about how the system teaches itself; only one of them is a win.
+
+---
+
+## Map by job, not by silhouette
+
+The easiest wrong mapping is the component that looks like the original.
+Phase 1 wrote down what each region is *for*, so map that and ignore the
+shape. These come up on almost every page:
+
+| What you see | What it looks like | What it usually is |
+|---|---|---|
+| A short line of small text above a heading | A badge or tag | Type: the system's small-label or meta text style, not a chip |
+| A quotation with a name under it | A figure with a caption | A blockquote carrying its attribution. Check what the figure's caption actually renders like before you use it |
+| An icon at the top of a card | Card media | Content. Media slots are often full-bleed with no padding, which is right for a photo and wrong for a glyph |
+| A real status, like `Now in beta` or `v2.0` | A badge | A badge. Some small pills really are badges |
+
+When the system has no component for the job (plenty of systems have no
+eyebrow, for example), name the type style or pattern the region needs and
+record the gap. Don't borrow a component just because it has the right
+silhouette.
 
 ---
 

@@ -86,6 +86,9 @@ Ask, or find out yourself:
   errors.
 - **Theme activation.** A class on `<html>`? A `data-theme` attribute? A
   provider component? What's the default theme, and what else is available?
+  If the page might switch themes at runtime (a theme picker, a dark mode
+  toggle), find out what that takes. Changing the class often isn't enough
+  when each theme's tokens and fonts load from separate files.
 - **A base or reset layer.** Many systems ship one. Find out whether it's
   required, and whether it makes layout assumptions the page has to respect.
 - **Any light-DOM stylesheets.** Some components style content outside their
@@ -93,7 +96,10 @@ Ask, or find out yourself:
   miss and the page looks broken without them.
 
 **Then test it.** Write the smallest possible page that loads the runtime and
-renders one component. If you can open it, you're done. If you can't render
+renders one component **from every package** the system ships. Packages in
+the same system can differ: one can publish a browser-ready build while its
+sibling ships only files that need a bundler, and the second one fails
+silently. If every component shows up, you're done. If you can't render
 anything in this environment, write the boot block down anyway and mark it
 `[untested]` in the profile, loudly.
 

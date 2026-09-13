@@ -115,9 +115,13 @@ are a legal and ethical problem, not a copy problem.
 reading `✨ Now in beta` or `🎉 v2.0 is here`, sitting directly above the
 `<h1>`.
 
-**What it means:** An eyebrow or badge. Check whether your hero or page
-header already has a slot for this before you reach for a standalone badge
-component.
+**What it means:** Either a real status or an eyebrow, and those map to
+different things. A status that's true and will change (`Now in beta`,
+`v2.0 is here`) is a badge or tag. A line of supporting text that labels the
+heading beneath it (a section number, a category, a kicker) is an eyebrow,
+and an eyebrow is type: the system's small-label or meta text style, never a
+chip, however much it looks like one. Check whether your hero or page header
+already has a slot for either before you reach for a standalone component.
 
 ### The dark-light-dark sandwich
 

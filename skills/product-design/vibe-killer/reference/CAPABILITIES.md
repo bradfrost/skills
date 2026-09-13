@@ -27,6 +27,13 @@ each one has a workaround or an honest thing to say instead.
 - **Verify what a page looks like without a browser.** Source that reads
   correctly is not a rendered page. When there's no browser in the
   environment, the receipt says "not rendered" and means it.
+- **Trust a browser that isn't really rendering.** A hidden or headless
+  browser can report a 0px viewport or serve a stale snapshot and still hand
+  back plausible numbers. Phase 4 confirms the renderer first, and reads the
+  source instead when it can't.
+- **Tell you the page looks right.** Validators and DOM checks confirm how
+  the page is built, not whether it looks correct. A person has to look
+  before the receipt calls it done.
 - **Invent a component the system doesn't have.** By design. That's a gap,
   and naming it is the useful output.
 - **Know a system it can't read.** With no catalog access, every mapping is
@@ -46,6 +53,8 @@ each one has a workaround or an honest thing to say instead.
 | No catalog access | Full conversion from an interview | "Every component name here is `[reported]`. Verify before shipping." |
 | Screenshot only | Regions, content, mapping, conversion | "Before-numbers are estimates. No markup or a11y signal was available." |
 | No browser | Everything through phase 3, plus the greps | "Not rendered. Counts are from source." |
+| Browser that isn't really rendering | Structural checks from source: heading outline, slots, nesting | "The browser couldn't be trusted, so these checks came from source." |
+| No person to review it | Everything automated | "No human review. Nobody has looked at this page yet." |
 | No validator | The deterministic counts | "This system ships no validator. Counts are grep-based." |
 | JS-rendered page, no browser | Nothing useful | Stop. Ask for the rendered HTML or a screenshot. |
 
