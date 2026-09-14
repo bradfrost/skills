@@ -60,6 +60,7 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 | [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md) | Runs your design system through the 10-station inspection, detailed in Chapter 3 of our [AI & Design Systems course](https://aianddesign.systems) |
 | [`product-inspection`](skills/product-design/product-inspection/SKILL.md) | Runs your product through a multi-point health inspection, detailed in Chapter 4 of [AI & Design Systems](https://aianddesign.systems/) |
 | [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md) | Establishes a plan to migrate your product's existing UI over to your design system, detailed in Chapter 4 of [AI & Design Systems](https://aianddesign.systems/) |
+| [`ds-token-architecture`](skills/design-systems/ds-token-architecture/SKILL.md) | Checks your design tokens against the three-tier architecture we teach in [Subatomic](https://designtokenscourse.com/), or establishes a tier ladder from a codebase that has no tokens yet |
 | [`ds-ascii`](skills/design-systems/ds-ascii/SKILL.md) | Sketches a page as labeled ASCII art, where every region maps to a real component in your design system |
 | [`vibe-killer`](skills/product-design/vibe-killer/SKILL.md) | Rebuilds a vibe-coded webpage out of your design system's real components and tokens |
 

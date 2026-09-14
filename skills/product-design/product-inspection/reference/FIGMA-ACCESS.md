@@ -4,10 +4,10 @@ What you can actually see in Figma, per bridge, and what to do when you
 can't see anything. No bridge gets to look more capable than it is.
 
 > **This file is duplicated, on purpose.** Identical copies ship inside
-> `ds-inspection`, `product-inspection`, `ds-adoption-plan`, and `ds-ascii`,
-> because skills install as standalone folders and any one of them may be
-> the only one you installed. `ds-inspection`'s copy is canonical. If you
-> edit one, sync the other three.
+> `ds-inspection`, `product-inspection`, `ds-adoption-plan`, `ds-ascii`,
+> `vibe-killer`, and `ds-token-architecture`, because skills install as
+> standalone folders and any one of them may be the only one you installed.
+> `ds-inspection`'s copy is canonical. If you edit one, sync the other five.
 
 Probed against a live account on 2026-09-08, then corrected against a real
 system (Forma 36) on 2026-09-10. The capability rows come from each server's
