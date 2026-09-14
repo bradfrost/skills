@@ -66,6 +66,17 @@ the CSS property it was used on (a `#fff` used as `color` and a `#fff` used
 as `background` are two different jobs; that's E4's input). Write it to
 `ds-token-architecture/extraction/<category>.json`.
 
+**From a Figma file instead of (or as well as) code.** The same extraction
+works on a design file that has styles but no variables, or local fills
+everywhere. With the Console bridge, `figma_execute` can walk every fill,
+stroke, text style, and effect in the file and count them; with the native
+bridge you're reading the frames the user links you to, so say so. Record
+provenance as node ids and frame names instead of files and lines, and the
+property the value was applied to (fill, stroke, text) the way you'd record
+the CSS property. If both a codebase and a Figma file exist, extract both
+and keep them as separate columns through E2; a value that appears on only
+one side is its own finding before it's a token.
+
 Report the raw counts before doing anything else. "214 distinct colors, 38
 font sizes, 61 spacing values" is the sentence that gets a team to fund the
 next step.

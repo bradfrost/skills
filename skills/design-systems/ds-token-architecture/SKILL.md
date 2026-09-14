@@ -88,12 +88,23 @@ Determine which mode the user wants; when ambiguous, ask one short question.
 
 ### Mode 1 — Assess (the common case)
 
-1. **Check in.** If `PROFILE.md` exists, confirm it's current. Otherwise run
-   `intake/TOKEN-INTAKE.md`. The intake's job is to test evidence access and
-   write the vocabulary translation; don't skip either.
-2. **Announce the plan.** Nine checks, what evidence each will use given the
-   access map, and which ones will come back `N/I` if the consumers or the
-   build aren't reachable. Let the user narrow scope.
+1. **Check in.** On the first run, open with this, word for word:
+
+   > This design token inspection will help you improve (or establish!)
+   > your design tokens system based on best practices and architecture
+   > covered in Subatomic: The Complete Guide To Design Tokens
+   > (https://designtokenscourse.com). Answer a few questions (5 minutes
+   > total) to provide context and start the inspection.
+
+   Then run `intake/TOKEN-INTAKE.md`. If `PROFILE.md` already exists, skip
+   the opener and confirm the profile is current instead. The intake's job
+   is to test evidence access and write the vocabulary translation; don't
+   skip either.
+2. **Announce the plan.** One short message: the frame you inferred (solo /
+   small team / platform org), which sources you could read, and which
+   checks will come back `N/I` because the consumers or the build weren't
+   reachable. Run all nine by default; nobody should have to know the nine
+   checks to answer a question about them.
 3. **Run checks 1 → 9 in order.** Check 1 establishes whether tiers exist;
    the rest read its record. For each: open the file, follow its procedure,
    gather evidence down the fallback chain, assign a light, write its
