@@ -42,7 +42,7 @@ differ wherever the system moved. Your job is to sort the differences:
   the pinned one. Expected. Point at the `GAPS.md` entry.
 - **Relocation error:** something you mapped wrong, a fixture field in the
   wrong place, a region missing. Fix it now, then re-screenshot.
-- **Deliberate omission:** placeholders from intake option C. Expected, say
+- **Deliberate omission:** placeholders from question 4 option C. Expected, say
   so.
 
 Say this plainly at the top of the report, in roughly these words:
@@ -87,7 +87,8 @@ Then file, if the intake asked for it (question 5):
 - Title: `[product-to-storybook] <name>: seen in <N> product(s)`.
 - Body: the ledger row, the screenshot, the nearest component, and a link
   back to the story.
-- Option C: show the list, wait for a yes, then file.
+- Option B: show the list, wait for a yes, then file. Option C: ledger
+  only, file nothing.
 
 The same site header in six products is one issue that says six. Six
 issues that each say one is noise.

@@ -1,8 +1,7 @@
 # Product intake
 
-<!-- DRAFT STATUS: every quoted question in this file is draft wording. Brad
-wordsmiths each one after the hub dry run, before the PR merges. Search for
-WORDSMITH to find them. Delete this banner and the markers when done. -->
+<!-- WORDSMITH: the opening and the five questions are Brad's final wording.
+The login script below is still draft (bradfrost/skills#33). -->
 
 Five questions, each with a default, asked in one batch. The answers go into
 `product-to-storybook/<product>/GARAGE.md` so a refresh never asks twice.
@@ -30,92 +29,100 @@ Say what you found first.
 
 ---
 
+## The opening
+
+Say this first, before any question, in exactly these words:
+
+> This skill takes your existing product UI and backfills a representation
+> into your Storybook workshop environment. Representing product screens in
+> Storybook directly connects product to system, applies atomic design
+> principles, and unlocks the ability to prototype product screens using
+> the design system's UI components. Answer a few questions to begin the
+> backfill process.
+
 ## The five questions
 
-Ask all five together. Lead with the defaults so a person in a hurry can
-say "defaults are fine" and move on.
+Ask all five together, right after the opening. Lead with the defaults so a
+person in a hurry can say "defaults are fine" and move on.
 
-### 1. Where's the product?
+### 1. Where does the product live?
 
-<!-- WORDSMITH -->
-> **Where's the product?** A path to the repo, a live URL, or both. A repo
-> gives me the richest results, because the templates are right there in the
-> source and I can see exactly which parts come from your design system. A
-> live URL works too, but the template list becomes my best guess from the
-> rendered pages, and I'll ask you to check it.
+> **Where does the product live?** Please provide a path to the product
+> source code repository and/or a URL to the live product. Product source
+> code will produce richer results as it surfaces imports, templates, design
+> system usage, and more. A live product URL works too, but rendered pages
+> don't provide as much context.
 >
-> **Default:** both, if you have both.
+> Provide access to the product repo and/or product URL.
 
 Record: repo path, URL, and which one you actually had. If it's URL-only,
 every template in the inventory gets tagged `[inferred]`.
 
-### 2. Where's your design system's Storybook?
+### 2. Where does your design system's Storybook live?
 
-<!-- WORDSMITH -->
-> **Where's your design system's Storybook?** I'll look for it myself and
-> tell you what I found; I just need you to confirm I've got the right one.
+The Storybook intake runs before this question, so the path is already
+known. Surface it and ask for confirmation:
+
+> **Where does your design system's Storybook live?** The intake identified
+> the path as `/path/to/storybook/`.
 >
-> **Default:** the one in `product-to-storybook/STORYBOOK.md`, if the intake
-> already ran.
+> - This is correct (Y)
+> - Provide another path
 
-If the Storybook intake hasn't run, run it now and come back.
+Fill in the real path from `STORYBOOK.md`. If the intake somehow hasn't
+run, run it now and come back; never ask this question with a blank path.
 
-### 3. Where should product screens live?
+### 3. What Storybook category should the product screens belong to?
 
-<!-- WORDSMITH -->
-> **Where should this product's screens live in Storybook?** They need a
-> home of their own so nobody mistakes a product screen for a system
-> component.
+> **What Storybook category should the product screens belong to?** For
+> clarity, product screens live in a separate section in Storybook than
+> core components.
 >
-> **Default:** `Products/<product name>/`. (If your Storybook already has a
-> section for product pages, I'll suggest that one instead.)
+> - Use existing structure if it exists
+> - `Products/<product name>/` (Default)
+> - Provide your own Storybook category structure
 
-Record the section title and the file path it maps to, from the Storybook
-profile.
+When `STORYBOOK.md` found an existing product section, name it in the
+first option (for example "Use existing structure: `Pages/we are here./`")
+so the person knows what they're choosing. Record the section title and the
+file path it maps to.
 
-### 4. What do we do with UI that doesn't come from your design system?
+### 4. How do you want to handle non-system components?
 
-<!-- WORDSMITH -->
-> **Some of this product's UI won't come from your design system.** A site
-> header the product built itself, a widget, a layout nobody made a
-> component for. I'll flag every one of those so you can see them at a
-> glance. What do you want done with them in the stories?
+> **How do you want to handle non-system components?**
 >
-> - **A. Bring them in as-is.** The product's own markup and CSS, scoped so
->   it can't leak into anything else, and outlined so it's obvious what's
->   not from the system. *(Default. You lose nothing and you see the gaps.)*
-> - **B. Split each one into its own recipe or pattern.** Same markup, but
->   filed as a named piece next to the stories, which makes it easy to turn
->   into a real component later. I'll set up the files; I won't turn them
->   into production components.
-> - **C. Leave them out.** A marked placeholder where each one was. The
->   page reads as a wireframe wherever the system has no answer.
-> - **D. Something else.** Tell me.
->
-> **Default:** A.
+> - **A. Import them as-is into the page** - This scopes the custom markup
+>   & CSS so it won't leak into anything else, and is outlined so it's
+>   obvious what's not in the system. (Recommended. You lose nothing and
+>   you see the gaps.)
+> - **B. Split each one into its own recipe or pattern.** - Each custom
+>   component will be filed as a named piece next to the stories. This
+>   doesn't turn them into design system components, but makes it easy to
+>   turn into formal components later.
+> - **C. Leave them out** - Replace custom components with a placeholder so
+>   the page articulates only the system-powered components and reads as a
+>   wireframe wherever the system currently has no answer.
+> - **D. Something else**
 
 Record the letter. Option C is the only one that hides UI, so if they pick
 it, say plainly that the side-by-side report will show holes and that's
 expected.
 
-### 5. Where should gaps go?
+### 5. Would you like to file issues for gaps in the system?
 
-<!-- WORDSMITH -->
-> **Every region that isn't from your system is a possible gap in it.** I'll
-> keep a ledger of those no matter what. Do you also want them filed?
+> **Would you like to file issues for gaps in the system?** Every custom
+> component is a potential gap in the design system. This process will keep
+> a ledger of those gaps.
 >
-> - **A. The ledger only** (`GAPS.md` next to the stories).
-> - **B. The ledger, plus a GitHub issue per distinct gap** on your design
->   system's repo. One issue per gap, not per product: the same site header
->   seen in six products is one issue that says "seen in 6 products." I'll
->   check for an open issue before filing and update it instead of
->   duplicating.
-> - **C. Both, but show me the list before you file anything.**
->
-> **Default:** A.
+> - **A. Automatically file/update issues for gaps in the design system's
+>   issue tracker** (recommended)
+> - **B. Present the gaps for review before filing/updating any issues**
+> - **C. Don't file/update gap issues; Only produce the gaps ledger
+>   (`GAPS.md`)**
 
-Record the letter and, for B or C, the repo the issues go to and the label
-to use.
+Record the letter and, for A or B, the repo the issues go to and the label
+to use. Filing is always one issue per distinct gap, deduped against open
+issues, never one per product; `phases/phase-4-proof.md` has the rule.
 
 ---
 
@@ -124,7 +131,7 @@ to use.
 Don't ask this up front. It comes up in phase 1 or 2 the moment a page
 refuses to render without a session. When it does, say this:
 
-<!-- WORDSMITH -->
+<!-- WORDSMITH: draft -->
 > This screen needs a login. Here's how I handle that: I never touch
 > credentials, and I never put a real person's data into a fixture. If you
 > have the repo, I'll build the fixtures from the shape of the data in the

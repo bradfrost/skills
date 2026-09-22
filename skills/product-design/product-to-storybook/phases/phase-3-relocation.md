@@ -61,7 +61,7 @@ instead of a surprise.
 
 ## Bucket 2 — Regions that aren't from the system
 
-The intake answer (question 4) decides what happens here. Whatever the
+The answer to question 4 decides what happens here. Whatever the
 answer, mark the region `data-origin="product"` and give it a name:
 `data-p2s-name="Site header"`. The gap ledger is built from these
 attributes.

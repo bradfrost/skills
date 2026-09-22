@@ -25,9 +25,9 @@ each one has an honest thing to say instead.
 - **Convert anything.** A region that isn't from the system stays that
   way, flagged. Converting it is `vibe-killer`'s job, afterward, if you
   want it.
-- **Author production components.** Intake option B sets up files. It does
-  not build a props API, register anything in the system's package, or
-  write docs. A person decides what becomes a real component.
+- **Author production components.** Question 4 option B sets up files. It
+  does not build a props API, register anything in the system's package,
+  or write docs. A person decides what becomes a real component.
 - **Prototype.** Every screen it builds already exists. "This product
   doesn't exist yet" is a different skill with different placeholders.
 - **See behind a login on its own.** It never handles credentials. The

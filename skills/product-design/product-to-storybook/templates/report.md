@@ -48,7 +48,7 @@ issues filed.*
 |---|---|---|
 | Card corners rounder | version drift | `GAPS.md` row 2 |
 | Tag list wraps at 5 not 6 | relocation error, fixed | fixture had a trailing tag |
-| Newsletter block missing | deliberate omission | intake option C |
+| Newsletter block missing | deliberate omission | question 4 option C |
 
 <Repeat per permutation.>
 

@@ -15,7 +15,7 @@ nobody will ever see.
 | Attribute | Values | On what |
 |---|---|---|
 | `data-origin` | `system` \| `product` | Every region that renders something |
-| `data-placeholder` | `missing-component` | A stand-in for a region that isn't built (intake option C, or a template branch nobody finished) |
+| `data-placeholder` | `missing-component` | A stand-in for a region that isn't built (question 4 option C, or a template branch nobody finished) |
 | `data-p2s-name` | the product's name for the region | Every `product` region and every placeholder |
 | `data-p2s-product` | the product slug | The wrapper the decorator puts around the whole story |
 | `data-p2s-outline` | present or absent | The same wrapper; set by the toolbar toggle |

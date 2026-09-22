@@ -21,7 +21,7 @@
 | 2 | Which Storybook? | `<STORYBOOK.md path>` |
 | 3 | Where do screens live? | `<section>` → `<file path>` |
 | 4 | UI not from the system | <A as-is / B recipes / C omit / D: …> |
-| 5 | Where gaps go | <A ledger / B issues on `<repo>` label `<label>` / C show first> |
+| 5 | File gap issues? | <A auto-file on `<repo>` label `<label>` / B review first / C ledger only> |
 
 ## Login handling
 
