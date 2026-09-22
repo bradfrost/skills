@@ -84,12 +84,14 @@ mode could hide them.
 
 ## The decorator and the toggle
 
-Added to the host Storybook's `preview.*`, in the host's own syntax. What it
+The toolbar global goes in the host's `preview.*`. The decorator goes in
+each product's story files (declared once in a shared meta object next to
+the product's shell, spread into every file), never in `preview.*`. What it
 has to do, in any renderer:
 
-1. **Run only on the product section.** Check the story's title prefix
-   against the section from `GARAGE.md`. The system's own stories never
-   see this decorator; phase 4 proves it.
+1. **Exist only where product stories import it.** Declared per file, it
+   cannot run on a system story. Phase 4 still proves it with a before and
+   after screenshot.
 2. **Wrap** the story in `<div data-p2s-product="<slug>">`.
 3. **Load** `markers.css` and `<slug>.scoped.css` once, on first use.
 4. **Read the `Origins` global** and set `data-p2s-outline` on the wrapper
