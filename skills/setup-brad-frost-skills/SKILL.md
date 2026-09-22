@@ -26,6 +26,7 @@ them):
 | Design systems | `ds-ascii` | **Yes** — build the design system profile |
 | Product design | `product-inspection` | No |
 | Product design | `vibe-killer` | **Yes** — build the design system profile |
+| Product design | `product-to-storybook` | **Yes** — learn the host Storybook |
 
 If none of them are present, say so plainly and stop — tell them to
 install first (`npx skills add bradfrost/skills -g`). Don't guess, and
@@ -68,9 +69,17 @@ and interviews them where it can't. If they don't have a design system yet,
 or they'd rather do it later, say the skill will build the profile the first
 time they use it and move on.
 
-If both `ds-ascii` and `vibe-killer` are installed, run whichever intake
-they want first and say that the second one will read the first's profile
-rather than asking everything again.
+**If `product-to-storybook` is installed:** it needs a profile of the
+Storybook it will be relocating product screens into: how a story is
+written there, where product screens should live, and how the design
+system loads. Ask whether they have a design system Storybook. If they do,
+run that skill's `intake/STORYBOOK-INTAKE.md`, which reads most of it out
+of the repo and asks about the rest. If they don't have one yet, say the
+skill will build the profile the first time they use it and move on.
+
+If more than one of `ds-ascii`, `vibe-killer`, and `product-to-storybook`
+is installed, run whichever intake they want first and say that the others
+will read that profile rather than asking everything again.
 
 **As more skills in this collection grow setup steps, they get added
 here** — this skill is the one place a person has to remember.
