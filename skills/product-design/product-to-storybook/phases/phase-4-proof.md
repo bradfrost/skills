@@ -27,6 +27,11 @@ empty region with no error is the classic symptom of a slot name that
 doesn't exist locally, so check the version-drift entries first when you
 see one.
 
+**Restart the Storybook dev server before this phase** if you added story
+files after it booted. Storybook's watcher missed every file created after
+boot in the Eddie run; the stories only existed in `index.json` after a
+restart.
+
 ## 3. Side by side with the live product
 
 For every permutation, screenshot the live page and the story at two
@@ -44,6 +49,12 @@ differ wherever the system moved. Your job is to sort the differences:
   wrong place, a region missing. Fix it now, then re-screenshot.
 - **Deliberate omission:** placeholders from question 4 option C. Expected, say
   so.
+
+**When the live product can't be captured**, say so and describe the expected
+differences from source instead. A local server can be wedged, throttle a
+headless browser, or answer curl and time out a page load (the hub did all
+three). Never fake a capture, and never commit a live capture that carries
+real people's data, even when you got one.
 
 Say this plainly at the top of the report, in roughly these words:
 

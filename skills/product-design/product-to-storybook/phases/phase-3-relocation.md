@@ -126,8 +126,17 @@ One decorator and one toolbar global, added to the host Storybook per
   `data-p2s-name`; every placeholder gets a hatched fill. Off, the story
   looks like the product.
 
-Scope the decorator to the product section (by title prefix) so it never
-runs on the system's own stories. That's a promise phase 4 checks.
+Declare the decorator in each product story file's meta (a shared
+`hubStoryMeta`-style object next to the shell keeps that to one line), not in
+`preview.*` with a title-prefix check. Declared per file, it is structurally
+impossible for it to run on a system story. Phase 4 still proves it.
+
+**Expect the host's validator to reject the product's classes.** A design
+system's naming rule (`ed-c-*` only, say) will flag every `cw-*` class the
+product brought along. That is the origin marker doing its job in a
+different voice. Record the count in the ledger; never rename a product
+class to satisfy the rule, and check whether the host's CI scans the folder
+the stories live in (Eddie's does not scan `.storybook/`).
 
 ---
 

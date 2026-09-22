@@ -29,6 +29,13 @@ Templates are in the source. Find them:
 - **The pinned version.** From `package.json` or the lockfile. Compare it to
   the local system's version and write both down.
 
+**When the product is a client-rendered app**, there are no layouts in the
+11ty sense. The templates are the view renderers: find the router (the
+route table, the dispatch function) and the function each route calls, and
+group by the skeleton those functions emit. The shell is whatever static
+markup wraps every view. bf-brain's hub was 21 view renderers behind one
+`index.html`, grouped into 6 templates.
+
 ## From a live URL
 
 Templates are inferred from the pages. Be honest about that: tag every

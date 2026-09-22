@@ -57,6 +57,8 @@ each one has an honest thing to say instead.
 | Repo, no reachable URL | Full inventory from source, fixtures from the data shape | "Content is from the repo's own data, not a live capture." |
 | Behind a login | Fixtures from shape, or user-driven capture | "I'll never touch credentials or real user data. Sign in yourself, or I build from shape." |
 | No browser | Stories written, no proof | "Not rendered. Nobody has confirmed these stories display." |
+| Live product unreachable under a browser (wedged local server, throttling) | Everything except the live captures | "Live side by side not captured; expected differences described from source." |
+| Host validator rejects product classes | Everything | "N naming findings, all the product's own classes. Expected; see the ledger." |
 | No `@scope` support in the target browser | Selector prefixing under the product wrapper | "Product CSS is prefixed instead of scoped. Less airtight; the scope check still runs." |
 | No sibling profiles | Storybook intake from scratch | Nothing special; it takes ten minutes longer. |
 | Host has no product section | `Products/` created | "New section. Confirm the file path lands inside the `stories` glob." |

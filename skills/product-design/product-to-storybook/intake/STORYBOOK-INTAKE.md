@@ -86,9 +86,16 @@ repo so the user decides with real information:
 - Is there a monorepo boundary? A product's stories might need to live in a
   package that already depends on every component package, or they'll fail
   to import anything.
+- **Is the existing product-pages location published?** Eddie's
+  `Pages/<product>/` section lives in `eddie-pages`, an npm package of
+  reference templates that the catalog indexes and the docs standard gates.
+  Product screens carry frozen product content, which is data, and a
+  published primitive package must not ship data. When the existing spot is
+  published, the default flips to a new, unpublished section (`Products/`
+  under the Storybook config folder), and you say why.
 
-Record the candidate location, the file path it maps to, and what has to be
-true for the glob to pick it up.
+Record the candidate location, the file path it maps to, whether it is
+published, and what has to be true for the glob to pick it up.
 
 ---
 
@@ -101,8 +108,13 @@ Read `preview.*` and record:
 - **Theme activation.** A global toolbar, a decorator, a class on the
   preview `<html>`. If there's a theme switcher, product screens should
   respond to it, which means they must not hardcode a theme.
-- **Existing decorators and globals.** You'll add one of each (the origin
-  outline toggle from `reference/MARKERS.md`), so know what's there first.
+- **Existing decorators and globals.** You'll add a toolbar global (the
+  Origins toggle from `reference/MARKERS.md`); the decorator itself goes in
+  each product's story files, never here. Know what's there first.
+- **Which components the preview registers.** Some systems register
+  everything globally; some leave page-level components (Eddie's `ed-page`,
+  `ed-stack`) for stories to import. The product shell imports what the
+  preview doesn't.
 - **Existing product CSS**, if any product screens already live here. How
   did they scope it? If they didn't, that's a finding for the report, not
   something to copy.
