@@ -116,17 +116,9 @@ wrong section, or when the system's load order changed.
 
 ## Reading the product
 
-A source repo, a live URL, or both. Say this to the user up front, in
-roughly these words:
-
-> A repo gives me the richest results, because the templates are right there
-> in the source and I can see exactly which components come from your
-> system. A live URL works too: I can infer the core templates and their
-> permutations from the rendered pages, but the grouping is a guess I'll
-> need you to check, and I can't see what's underneath a region without the
-> code.
-
-Record which one you had. Every downstream artifact says so.
+A source repo, a live URL, or both. Question 1 of `intake/PRODUCT-INTAKE.md`
+says what each one buys, in the words the user sees. Record which one you
+had; every downstream artifact says so.
 
 ## Where things go
 

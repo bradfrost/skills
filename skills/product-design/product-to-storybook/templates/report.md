@@ -9,10 +9,10 @@ issues filed.*
 **Local system:** <x.y.z> · **Product pins:** <x.y.z> · **Source:** <repo / URL / both> · **Date:** <date>
 **Stories:** `<path>` · **Ledger:** `./GAPS.md` · **Inventory:** `./INVENTORY.md`
 
-> These won't match pixel for pixel, and they shouldn't. The stories run on
-> your local design system (<x.y.z>) and the product pins <x.y.z>. Every
-> difference below is labeled: version drift you'll want to know about, or
-> something I got wrong and fixed.
+> Note: these screens won't match the live product exactly because
+> Storybook runs on the local design system (<x.y.z>) while the product runs
+> on <x.y.z>. Each difference between renderings is labeled accordingly
+> (version drift, relocation errors, omissions, etc).
 
 ---
 

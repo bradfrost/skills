@@ -92,5 +92,6 @@ Add a "Content sample" section to `INVENTORY.md`: one line per permutation
 naming the source page and *why* it was chosen ("longest title on the
 site", "only post with a table"). Then close the phase in one line:
 
-> Captured 11 fixtures across 5 templates. Default for Post is the 2024
-> design tokens post (median length, one image, six tags). Relocation next.
+> This phase collected 11 fixtures across 5 templates. The default for the
+> Post template is the 2024 design tokens post (median length, one image,
+> six tags). Moving onto relocation next.

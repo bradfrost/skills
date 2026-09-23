@@ -58,10 +58,10 @@ real people's data, even when you got one.
 
 Say this plainly at the top of the report, in roughly these words:
 
-> These won't match pixel for pixel, and they shouldn't. The stories run on
-> your local design system (0.67.0) and the product pins 0.59.0. Every
-> difference below is labeled: version drift you'll want to know about, or
-> something I got wrong and fixed.
+> Note: these screens won't match the live product exactly because
+> Storybook runs on the local design system (0.67.0) while the product runs
+> on 0.59.0. Each difference between renderings is labeled accordingly
+> (version drift, relocation errors, omissions, etc).
 
 ## 4. The system's own stories didn't change
 

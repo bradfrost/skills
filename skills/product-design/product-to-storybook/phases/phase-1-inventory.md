@@ -92,14 +92,26 @@ render. Tag each template `[source]` or `[inferred]`.
 
 ## The checkpoint
 
-**Stop here.** Show the user the inventory in a few lines and wait:
+**Stop here.** Show the user the inventory in this shape and wait. One
+numbered line per template, biggest first; name a template's permutation
+count only when it has more than one:
 
-> Here's what I found: 5 templates, 11 permutations. Post is the big one
-> (about 1,900 pages, 4 permutations). Home, Note, and Page are one
-> permutation each. The 404 is its own template. Three regions show up on
-> every template and aren't from your system: the site header, the site
-> footer, and the newsletter signup. Does this grouping look right? Anything
-> to add, merge, or drop?
+> The inventory found 5 templates and 11 permutations:
+>
+> 1. Post is the biggest, containing about 1,900 pages and 4 permutations
+> 2. Page has 2 permutations
+> 3. Home
+> 4. Note
+> 5. 404
+>
+> Three custom components show up on every template and aren't from the
+> design system: the site header, the site footer, and the newsletter
+> signup.
+>
+> To continue, select one of the following:
+>
+> - Go ahead and build this
+> - Make revisions (add, edit, drop, etc)
 
 Take their corrections, update `INVENTORY.md`, and only then move to phase
 2. Do not build a single story before this is confirmed. On a repo-sourced

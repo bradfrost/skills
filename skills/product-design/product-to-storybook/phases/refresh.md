@@ -32,7 +32,12 @@ choice the user has to make.
 Templates in the fresh inventory that have no story, and stories whose
 template is gone from the product.
 
-> *Update the stories / ignore for now / file it as an issue?*
+> The product has templates that Storybook doesn't (or the other way
+> around). What should happen?
+>
+> - Update Storybook to match the product
+> - Leave Storybook as it is for now
+> - File an issue to deal with it later
 
 ### Permutations changed
 
@@ -40,7 +45,12 @@ For each existing permutation: the source page changed (content diff
 against the fixture), the source page is gone (404), or a new branch
 appeared in the template that no story covers.
 
-> *Re-capture this fixture / keep the frozen one / file it?*
+> The content behind these screens has changed since it was captured. What
+> should happen?
+>
+> - Re-capture the content so the screen matches the product again
+> - Keep the captured content as it is
+> - File an issue to deal with it later
 
 ### Pinned version bumped
 
@@ -49,14 +59,23 @@ appeared in the template that no story covers.
 row in `GAPS.md`: some will have closed (the product caught up), some will
 be new.
 
-> *Update GARAGE.md and the ledger / ignore?*
+> The product moved to a newer version of the design system. What should
+> happen?
+>
+> - Record the new version and update the version-drift ledger
+> - Leave it as it is for now
 
 ### New UI that isn't from the system
 
 Regions in the fresh render that carry no system component and match no
 existing `data-p2s-name`. Each one is a candidate `GAPS.md` row.
 
-> *Add to the ledger / add and file / ignore?*
+> The product has new custom components that aren't from the design
+> system. What should happen?
+>
+> - Add them to the gap ledger
+> - Add them to the gap ledger and file issues
+> - Leave them out for now
 
 ---
 

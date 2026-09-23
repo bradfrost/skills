@@ -1,8 +1,5 @@
 # Product intake
 
-<!-- WORDSMITH: the opening and the five questions are Brad's final wording.
-The login script below is still draft (bradfrost/skills#33). -->
-
 Five questions, each with a default, asked in one batch. The answers go into
 `product-to-storybook/<product>/GARAGE.md` so a refresh never asks twice.
 
@@ -131,13 +128,15 @@ issues, never one per product; `phases/phase-4-proof.md` has the rule.
 Don't ask this up front. It comes up in phase 1 or 2 the moment a page
 refuses to render without a session. When it does, say this:
 
-<!-- WORDSMITH: draft -->
-> This screen needs a login. Here's how I handle that: I never touch
-> credentials, and I never put a real person's data into a fixture. If you
-> have the repo, I'll build the fixtures from the shape of the data in the
-> templates. If I need to see the rendered page, sign in yourself in your
-> own browser and I'll read what's on screen, then write fixtures with made
-> up values in the real shapes.
+> **This screen requires a login.** Credentials are never handled by this
+> process, and real user data never ends up in a fixture.
+>
+> - **A. Build from the source code.** If the product repo is available,
+>   fixtures are written from the shape of the data in the templates, with
+>   placeholder values. (Recommended)
+> - **B. Sign in yourself.** Log in with your own browser, and the rendered
+>   screen will be used to write fixtures with placeholder values in the
+>   real shapes.
 
 Record the choice in `GARAGE.md`. If a capture turns out to contain real
 user data anyway, stop, delete it, and say so before continuing. That's rule
