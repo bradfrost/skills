@@ -18,6 +18,16 @@ One row per distinct gap. Rows merge on name across products.
 |---|---|---|---|---|
 | `ed-card variant="raised"` (0.59) | `variant` dropped in 0.63; `elevation="2"` | Home, Post | renders `elevation="2"` | |
 
+## Product bugs found by relocating (not drift)
+
+Rendering the product's markup against the local catalog turns up things the
+product cannot see about itself: a prop that never existed, a tag the
+component renders as nothing, a handler wired to nothing. They go to the
+product's tracker, not the system's.
+
+| Finding | Where | Issue |
+|---|---|---|
+
 ## Missing components (placeholders)
 
 | Name | Seen in | Why it's a hole | Screenshot | Issue |

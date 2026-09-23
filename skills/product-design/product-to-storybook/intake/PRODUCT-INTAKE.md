@@ -138,7 +138,10 @@ refuses to render without a session. When it does, say this:
 >   screen will be used to write fixtures with placeholder values in the
 >   real shapes.
 
-Record the choice in `GARAGE.md`. If a capture turns out to contain real
+Option A keeps the run moving now; option B pauses until the person has
+signed in, and the rendered screens are then read from their browser (never
+copied into the repo: they carry real data). Record the choice in
+`GARAGE.md`. If a capture turns out to contain real
 user data anyway, stop, delete it, and say so before continuing. That's rule
 4 in `SKILL.md` and it has no exceptions.
 

@@ -88,12 +88,34 @@ point of A is that the story shows the product as it is, outlined so
 everyone can see which parts the system doesn't own.
 
 **B. Split each one into its own recipe.** Same markup and CSS as A, but
-each region becomes its own file next to the stories (a partial, a small
-component, a template fragment, whatever the host renderer calls that) with
-the product's name for it. The story imports them. Set up the files and
-nothing more: no props API, no docs page, no registration in the system's
-package. Turning one into a real component is a decision for a person and a
-different session.
+each region becomes its own file next to the stories, with the product's
+name for it. The shape that worked (Content Brain, 35 files):
+
+- `patterns/<kebab-name>.ts` exports one render function returning the
+  region's markup, with `data-origin="product"` and `data-p2s-name` on its
+  root. Eddie-wrapping components (a file that is mostly `<ed-*>` tags with
+  a few product classes) are still pattern files: the product owns them.
+- `patterns/<kebab-name>.css` holds that region's own stylesheet verbatim,
+  wrapped in `@scope ([data-p2s-product="<slug>"]) { … }`. Rules the region
+  takes from a global product stylesheet stay in the product's scoped file.
+- The product shell globs `patterns/*.css` and hands the lot to the
+  decorator, so adding a pattern never touches the shell.
+
+Set up the files and nothing more: no props API, no docs page, no
+registration in the system's package. Turning one into a real component is
+a decision for a person and a different session.
+
+**Translating from a framework template.** The product's markup rarely
+arrives as plain HTML. Carry the structure, drop the behaviour:
+
+| Product wrote | Story writes |
+|---|---|
+| `v-if` / `{#if}` / `{cond && …}` | a ternary, one branch per permutation |
+| `v-for` / `{#each}` / `.map` | `.map` over the fixture |
+| `:prop="…"` / `{prop}` | an attribute, `?attr` for booleans, `.prop` for arrays and objects |
+| `@click` / `on:click` / `onClick` | dropped; stories are static (keep `aria-*`) |
+| `<style scoped>` | the pattern's `.css`, plain selectors inside `@scope` |
+| a child component | its own pattern file |
 
 **C. Leave them out.** A placeholder in the region's place, marked
 `data-placeholder="missing-component"` with the same `data-p2s-name`, sized
