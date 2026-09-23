@@ -175,6 +175,16 @@ the stories live in (Eddie's does not scan `.storybook/`).
 
 ---
 
+**Search the system for every product component by name before writing a
+pattern file for it**, including components named after another product or
+after the product itself. A recipe ported *from* the product you are
+relocating can live under a `common/` folder with a different name; a
+builder who searches for "radial chart" finds nothing and hand-rolls what
+`ed-r-wheel-of-life` already does. One catalog search per component name,
+and the lead re-checks the not-from-the-system rows against the recipe list
+before the ledger is written. The review caught this once (we are here.,
+2026-09-23); the search is cheaper than the review.
+
 ## Building a big product in parallel
 
 Past six or seven templates, one session writing every story is the slow
