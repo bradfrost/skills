@@ -28,7 +28,11 @@ The shape, in whatever syntax the host uses:
   `EmptyResults`. Storybook's sidebar then reads as a list of the content
   shapes the system has to support, which is half the value of this whole
   exercise.
-- **Fullscreen layout** and whatever else the host's page stories set.
+- **Fullscreen layout** and whatever else the host's page stories set,
+  written literally in the file's `parameters` (a spread hides it from
+  Storybook, and the product renders inside a padded canvas). The screen
+  should sit against the canvas edge the way the product sits against the
+  viewport.
 - **A product wrapper** around the whole story:
   `<div data-p2s-product="<product>">`. This is what the scoped CSS and the
   outline toggle hang off. The decorator below adds it, so the story itself

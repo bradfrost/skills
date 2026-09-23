@@ -63,6 +63,11 @@ page or template story if the repo has any. Record:
   `tags: ['!autodocs']`, a status parameter, a viewport default. Page-sized
   stories in this repo probably all set the same few things. Find them and
   use them.
+  **Write `parameters` literally in every story file's default export.**
+  Storybook reads `layout` statically, so a `parameters` block spread in
+  from a shared meta object is ignored and the story renders with the
+  padded canvas. Decorators and tags can come from the shared object;
+  `parameters` cannot.
 - **Where fixture data lives** when a story has any. A sibling JSON file, an
   inline object, a `data/` folder. Follow the local habit.
 
