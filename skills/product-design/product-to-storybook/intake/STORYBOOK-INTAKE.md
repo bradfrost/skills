@@ -112,7 +112,17 @@ Read `preview.*` and record:
   fonts, component registrations, light-DOM stylesheets.
 - **Theme activation.** A global toolbar, a decorator, a class on the
   preview `<html>`. If there's a theme switcher, product screens should
-  respond to it, which means they must not hardcode a theme.
+  respond to it, which means the decorator must not hardcode a theme. A
+  product that ships its *own* theme in the system is the one exception,
+  and it pins the theme per story, not in the decorator: with
+  `@storybook/addon-themes`, `parameters.themes.themeOverride: '<theme>'`
+  written literally in each story file locks that story to its theme and
+  the toolbar shows the lock. Phase 4's scope check is what proves the class
+  came off again for the next story (it did, we are here., 2026-09-23).
+- **Whether the package's own typecheck reaches the Storybook folder.** A
+  `tsconfig.json` with `include: ["./"]` skips dot-folders, so
+  `.storybook/**` may be covered only by a root-level typecheck. Record
+  which command actually checks the story files.
 - **Existing decorators and globals.** You'll add a toolbar global (the
   Origins toggle from `reference/MARKERS.md`); the decorator itself goes in
   each product's story files, never here. Know what's there first.

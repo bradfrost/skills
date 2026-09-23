@@ -32,6 +32,15 @@ files after it booted. Storybook's watcher missed every file created after
 boot in the Eddie run; the stories only existed in `index.json` after a
 restart.
 
+**When axe fails, where it fails decides what happens.** A failure inside a
+`data-origin="product"` region is the product's: exclude that selector for
+that story (`parameters.a11y.context.exclude = ['[data-origin="product"]']`),
+name the rule in a comment, and file it to the product. A failure inside a
+system region is the system's: keep the story gated on everything else, run
+it at `test: 'todo'` so the violation stays visible, and file it to the
+system. Never "fix" the markup to pass in either case. (Eddie: the hub's
+Court story and `ed-r-chunky-checkbox`'s hardcoded `<h3>`, #2170.)
+
 ## 3. Side by side with the live product
 
 For every permutation, screenshot the live page and the story at two
@@ -76,6 +85,12 @@ Any difference means the product's CSS escaped its scope. Fix the scope,
 don't ship the leak, and record what happened in the report. A product
 restyling the system's Storybook is the one outcome worse than not doing
 this at all.
+
+**Run the scope check alone.** With 88 screenshot renders hitting the same
+dev server at the same time, one system story came back as a page that had
+loaded without its styles (Times, no tokens): not a leak, a starved server.
+Re-run in isolation before calling it either way, and say in the report
+that you did.
 
 ## 5. Finish the ledger
 

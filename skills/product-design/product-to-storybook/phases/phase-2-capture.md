@@ -82,7 +82,18 @@ anything from an account), stop:
    widths, and say that's what you did in `_meta.source`.
 
 A product owner's own public content (their blog posts, their bio) is fine.
-Their customers' content is not. When you can't tell, ask.
+Their customers' content is not. When you can't tell, ask. A third party
+named inside the product's own copy (a quoted expert, the author of a
+cited document, a byline) gets the same treatment as customer data: the
+name and its link are replaced and `_meta.source` says so. It's the one
+edit the "content is content" rule allows, and it's applied the same way
+every run (Subatomic's attributed quotes, we are here.'s charter citation).
+
+**A signed-in product's data reaches you through the browser, not the
+repo.** Read the live screens for shape, counts and widths; write fixtures
+from the source's types and seed files with invented values in those
+widths; every person comes from one shared `fixtures/members.json` of
+invented members so the same invented people recur across templates.
 
 ---
 

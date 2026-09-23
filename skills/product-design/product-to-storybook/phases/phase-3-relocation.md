@@ -175,6 +175,39 @@ the stories live in (Eddie's does not scan `.storybook/`).
 
 ---
 
+## Building a big product in parallel
+
+Past six or seven templates, one session writing every story is the slow
+path. What worked for a 13-template, two-surface product (44 stories in an
+afternoon):
+
+1. **The shell first, by the lead.** `shell.ts`, the scoped global CSS, the
+   patterns every template shares (footer, page header, site header), the
+   invented-members fixture, and the catalog lookups behind the shell's own
+   `<ed-*>` tags. Nothing a builder writes may touch these.
+2. **One brief, in a file.** The story file shape verbatim, the marker
+   rules, the framework translation table, the fixture rules, what the live
+   screens showed for each template (counts and widths only, never names),
+   and the checks a builder runs before reporting. Builders read the brief,
+   the host profile, one worked example from an earlier product, and their
+   own templates' source; nothing else.
+3. **Two to four templates per builder**, grouped by shell (the auth pages
+   together, the marketing site together, the two heaviest pages alone).
+4. **A notes file per builder** with fixed sections: stories written, region
+   counts, not-from-the-system rows, drift rows, product bugs, system
+   findings, axe, catalog lookups, not done. The lead merges the notes into
+   the ledger; builders never write the ledger themselves.
+5. **The lead runs phase 4.** Builders check their own files (lint, an
+   ad-hoc typecheck, a fixture sweep); rendering, axe, the scope check and
+   the ratchets run once, from one session, after the dev server restarts.
+
+**Page CSS that reuses class names across pages** (two pages both styling
+`.card__name` differently, a page class that is also a component's root
+class, bare `li` / `dt` rules) needs a per-page scope on top of the product
+scope: `@scope ([data-p2s-product="<slug>"] [data-p2s-page="<route>"])`,
+with the story setting `data-p2s-page` on its own root. It stands in for
+the framework's scoped-style attribute (Vue's `data-v-*`).
+
 ## Write the first pass at the ledger
 
 Scrape every `data-origin="product"` and `data-placeholder` region across
