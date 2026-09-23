@@ -100,6 +100,9 @@ name for it. The shape that worked (Content Brain, 35 files):
   takes from a global product stylesheet stay in the product's scoped file.
 - The product shell globs `patterns/*.css` and hands the lot to the
   decorator, so adding a pattern never touches the shell.
+- A layout wrapper that is nothing but a class on a `div` (a page padding
+  wrapper, a flex row, a spacer) stays inline in the story, marked. Pattern
+  files are for things a person would call a component.
 
 Set up the files and nothing more: no props API, no docs page, no
 registration in the system's package. Turning one into a real component is
