@@ -57,13 +57,22 @@ Rules:
   opacity: 0.7;
 }
 
-/* Product regions are outlined only when the toggle is on. */
-[data-p2s-outline] [data-origin="product"] {
+/* Product regions are outlined only when the toggle is on. `:where()` keeps
+   the rule at one attribute of specificity, so a product's own `position:
+   fixed` or `absolute` on a region wins the tie and the toggle never moves
+   anything. Without it, Content Brain's fixed toast wrapper fell into the
+   flow and every story overflowed. */
+/* The containing block for the badge, at ZERO specificity: any product rule,
+ * even a bare element selector, wins the tie, so the toggle never re-positions
+ * a region the product positioned itself. */
+:where([data-p2s-outline] [data-origin="product"]) {
   position: relative;
+}
+:where([data-p2s-outline]) [data-origin="product"] {
   outline: 2px solid #d6336c;
   outline-offset: -2px;
 }
-[data-p2s-outline] [data-origin="product"]::after {
+:where([data-p2s-outline]) [data-origin="product"]::after {
   content: "Not from the system: " attr(data-p2s-name);
   position: absolute;
   inset: 0 auto auto 0;
@@ -71,7 +80,15 @@ Rules:
   background: #d6336c;
   color: #fff;
   font: 600 0.75rem/1 system-ui, sans-serif;
-  z-index: 1;
+  /* Never wider than the region it names: a long name on a narrow region at the
+   * page edge would otherwise widen the document. The full name is in the attribute. */
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* Above sticky headers and drawers; the badge must never hide under the region it names. */
+  z-index: 2147483000;
   pointer-events: none;
 }
 ```

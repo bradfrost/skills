@@ -28,7 +28,11 @@ The shape, in whatever syntax the host uses:
   `EmptyResults`. Storybook's sidebar then reads as a list of the content
   shapes the system has to support, which is half the value of this whole
   exercise.
-- **Fullscreen layout** and whatever else the host's page stories set.
+- **Fullscreen layout** and whatever else the host's page stories set,
+  written literally in the file's `parameters` (a spread hides it from
+  Storybook, and the product renders inside a padded canvas). The screen
+  should sit against the canvas edge the way the product sits against the
+  viewport.
 - **A product wrapper** around the whole story:
   `<div data-p2s-product="<product>">`. This is what the scoped CSS and the
   outline toggle hang off. The decorator below adds it, so the story itself
@@ -53,6 +57,12 @@ product uses no longer exists locally:
 - Don't paper over it in the story with custom CSS. If the local component
   can't do what the product's version did, that's exactly what the ledger
   is for.
+
+**A product pinned years behind** (Eddie 0.17, 0.18, 0.37 in the fleet run)
+turns this into the main event: components that were never published, props
+that were renamed twice, a shell that never worked on the pin. Every one is a
+ledger row; a component that no longer exists at all is a placeholder with
+its slotted content kept inside, so the screen still reads.
 
 This is the ripple working as intended. The product's screen, rendered on
 the newer system, shows what the next product release is going to look
@@ -88,12 +98,37 @@ point of A is that the story shows the product as it is, outlined so
 everyone can see which parts the system doesn't own.
 
 **B. Split each one into its own recipe.** Same markup and CSS as A, but
-each region becomes its own file next to the stories (a partial, a small
-component, a template fragment, whatever the host renderer calls that) with
-the product's name for it. The story imports them. Set up the files and
-nothing more: no props API, no docs page, no registration in the system's
-package. Turning one into a real component is a decision for a person and a
-different session.
+each region becomes its own file next to the stories, with the product's
+name for it. The shape that worked (Content Brain, 35 files):
+
+- `patterns/<kebab-name>.ts` exports one render function returning the
+  region's markup, with `data-origin="product"` and `data-p2s-name` on its
+  root. Eddie-wrapping components (a file that is mostly `<ed-*>` tags with
+  a few product classes) are still pattern files: the product owns them.
+- `patterns/<kebab-name>.css` holds that region's own stylesheet verbatim,
+  wrapped in `@scope ([data-p2s-product="<slug>"]) { … }`. Rules the region
+  takes from a global product stylesheet stay in the product's scoped file.
+- The product shell globs `patterns/*.css` and hands the lot to the
+  decorator, so adding a pattern never touches the shell.
+- A layout wrapper that is nothing but a class on a `div` (a page padding
+  wrapper, a flex row, a spacer) stays inline in the story, marked. Pattern
+  files are for things a person would call a component.
+
+Set up the files and nothing more: no props API, no docs page, no
+registration in the system's package. Turning one into a real component is
+a decision for a person and a different session.
+
+**Translating from a framework template.** The product's markup rarely
+arrives as plain HTML. Carry the structure, drop the behaviour:
+
+| Product wrote | Story writes |
+|---|---|
+| `v-if` / `{#if}` / `{cond && …}` | a ternary, one branch per permutation |
+| `v-for` / `{#each}` / `.map` | `.map` over the fixture |
+| `:prop="…"` / `{prop}` | an attribute, `?attr` for booleans, `.prop` for arrays and objects |
+| `@click` / `on:click` / `onClick` | dropped; stories are static (keep `aria-*`) |
+| `<style scoped>` | the pattern's `.css`, plain selectors inside `@scope` |
+| a child component | its own pattern file |
 
 **C. Leave them out.** A placeholder in the region's place, marked
 `data-placeholder="missing-component"` with the same `data-p2s-name`, sized
@@ -139,6 +174,49 @@ class to satisfy the rule, and check whether the host's CI scans the folder
 the stories live in (Eddie's does not scan `.storybook/`).
 
 ---
+
+**Search the system for every product component by name before writing a
+pattern file for it**, including components named after another product or
+after the product itself. A recipe ported *from* the product you are
+relocating can live under a `common/` folder with a different name; a
+builder who searches for "radial chart" finds nothing and hand-rolls what
+`ed-r-wheel-of-life` already does. One catalog search per component name,
+and the lead re-checks the not-from-the-system rows against the recipe list
+before the ledger is written. The review caught this once (we are here.,
+2026-09-23); the search is cheaper than the review.
+
+## Building a big product in parallel
+
+Past six or seven templates, one session writing every story is the slow
+path. What worked for a 13-template, two-surface product (44 stories in an
+afternoon):
+
+1. **The shell first, by the lead.** `shell.ts`, the scoped global CSS, the
+   patterns every template shares (footer, page header, site header), the
+   invented-members fixture, and the catalog lookups behind the shell's own
+   `<ed-*>` tags. Nothing a builder writes may touch these.
+2. **One brief, in a file.** The story file shape verbatim, the marker
+   rules, the framework translation table, the fixture rules, what the live
+   screens showed for each template (counts and widths only, never names),
+   and the checks a builder runs before reporting. Builders read the brief,
+   the host profile, one worked example from an earlier product, and their
+   own templates' source; nothing else.
+3. **Two to four templates per builder**, grouped by shell (the auth pages
+   together, the marketing site together, the two heaviest pages alone).
+4. **A notes file per builder** with fixed sections: stories written, region
+   counts, not-from-the-system rows, drift rows, product bugs, system
+   findings, axe, catalog lookups, not done. The lead merges the notes into
+   the ledger; builders never write the ledger themselves.
+5. **The lead runs phase 4.** Builders check their own files (lint, an
+   ad-hoc typecheck, a fixture sweep); rendering, axe, the scope check and
+   the ratchets run once, from one session, after the dev server restarts.
+
+**Page CSS that reuses class names across pages** (two pages both styling
+`.card__name` differently, a page class that is also a component's root
+class, bare `li` / `dt` rules) needs a per-page scope on top of the product
+scope: `@scope ([data-p2s-product="<slug>"] [data-p2s-page="<route>"])`,
+with the story setting `data-p2s-page` on its own root. It stands in for
+the framework's scoped-style attribute (Vue's `data-v-*`).
 
 ## Write the first pass at the ledger
 

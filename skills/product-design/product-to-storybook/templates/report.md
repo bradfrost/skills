@@ -32,6 +32,7 @@ issues filed.*
 | Every story renders, no console errors | <11 of 11, or which failed> |
 | Rendered widths | <e.g. 400 and 1280> |
 | Visual regression suite | <ran clean / not available> |
+| Live product side by side | <captured from the user's signed-in browser and NOT committed (real data), or not captured and why> |
 | Human visual review | <who and what they found / **no human review**> |
 
 ---
