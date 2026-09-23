@@ -54,6 +54,12 @@ product uses no longer exists locally:
   can't do what the product's version did, that's exactly what the ledger
   is for.
 
+**A product pinned years behind** (Eddie 0.17, 0.18, 0.37 in the fleet run)
+turns this into the main event: components that were never published, props
+that were renamed twice, a shell that never worked on the pin. Every one is a
+ledger row; a component that no longer exists at all is a placeholder with
+its slotted content kept inside, so the screen still reads.
+
 This is the ripple working as intended. The product's screen, rendered on
 the newer system, shows what the next product release is going to look
 like. Some of what it shows will be a regression, and now it's in a ledger

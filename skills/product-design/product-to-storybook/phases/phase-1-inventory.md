@@ -65,6 +65,10 @@ not a museum of every page. Some rules that hold up:
 
 - **One template = one story file.** Five templates is typical. Fifteen
   means you're counting pages, not templates; regroup.
+- **One is a real answer.** A one-page marketing site or a single-route
+  dashboard is one template with permutations for its states; don't invent
+  section-level templates to reach a bigger number. Five of the nine fleet
+  products came in at one to three templates.
 - **A permutation earns its place by changing what the system has to
   support.** A post with a YouTube embed, a post with a code block, a post
   with a 90-character title: yes. A post from 2019 versus a post from 2024:
