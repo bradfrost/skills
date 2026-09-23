@@ -63,6 +63,7 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 | [`ds-token-architecture`](skills/design-systems/ds-token-architecture/SKILL.md) | Checks your design tokens against the three-tier architecture we teach in [Subatomic](https://designtokenscourse.com/), or establishes a tier ladder from a codebase that has no tokens yet |
 | [`ds-ascii`](skills/design-systems/ds-ascii/SKILL.md) | Sketches a page as labeled ASCII art, where every region maps to a real component in your design system |
 | [`vibe-killer`](skills/product-design/vibe-killer/SKILL.md) | Rebuilds a vibe-coded webpage out of your design system's real components and tokens |
+| [`product-to-storybook`](skills/product-design/product-to-storybook/SKILL.md) | Backfills an existing product's screens into your design system's Storybook, built from your local components, with every region that isn't from the system flagged |
 
 ---
 
@@ -188,6 +189,16 @@ It works like this: it reads the page and works out what each region is actually
 That last part is the sleeper feature. A conversion that surfaces three real holes in your design system did something useful beyond converting a page.
 
 It works with any design system it can read, not just mine, and the field guide it uses to spot a vibe-coded page ([`THE-TELLS.md`](skills/product-design/vibe-killer/reference/THE-TELLS.md)) is worth a read on its own.
+
+## Get every product into Storybook
+
+Your design system's Storybook shows every component in isolation, and it shows almost nothing about the products those components live in. So when you change a card or a table, you're guessing at what happens downstream, and the only way to stop guessing is to open every product, one at a time, and look.
+
+**[`product-to-storybook`](skills/product-design/product-to-storybook/SKILL.md)** takes an existing product (a repo, a live URL, or both), works out its core page templates and the permutations that matter, and rebuilds representative versions of them inside your Storybook using your *local* design system wherever the product already uses it. Real content, captured once and frozen, chosen for the awkward shapes: the 90-character title, the post with two embeds, the list with 40 tags. Every region that *isn't* from the system gets flagged in the markup and in a gap ledger, with a screenshot and the nearest thing your system already has.
+
+Once every product is in there, a change to one component shows its ripple across all of them at once, and you can design the next version of a product right in Storybook without tripping over a backend. It's important to say that this is relocation, not translation: it never converts a bespoke region onto your system (that's what `vibe-killer` is for), and it never writes production components. It moves screens in, and it tells you what it found.
+
+It also runs a drift check later, so you know when the live product and its Storybook copy have parted ways. It reports and asks; it never overwrites, because the Storybook copy might be ahead of the product on purpose.
 
 ## A living project
 I'll continue adding and iterating on skills with the goal to provide you useful skills to help people in many dimensions of work and life. If you have feedback, thoughts, or ideas, feel free to [get in touch](https://bradfrost.com/contact/). If you'd like to support this work, please consider checking out [our online courses](https://bradfrost.com/courses/), and if you want to follow along you can subscribe to [my newsletter](https://bradfrost.com/newsletter/).
