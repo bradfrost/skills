@@ -220,9 +220,11 @@ classes from the fixture (the positioned nodes with the system's node inside,
 an SVG of paths computed the engine's way, the labels, the handles), compute
 what the engine would have measured for the 1280 screen, and carry only the
 subset of the engine's stylesheet those classes need, labelled third party
-in the pattern's `.css`. The engine's own accessibility faults go to the
-product's tracker, and the story excludes product regions from axe with the
-rule named (eddie-diagrams, 2026-09-24).
+in the pattern's `.css`. Carry the engine's accessibility markup too: the
+roles, `tabindex` and hidden descriptions it puts on nodes and edges. A
+static render that drops them manufactures axe failures the engine never
+had, and an exclude written for those is a finding against the story, not
+the product (the eddie-diagrams review caught exactly that, 2026-09-24).
 
 **A product's `:root` block never matches inside `@scope`**: the scope root
 is a `div`. Carry the variables onto the story's root class or they resolve
