@@ -185,6 +185,13 @@ and the lead re-checks the not-from-the-system rows against the recipe list
 before the ledger is written. The review caught this once (we are here.,
 2026-09-23); the search is cheaper than the review.
 
+**Relocate exactly where the product's fork sits.** When the product renders
+its fork of a recipe on some rows and something else on the others (Eddie
+Slides: the section-row fork on organizational rows, its own tile on content
+rows), the recipe goes on those rows only. Putting it on every row gives the
+screen a region the product never had, and the review will send it back
+(2026-09-24).
+
 **A product with no design system in it is still a run.** Every region is
 `product`, version drift is "none, and here is why", and the ledger becomes
 an adoption map: the nearest system component per region, each looked up,
