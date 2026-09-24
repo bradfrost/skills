@@ -41,6 +41,16 @@ it at `test: 'todo'` so the violation stays visible, and file it to the
 system. Never "fix" the markup to pass in either case. (Eddie: the hub's
 Court story and `ed-r-chunky-checkbox`'s hardcoded `<h3>`, #2170.)
 
+**Look at every Default screen before writing the report, at the width the
+product is designed for, and compare its silhouette to the live page.** A
+render that "passes" (no errors, no overflow, regions counted) can still be
+wrong in the way a person sees first: a full-bleed hero sitting in a 70rem
+box, a band that lost its background, a rail that became a row. The fleet
+run shipped two heroes boxed by the local `ed-main` (a newer version caps
+non-bleed children; the products' pins did not) with clean probes and a
+report that never said so; Brad saw it in one glance. Silhouette first,
+then counts.
+
 ## 3. Side by side with the live product
 
 For every permutation, screenshot the live page and the story at two
