@@ -147,7 +147,7 @@ this skill's.
 The first pass at `GAPS.md` is a query over the rendered stories:
 
 ```js
-[...document.querySelectorAll('[data-origin="product"], [data-placeholder]')]
+[...document.querySelectorAll('[data-origin="product"], [data-placeholder="missing-component"]')]
   .map(el => ({
     name: el.dataset.p2sName,
     type: el.dataset.placeholder ? 'missing-component' : 'product',
@@ -157,3 +157,5 @@ The first pass at `GAPS.md` is a query over the rendered stories:
 
 Run it per story, merge on `name`, and you have the "seen in" column
 before anyone screenshots anything.
+
+Count the placeholder by its value, never by the bare attribute: a product can carry its own `data-placeholder` (Eddie Slides draws its empty-notes hint with `content: attr(data-placeholder)`), and a bare `[data-placeholder]` scrape counts it as a missing component.
