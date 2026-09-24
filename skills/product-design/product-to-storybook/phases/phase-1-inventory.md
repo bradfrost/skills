@@ -28,6 +28,17 @@ Templates are in the source. Find them:
   from local components, so get the exact names.
 - **The pinned version.** From `package.json` or the lockfile. Compare it to
   the local system's version and write both down.
+- **The installed tree, too.** The lockfile is the declaration; what is
+  under `node_modules` is what the product last ran on, and the two can be
+  months apart (eddie-diagrams declared 0.67 and had 0.25 installed, the
+  dependabot bumps merged and never installed). Read both. When they differ,
+  install from the lockfile before capturing screens, say so in the garage,
+  and never edit the product's own files.
+- **Props spelled in a way the system does not read** (`tag-name` for
+  `tagName`, `hide-text` for `hideText`) are a product bug, not drift, when
+  the system never declared that spelling on any version. Check the
+  component's `attribute:` declarations before calling it drift; the story
+  sets the property the system reads, and the bug goes to the product.
 
 **When the product is a client-rendered app**, there are no layouts in the
 11ty sense. The templates are the view renderers: find the router (the

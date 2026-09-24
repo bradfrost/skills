@@ -213,6 +213,17 @@ rewritten as `x`, never the Lit source. Say how many layouts are covered
 and where the rest fall. A product that borrows the system's prefix is a
 finding for the system's catalog as well as for the product.
 
+**A third-party canvas engine is carried as the DOM it paints, once.** A
+Svelte Flow, React Flow or d3 canvas measures its box, fits the nodes and
+draws the edges at runtime; none of that runs in a story. Render the engine's
+classes from the fixture (the positioned nodes with the system's node inside,
+an SVG of paths computed the engine's way, the labels, the handles), compute
+what the engine would have measured for the 1280 screen, and carry only the
+subset of the engine's stylesheet those classes need, labelled third party
+in the pattern's `.css`. The engine's own accessibility faults go to the
+product's tracker, and the story excludes product regions from axe with the
+rule named (eddie-diagrams, 2026-09-24).
+
 **A product's `:root` block never matches inside `@scope`**: the scope root
 is a `div`. Carry the variables onto the story's root class or they resolve
 to nothing.
