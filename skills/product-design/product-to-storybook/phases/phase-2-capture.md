@@ -97,6 +97,12 @@ invented members so the same invented people recur across templates.
 
 ---
 
+**Third-party players and hosted fonts.** A podcast host's iframe, a video
+provider's embed, a Typekit face: never load the live thing in a story.
+The player becomes a placeholder of the same size naming what it stands in
+for; the font becomes an omission stated in the report ("the wordmark
+renders in the fallback serif"), and the silhouette check reads past it.
+
 ## Record the sample
 
 Add a "Content sample" section to `INVENTORY.md`: one line per permutation

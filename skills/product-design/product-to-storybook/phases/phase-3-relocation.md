@@ -185,6 +185,31 @@ and the lead re-checks the not-from-the-system rows against the recipe list
 before the ledger is written. The review caught this once (we are here.,
 2026-09-23); the search is cheaper than the review.
 
+**A product with no design system in it is still a run.** Every region is
+`product`, version drift is "none, and here is why", and the ledger becomes
+an adoption map: the nearest system component per region, each looked up,
+with the regions the system cannot answer filed as issues. That map is what
+the run delivers (Wake Up Excited!, 2026-09-24).
+
+**A recipe that half-fits is the best gap list the system can get.** When
+the local system has a recipe for the product's region and the recipe's
+vocabulary covers only part of it (visualzzz's panel on
+`ed-r-viz-controls`: about 95 controls fit, 32 kinds do not), build the
+fitting part as the recipe's data (system), carry the rest as product
+regions, and write the "could not express" table per kind with the
+product's markup. That table is the issue, filed once.
+
+**A product's own custom-element library** (Eddie Slides ships fourteen
+`ed-*` elements that are not Eddie's) is a pattern file that renders the
+DOM the elements paint, flattened into light DOM with `::slotted(x)`
+rewritten as `x`, never the Lit source. Say how many layouts are covered
+and where the rest fall. A product that borrows the system's prefix is a
+finding for the system's catalog as well as for the product.
+
+**A product's `:root` block never matches inside `@scope`**: the scope root
+is a `div`. Carry the variables onto the story's root class or they resolve
+to nothing.
+
 ## Building a big product in parallel
 
 Past six or seven templates, one session writing every story is the slow
