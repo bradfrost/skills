@@ -64,6 +64,7 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 | [`ds-ascii`](skills/design-systems/ds-ascii/SKILL.md) | Sketches a page as labeled ASCII art, where every region maps to a real component in your design system |
 | [`vibe-killer`](skills/product-design/vibe-killer/SKILL.md) | Rebuilds a vibe-coded webpage out of your design system's real components and tokens |
 | [`product-to-storybook`](skills/product-design/product-to-storybook/SKILL.md) | Backfills an existing product's screens into your design system's Storybook, built from your local components, with every region that isn't from the system flagged |
+| [`storybook-to-product`](skills/product-design/storybook-to-product/SKILL.md) | Carries UI you designed in Storybook into your production product, wired up and proven, all the way to a pull request |
 
 ---
 
@@ -199,6 +200,14 @@ Your design system's Storybook shows every component in isolation, and it shows 
 Once every product is in there, a change to one component shows its ripple across all of them at once, and you can design the next version of a product right in Storybook without tripping over a backend. It's important to say that this is relocation, not translation: it never converts a bespoke region onto your system (that's what `vibe-killer` is for), and it never writes production components. It moves screens in, and it tells you what it found.
 
 It also runs a drift check later, so you know when the live product and its Storybook copy have parted ways. It reports and asks; it never overwrites, because the Storybook copy might be ahead of the product on purpose.
+
+## Ship it from Storybook
+
+Once a product lives in Storybook, you can design its next version right there, out of your system's real components, with real content. And at some point you look at the screen and realize it's done! Well, *mostly* done. Storybook never had to open a modal, post a form, read a data file, or wait on a design system release, and your product has to do all of those things.
+
+**[`storybook-to-product`](skills/product-design/storybook-to-product/SKILL.md)** carries that work into production. It assesses the whole job before touching anything (every region, every behavior Storybook left behind, every component your product can't install yet), then brings the markup and styles over in your product's own templating language and wires them up to your data, scripts, forms, and links. Content gets special care, because Storybook copy is a mix of real edits you made there and placeholder text invented to fill out the design. Every field gets a default based on where it came from, you decide the unclear ones and every image, and the build gets searched to prove none of the invented stuff made it through.
+
+It ends with a pull request, never a deploy, and it records exactly which version of each story shipped. So when you tweak a headline in Storybook next week, a catch-up carries just that change over, instead of the whole handoff starting from scratch. It's the other half of `product-to-storybook`: product screens go into Storybook, and the designs you make there come back out.
 
 ## A living project
 I'll continue adding and iterating on skills with the goal to provide you useful skills to help people in many dimensions of work and life. If you have feedback, thoughts, or ideas, feel free to [get in touch](https://bradfrost.com/contact/). If you'd like to support this work, please consider checking out [our online courses](https://bradfrost.com/courses/), and if you want to follow along you can subscribe to [my newsletter](https://bradfrost.com/newsletter/).

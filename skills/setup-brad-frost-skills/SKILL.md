@@ -27,6 +27,7 @@ them):
 | Product design | `product-inspection` | No |
 | Product design | `vibe-killer` | **Yes** — build the design system profile |
 | Product design | `product-to-storybook` | **Yes** — learn the host Storybook |
+| Product design | `storybook-to-product` | No |
 
 If none of them are present, say so plainly and stop — tell them to
 install first (`npx skills add bradfrost/skills -g`). Don't guess, and
@@ -95,6 +96,8 @@ and how to start it:
   product's project
 - **`ds-adoption-plan`** — run `/ds-adoption-plan` from inside a product
   you want moved onto your design system
+- **`storybook-to-product`** — run `/storybook-to-product` from inside the
+  product, and point it at the Storybook story you want to ship
 
 Skip the ones they didn't install.
 
