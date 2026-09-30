@@ -47,6 +47,10 @@ For each story, find the product template it lands in (the story's comments
 or the fixture's `_meta.source_file` usually say). Record:
 
 - **The template and every partial it includes**, in render order.
+- **The template engine that actually parses them.** Read the build config,
+  not the file extensions: in an Eleventy site whose pages are `.html`,
+  every `.njk` include is parsed as Liquid, so the translation targets
+  Liquid (the course site, 2026-09-30).
 - **How the product gets its data:** data files, front matter, a CMS, an
   API, hardcoded strings in the template.
 - **How the product loads the design system:** which components it
@@ -90,7 +94,10 @@ content went, so phase 2 treats it as the same content.
 **Partials are shared.** Before adapting or retiring a partial, find every
 page that includes it. A hero partial the homepage redesign rebuilds may
 also render, smaller, on the order page. Every other page it touches goes
-in the row, and phase 5 renders it.
+in the row, and phase 5 renders it. When the other page exists mostly to
+repeat what the redesigned one now says, retiring it is a real answer:
+offer it. (The course site's order page became a 301 to `/#order`, which
+made every shared partial the homepage's alone.)
 
 ## 4. The system dependency ledger
 

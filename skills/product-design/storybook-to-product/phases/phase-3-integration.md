@@ -99,7 +99,17 @@ registration covers it. An unregistered custom element renders as an empty
 inline box with no error, which is the most common "it worked in
 Storybook" bug there is.
 
-## 6. Leave a trail
+## 6. Keep the paper trail out of the build
+
+A static site generator publishes whatever it finds, and
+`storybook-to-product/*.md` is Markdown it knows how to render. Add the
+folder to the generator's ignore list before the first build, or the
+assessment ships as a page on the live site. (Eleventy rendered all three
+files on the first run.) If the repo tracks compiled output (a built
+stylesheet, a bundle), rebuild before each commit so the artifact matches
+the source.
+
+## 7. Leave a trail
 
 Put the link header from `reference/LINKS.md` at the top of each template
 and partial this phase created or adapted, so anyone who opens the file

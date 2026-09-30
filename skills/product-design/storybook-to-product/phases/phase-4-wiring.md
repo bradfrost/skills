@@ -83,6 +83,17 @@ Every `href` in the new markup goes somewhere real:
   until proven otherwise.
 - **Links the story dropped** (a nav item that was cut) are gone from every
   page, not just the redesigned one.
+- **A retired page gets a redirect**, a permanent one, to wherever its job
+  went now (`/order` → `/#order`), so old links, emails, and bookmarks
+  still land.
+
+**Third-party embeds can refuse the production domain.** An embed that
+talks to its host by `postMessage` usually checks the host's origin. Read
+the embed's own allowlist: the course site's generative backdrop accepted
+messages from `localhost` and `*.bradfrost.com`, so it worked in Storybook
+and on localhost, and silently dropped every message on
+`aianddesign.systems` and on deploy previews. File it where the embed
+lives.
 
 ## 5. The page around the page
 

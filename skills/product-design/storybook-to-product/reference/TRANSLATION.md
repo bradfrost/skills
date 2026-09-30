@@ -1,5 +1,8 @@
 # Translation: from a story to the product's templates
 
+Read the product's build config before translating anything: the
+engine that parses a file is not always the one its extension names.
+
 A story is written in whatever the Storybook renders with (lit's `html`,
 JSX, a Vue template). The product is written in whatever *it* uses
 (Nunjucks, Liquid, JSX, Vue, PHP, Rails views). This is the table for
