@@ -65,6 +65,12 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 | [`vibe-killer`](skills/product-design/vibe-killer/SKILL.md) | Rebuilds a vibe-coded webpage out of your design system's real components and tokens |
 | [`product-to-storybook`](skills/product-design/product-to-storybook/SKILL.md) | Backfills an existing product's screens into your design system's Storybook, built from your local components, with every region that isn't from the system flagged |
 
+**Judgment**
+
+| Skill | What it does |
+|---|---|
+| [`what-do-i-make-of-this`](skills/judgment/what-do-i-make-of-this/SKILL.md) | Hands you a short, honest read of an article, a hot take, or a hard question that makes you think harder about it, and REFUSES to tell you what to think |
+
 ---
 
 ## Set healthy limits for AI use
@@ -199,6 +205,33 @@ Your design system's Storybook shows every component in isolation, and it shows 
 Once every product is in there, a change to one component shows its ripple across all of them at once, and you can design the next version of a product right in Storybook without tripping over a backend. It's important to say that this is relocation, not translation: it never converts a bespoke region onto your system (that's what `vibe-killer` is for), and it never writes production components. It moves screens in, and it tells you what it found.
 
 It also runs a drift check later, so you know when the live product and its Storybook copy have parted ways. It reports and asks; it never overwrites, because the Storybook copy might be ahead of the product on purpose.
+
+## Think harder, not less
+
+Somebody sends you a hot take and asks what you think. An article lands that you can't stop chewing on. A question at work turns out to be a genuinely hard one. The tempting move is to paste it into an AI and ask what to make of it, and the AI is very happy to tell you! It'll notice what you probably already believe and hand you 900 elegant words agreeing with you, which feels like insight and is actually flattery.
+
+**[`what-do-i-make-of-this`](skills/judgment/what-do-i-make-of-this/SKILL.md)** is built to make that failure hard. It's the first skill in a new family aimed at cultivating *your own* judgment rather than producing an artifact, and it opens every session with:
+
+> This is a mirror, not advice. What you make of it (and what you do about it) is yours.
+
+It asks what you value first (point it at a file you own, paste it in, or answer 4 short questions), and every claim it makes about you gets tagged `[documented]` with a citation or `[inferred]` with its reasoning. Then you get a read that fits on a phone screen:
+
+```
+What it is             one line, framing stripped off
+Where you align        cited · [documented] or [inferred]
+Where you disagree     the steelman, written to persuade
+Tension & nuance       two of YOUR values pulling apart
+What's missing         who or what is absent
+
+What you could do      3 options incl. "say nothing", each with its cost
+Reflect on this        2–3 questions. no conclusion.
+```
+
+There's no verdict at the end, it won't draft your reply, and if it can't actually read the link you gave it, it says so instead of bluffing. Every read closes with the same line:
+
+> Was any of that flattery?
+
+It's important to say what this skill is *not*. It's not therapy and it won't pretend to be; it's not responsible for what you decide; and it will never link you to anything for sale. Nothing you tell it gets saved unless you ask, and when you do, it points you at a private place instead of your work laptop. Those terms live in the family's [contract](skills/judgment/what-do-i-make-of-this/reference/CONTRACT.md), and the whole thing works when you close the window and go think.
 
 ## A living project
 I'll continue adding and iterating on skills with the goal to provide you useful skills to help people in many dimensions of work and life. If you have feedback, thoughts, or ideas, feel free to [get in touch](https://bradfrost.com/contact/). If you'd like to support this work, please consider checking out [our online courses](https://bradfrost.com/courses/), and if you want to follow along you can subscribe to [my newsletter](https://bradfrost.com/newsletter/).

@@ -27,6 +27,7 @@ them):
 | Product design | `product-inspection` | No |
 | Product design | `vibe-killer` | **Yes** — build the design system profile |
 | Product design | `product-to-storybook` | **Yes** — learn the host Storybook |
+| Judgment | `what-do-i-make-of-this` | No |
 
 If none of them are present, say so plainly and stop — tell them to
 install first (`npx skills add bradfrost/skills -g`). Don't guess, and
@@ -95,6 +96,9 @@ and how to start it:
   product's project
 - **`ds-adoption-plan`** — run `/ds-adoption-plan` from inside a product
   you want moved onto your design system
+- **`what-do-i-make-of-this`** — run `/what-do-i-make-of-this` and paste
+  the thing you're trying to make sense of; it asks what it needs to know
+  about you the first time
 
 Skip the ones they didn't install.
 
