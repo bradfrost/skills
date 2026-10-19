@@ -22,6 +22,21 @@ else changes. Not a story, not a fixture, not `INVENTORY.md`.
    `_meta.source_url` again and compare to the frozen fixture.
 4. **Diff** against what's in Storybook, and write the report.
 
+## After a handoff
+
+If the product repo carries `storybook-to-product/links.json`, a story from
+this Storybook has shipped to production through `storybook-to-product`.
+Read it before diffing, because it changes what counts as drift:
+
+- **A story that changed after its `story_commit`** is a pending handoff,
+  not drift. List it in its own section at the top of the report, with the
+  commit count, and point at `storybook-to-product`'s catch-up.
+- **A linked product file that changed after the handoff commit** (the
+  product commit that last touched `links.json`) is real drift: somebody
+  edited production directly. Report it in the usual sections.
+- **A product that now pins a newer version** because of the handoff closes
+  version-drift rows in `GAPS.md`. Say how many.
+
 ## The four sections
 
 Every drift report has exactly these, in this order, each ending with the
