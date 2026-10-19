@@ -28,6 +28,7 @@ them):
 | Product design | `vibe-killer` | **Yes** — build the design system profile |
 | Product design | `product-to-storybook` | **Yes** — learn the host Storybook |
 | Product design | `storybook-to-product` | No |
+| Judgment | `what-do-i-make-of-this` | No |
 
 If none of them are present, say so plainly and stop — tell them to
 install first (`npx skills add bradfrost/skills -g`). Don't guess, and
@@ -98,6 +99,9 @@ and how to start it:
   you want moved onto your design system
 - **`storybook-to-product`** — run `/storybook-to-product` from inside the
   product, and point it at the Storybook story you want to ship
+- **`what-do-i-make-of-this`** — run `/what-do-i-make-of-this` and paste
+  the thing you're trying to make sense of; it asks what it needs to know
+  about you the first time
 
 Skip the ones they didn't install.
 

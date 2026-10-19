@@ -71,6 +71,21 @@ md5 -q skills/*/*/reference/FIGMA-ACCESS.md | sort -u | wc -l   # must print 1
 
 Keep it short. Every line in it is written five times.
 
+## The judgment contract is copied on purpose too
+
+Skills in `skills/judgment/` exist to build the reader's own judgment, not
+to produce an artifact. Each one ships identical copies of
+`reference/CONTRACT.md` (clear terms, never clinical, no commercial links,
+success means the reader leaves) and `reference/DATA-HYGIENE.md`, for the
+same standalone-install reason as FIGMA-ACCESS.md. `what-do-i-make-of-this`
+holds the canonical copies. A new skill in this family copies both before
+it ships, and an edit to either syncs every copy in the same commit:
+
+```bash
+md5 -q skills/judgment/*/reference/CONTRACT.md | sort -u | wc -l       # must print 1
+md5 -q skills/judgment/*/reference/DATA-HYGIENE.md | sort -u | wc -l   # must print 1
+```
+
 ## Honesty rules that outrank good marketing copy
 
 - Never claim enforcement that doesn't exist. Every limit is labeled
