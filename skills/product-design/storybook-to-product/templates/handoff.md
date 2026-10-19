@@ -9,11 +9,11 @@
 | Stories | `<story IDs or Storybook section>` |
 | Story files | `<design system repo>/<path>` on `<branch>` |
 | Design system version the stories render on | `<x.y.z>` (`<branch>`, commit `<sha>`; contained in `<release branch / tag, or none yet>`) |
-| Checkouts at intake | product: <current / behind <n> / dirty: <files>>; design system: <current / behind <n>>; <fetched / pulled / worked from what was there> |
 | Product repo | `<path>` |
 | Live URL | `<url or none>` |
 | Product's pinned design system version | `<package@range>` from `<manifest>`; `<x.y.z>` in the lockfile |
 | Product's own rules read | <CLAUDE.md / AGENTS.md / contributing guide / process config / none> |
+| Workflow followed | <where it came from, or "none stated: new branch + pull request">; branch `<branch>` off `<base>`; previews: <yes, <host> / no> |
 | Sibling files read | <product-to-storybook/<product>/*, ds-adoption-plan/MAPPING.md, none> |
 
 ## Intake answers
@@ -23,7 +23,6 @@
 | 1 | Which stories? | <every story in `<section>` / the list> |
 | 2 | Where's the product? | <above> |
 | 3 | Content | <A field by field / B Storybook wins / C product wins / D: …> |
-| 4 | Where the work lands | `<branch>` off `<base>`; previews: <yes, <host> / no> |
 
 ## Release gate
 

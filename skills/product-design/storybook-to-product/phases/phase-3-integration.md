@@ -12,7 +12,9 @@ the branch from `HANDOFF.md`, plus the design system version bump.
 
 ## 1. Branch first, bump first
 
-Work on the branch recorded in `HANDOFF.md`, never on the default branch.
+Work the way the product's own workflow says (recorded in `HANDOFF.md`):
+its branch naming, its base branch, its commit style. When it says
+nothing, a new branch, never the default branch.
 
 Then move the design system pin, because every region after this depends
 on it:

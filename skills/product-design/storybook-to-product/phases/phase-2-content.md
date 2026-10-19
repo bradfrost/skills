@@ -52,11 +52,8 @@ Read the evidence, not the vibe, and weigh it in this order:
    was captured*, and nothing after. A fixture whose `_meta` says "values
    invented" may be mostly real copy by the time it ships.
 
-"The product" means the product's **fetched default branch**, never just
-the local working tree. A value that matches it character for character is
-`captured`, whatever the history says. A value that only matches an
-uncommitted edit in the product checkout is in flight: flag it, don't
-count it as a match.
+A value that matches the product's current code character for character is
+`captured`, whatever the history says.
 
 Then compare every `captured` value against the product *now*. If the
 product changed it since the capture, the row is a **conflict**, and a
@@ -98,12 +95,19 @@ For each asset, record:
   it gets decided like any other copy.
 - The file size and dimensions, when the asset is a file.
 
-The choices:
+Then ask, in exactly these words, one line per asset with what it is,
+where it comes from, its alt text, and whether the product already has it:
 
-> - **Carry the story's asset** (copied into the product's own asset
->   folder, never hotlinked from the design system's Storybook)
-> - **Keep the product's asset**
-> - **Replace it** with something else the user provides
+> The Storybook design uses these images and media:
+>
+> - **Course summary video**: YouTube `0ZqxBmwzaIU` (new)
+> - **Brad & Ian photo**: `ian-brad.jpg`, alt "brad frost web" (already in the product)
+>
+> Review them and say "Carry all of them over" or name the ones to keep
+> from the product or replace.
+
+Every asset that carries over is copied into the product's own asset
+folder, never hotlinked from the design system's Storybook.
 
 ## 4. Where the content lives in the product
 

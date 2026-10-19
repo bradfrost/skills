@@ -70,7 +70,9 @@ with a catch-up instead of a do-over.
    interaction and none of the behavior. Every modal, form, toggle, and
    link gets wired, and every trigger is walked in a real browser.
 8. **The product's own rules win.** A `CLAUDE.md`, `AGENTS.md`, or process
-   config in the product repo outranks anything here.
+   config in the product repo outranks anything here, including how the
+   work branches, commits, and ships. The skill follows it without asking,
+   and departs from it only when the user explicitly says so.
 9. **It ends at a pull request.** Merging and deploying belong to a person,
    every time, even when every check is green.
 10. **Nothing gets overwritten on a catch-up.** A field changed in both
@@ -81,7 +83,7 @@ with a catch-up instead of a do-over.
 
 ### Mode 1: Handoff
 
-1. **Intake** (`intake/HANDOFF-INTAKE.md`). Four questions, each with a
+1. **Intake** (`intake/HANDOFF-INTAKE.md`). Three questions, each with a
    default. Records the answers in the product repo's
    `storybook-to-product/HANDOFF.md`.
 2. **Phase 1: Assessment** (`phases/phase-1-assessment.md`). Map every
@@ -131,7 +133,7 @@ the two sides stay connected.
 
 ## Files in this kit
 
-- `intake/HANDOFF-INTAKE.md`: the four questions, and the ones that wait
+- `intake/HANDOFF-INTAKE.md`: the three questions, and the ones that wait
   for their moment
 - `phases/phase-1-assessment.md`: regions, dependencies, behaviors,
   estimate, then the checkpoint

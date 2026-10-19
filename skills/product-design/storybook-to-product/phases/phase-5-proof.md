@@ -124,7 +124,8 @@ Anything the local server can't exercise (host redirects, serverless
 functions, edge headers) is listed as "check on the deploy preview",
 never as passed.
 
-Open the pull request on the branch from `HANDOFF.md`, with the report's
+Open the pull request the way the product's workflow does (its ship
+command, its pull request template), from the branch in `HANDOFF.md`, with the report's
 headline as its description and the side by sides attached or linked. If
 the product's host builds preview deploys, link the preview.
 

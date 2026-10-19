@@ -148,18 +148,18 @@ one is a way for the page to break when somebody else's server does.
 The moment the ledger has an **unreleased** row, say this:
 
 > **This UI depends on design system work that hasn't been released yet.**
-> The product can't install these until a new version of the design system
-> is published: <list>.
+> Your product can't install `<components>` until a new version of the
+> design system is published.
 >
-> - **A. Wait for the release.** Nothing in the product changes until a
->   version with all of these is published.
-> - **B. Build against the local design system now.** The product links to
->   the local design system during development, and the work is marked not
->   ready to ship until the product pins a published release that contains
->   every one of these. (Recommended when a release is already on its way.)
-> - **C. Build what's released.** Regions whose dependencies are published
->   move now; the rest keep the product's current version until the release
->   lands.
+> - **A. Wait for the release** - Nothing in the product changes until the
+>   new version is out.
+> - **B. Build against the local design system** - Work continues now
+>   against your local copy of the design system, and it's marked not ready
+>   to ship until the product uses a published release. (Recommended when a
+>   release is already on its way.)
+> - **C. Build what's released** - Carry over what the published version
+>   supports, and keep the product's current UI everywhere else until the
+>   release lands.
 
 Record the answer in `HANDOFF.md`. Option B never ships on a local link:
 phase 5 refuses to call the work ready while the product's manifest points
@@ -217,11 +217,25 @@ Show the user the assessment in this shape, then stop and wait:
 > 1 keep. 9 behaviors: 4 restore, 2 rebuild, 1 new, 2 retire. System
 > dependencies: 11 installed, 3 need a version bump, 4 unreleased (release
 > gate: option B). Estimate: about 3 days, 1 of it waiting on the release.
->
-> Retiring: the FAQ section (and `js/faq.js`), the email gate (and
-> `netlify/functions/subscribe.mjs`, which nothing else uses). **Confirm
-> each retirement before I touch it.**
 
-A wrong retirement here deletes something the business still needs, so
-every **Retire** row gets an explicit yes. Everything else can be confirmed
-as a batch.
+Then ask about the retirements, in exactly these words, listing every file
+each **Retire** row would remove under the region it belongs to:
+
+> Adopting the Storybook design removed the need for these existing product
+> files:
+>
+> - **FAQ section**: `_includes/section-faq.njk`, `css/components/accordion.scss`
+> - **Email gate**: `_includes/email-gate.njk`, `netlify/functions/subscribe.mjs`
+>
+> Review these files and say "Remove all of them" or name the ones to keep.
+
+When a file on the list is also used by a page outside this handoff, ask
+about that page on its own:
+
+> **`hero.njk` is also used by `order.html`, which isn't part of this
+> handoff.** You can keep the old version for that page, or remove that
+> page too and redirect it to `/#order`.
+
+A wrong retirement deletes something the business still needs, so nothing
+on the list is removed without that answer. Everything else in the
+assessment can be confirmed as a batch.
