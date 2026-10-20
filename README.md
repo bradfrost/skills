@@ -146,9 +146,16 @@ You can always raise your limit, but it requires some deliberate friction: you p
 - 💡 **Opportunity:** spotted and filed, never a pitch to keep working
 - 🔗 **Links:** named links to whatever got made or changed
 - 👉 **Your turn:** what you need to do to finish, always last
+- 1️⃣ 2️⃣ 3️⃣ **Your turn, in order:** questions only you can answer, or steps that have to happen in sequence
 - 🏁 **Finished:** nothing left for you to do, so you can safely archive
 
-You'll only see the flags that apply, so most blocks run 4 or 5 lines. And when a session is truly finished, it says so:
+You'll only see the flags that apply, so most blocks run 4 or 5 lines. And when a session needs your decisions, it brings the questions to you instead of sending you off to find them. No more "answer the four questions in the spec"! Each one is numbered, makes sense on its own (even if you've been off in three other sessions since), and comes with a recommended default:
+
+```
+1️⃣ **Stories spec:** where do stories live? A) next to each component, B) one `stories/` folder. Default: A, so they move together
+2️⃣ **Stories spec:** ship behind a feature flag? A) yes, B) no. Default: A, it's easy to undo
+👉 Reply like "1 A, 2 B", or "defaults" to take them all
+``` And when a session is truly finished, it says so:
 
 ```
 🏁 Nothing left to do; you can safely archive this conversation.
