@@ -58,14 +58,64 @@ Format: one-sentence plain summary, then flag lines in this fixed order:
 | 💡 | opportunity spotted (max one) — parked as a filed item, never a proposal to keep working *(optional)* |
 | 🔗 | [named markdown link](to the artifact) — never raw URLs |
 | 👉 | action **you** must take to finish or deploy THIS task — imperative verb, one per line, never new work, **always last** |
+| 1️⃣ 2️⃣ 3️⃣ | your turn, in order: a question only you can answer, or a step that has to happen before the next one. Takes 👉's place, numbered in the order to do them (see below) |
 | 🏁 | definitive end: nothing left for you to do. Replaces 👉 entirely and closes the block with "Nothing left to do; you can safely archive this conversation." Earned, not assumed (see Rule 3) |
 
-**Rules:** one item per line, ≤12 words (🏁's fixed sentence exempt); omit
-empty categories; max ~8 lines (consolidate); ✅ only for verified-done;
-no emoji outside this registry; a block ends with either 👉 actions or the
-🏁 line, never both; the block is the last thing in the response — with
-one narrow exception below. A session that's truly done deserves a door,
+**Rules:** one item per line, ≤12 words (🏁's fixed sentence and numbered
+questions exempt); omit empty categories; max ~8 lines (consolidate); ✅
+only for verified-done; no emoji outside this registry; a block ends with
+your turn (👉 or numbered lines) or the 🏁 line, never both; the block is
+the last thing in the response, with one narrow exception below. A session that's truly done deserves a door,
 not a hallway: that's what 🏁 is.
+
+### Your turn, in order: bring the questions, don't point at them
+
+"Answer the four questions in the spec" is a pointer, which means you have
+to open the spec, find the questions, reload the whole context in your
+head, and only THEN start deciding. If you've been off in three other
+sessions since this one started, that friction is exactly what keeps a
+decision sitting there for days.
+
+So never point at questions. Bring them into the block, one per line,
+numbered in the order to answer them:
+
+- **Each one stands on its own.** Write it for someone who's been away for
+  an hour and remembers nothing about this session. Name the thing it's
+  about (the repo, the PR, the spec), then ask the question.
+- **Offer the choices.** Use lettered options (A, B, C) when there are a
+  few, which means you can answer with a letter instead of a paragraph.
+- **Recommend something.** End every question with "Default:" and the
+  pick, plus a few words on why. Taking the default should always be a
+  perfectly good answer.
+- **One line each, about 30 words max.** Numbered questions are exempt
+  from the 12-word cap, because a question stripped of its context isn't
+  digestible; it's a riddle.
+- **Five max.** More than five open questions means the work needs
+  consolidating, not a longer list. Ask the five that unblock the most and
+  link to where the rest live, with a count: "3 more in the [stories
+  spec](#)".
+- **Close with how to reply.** The last line is a 👉 that makes answering
+  a few keystrokes: `👉 Reply like "1 A, 2 B", or "defaults" to take them all`.
+
+```
+The stories spec is drafted and waiting on three decisions from you.
+✅ Draft spec pushed on `feature/525`
+🔗 [Stories spec](#)
+1️⃣ **Stories spec:** where do stories live? A) next to each component, B) one `stories/` folder. Default: A, so they move together
+2️⃣ **Stories spec:** document deprecated components? A) yes, flagged as deprecated, B) skip them. Default: B
+3️⃣ **Stories spec:** ship behind a feature flag? A) yes, B) no. Default: A, it's easy to undo
+👉 Reply like "1 A, 2 B", or "defaults" to take them all
+```
+
+Steps that only work in a certain order get the same numbering, so a
+close-out never shows three interchangeable 👉 lines for things that have
+to happen in sequence. Questions and steps share one list, numbered in the
+order you'd do them. When actions are genuinely independent (any order
+works, or you only do the one that applies to you), keep 👉.
+
+The same shape applies any time you need a decision, not just at the
+close. A blocker question from Rule 1 gets numbered, self-contained, and a
+Default too.
 
 ## Rule 3 — The checkered flag is earned, not assumed
 
@@ -89,9 +139,10 @@ Print 🏁 only when all five of these are true:
    *shipped*.
 3. **Every ✅ is verified, not attempted.** A pushed branch is not a merged
    PR. A written migration is not a migration that ran.
-4. **There's no 👉 line, and you didn't suppress one.** If you can name a
-   single thing they still have to do to get the outcome they asked for,
-   that thing is a 👉 and this block doesn't get a flag.
+4. **There's no 👉 or numbered line, and you didn't suppress one.** If you
+   can name a single thing they still have to do or decide to get the
+   outcome they asked for, that thing is a 👉 (or a 1️⃣) and this block
+   doesn't get a flag.
 5. **No ⏳ and no 🚫 in the block.** Running work isn't finished work, and
    blocked work certainly isn't.
 
