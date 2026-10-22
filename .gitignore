@@ -1,4 +1,5 @@
 .DS_Store
+dist/
 
 # Claude Code local config, plus the worktrees it creates for background tasks
 .claude/

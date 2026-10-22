@@ -20,6 +20,9 @@ npx skills add bradfrost/skills -g -a claude-code
 
 For other agents, swap in `-a codex`, `-a cursor`, `-a github-copilot`, `-a gemini-cli`, which will install into `~/.agents/skills/`. You can also drop the `-g` to install only in the project you're currently in.
 
+For Codex links that follow a local checkout, or a ChatGPT plugin containing
+the full collection, follow [Use these skills in Codex & ChatGPT](OPENAI.md).
+
 ### 2. Run the setup
 
 Once the skills are installed, in a new agent session, run:
