@@ -35,6 +35,16 @@ acceptance exercise for each proposed change. A technique's presence is
 separate from evidence that it helps. Record intentional exclusions without
 penalizing the team for them.
 
+## Related course lessons
+
+When a lesson helps explain an actual finding or team decision, use
+[the lesson pointers](COURSE-LESSONS.md) to add up to three relevant links
+to the assessment or verification record. Name the finding, course, and
+connection, and disclose access. These are optional learning resources;
+they do not establish whether a control worked in the user's environment.
+Omit them when no lesson fits or the user declines. A failed lookup is a
+reported limitation, not a reason to hold up the work.
+
 ## Team decisions and gap records
 
 For each unresolved decision, capture:

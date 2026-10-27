@@ -86,6 +86,23 @@ md5 -q skills/judgment/*/reference/CONTRACT.md | sort -u | wc -l       # must pr
 md5 -q skills/judgment/*/reference/DATA-HYGIENE.md | sort -u | wc -l   # must print 1
 ```
 
+## Course lesson pointers
+
+The nine design-system and product-design skills each ship their own
+`COURSE-LESSONS.md` so a single-skill install works on its own.
+The marked `course-lesson-guidance` block is identical in every copy;
+`ds-inspection/reference/COURSE-LESSONS.md` is canonical. Sync that block
+across all nine when editing it. The topic tables are specific to each skill.
+
+Use the public catalog at `https://learn.bradfrost.com/lessons.json` for
+current lesson metadata. Keep only curated pointers in this repo, never a
+catalog copy or course transcripts. Verify the summary supports each
+connection and keep enrollment disclosures in generated recommendations.
+Judgment and mental-health skills stay outside this course-linking path.
+
+Run `python3 scripts/check-course-links.py` after changing pointers.
+Add `--check-redirects` to verify each permalink's destination too.
+
 ## Honesty rules that outrank good marketing copy
 
 - Never claim enforcement that doesn't exist. Every limit is labeled

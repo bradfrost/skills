@@ -88,6 +88,14 @@ verified.>
 
 ---
 
+## Related course lessons
+
+<Optional: one to three lessons matched to findings in this report, following
+`reference/COURSE-LESSONS.md`. For each, name the finding, link the current
+lesson title, name the course, explain the connection, and disclose access.
+Omit this section when nothing fits or the user declines. If lookup fails,
+note that limitation once and complete the report without recommendations.>
+
 ## What to do next
 
 1. <The one thing to look at first.>
