@@ -58,6 +58,7 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 | Skill | What it does |
 |---|---|
 | [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md) | Runs your design system through the 10-station inspection, detailed in Chapter 3 of our [AI & Design Systems course](https://aianddesign.systems) |
+| [`ds-ai-rails`](skills/design-systems/ds-ai-rails/SKILL.md) | Assesses, configures, and verifies how AI uses your actual design system, including what happens when the system doesn't cover a need |
 | [`product-inspection`](skills/product-design/product-inspection/SKILL.md) | Runs your product through a multi-point health inspection, detailed in Chapter 4 of [AI & Design Systems](https://aianddesign.systems/) |
 | [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md) | Establishes a plan to migrate your product's existing UI over to your design system, detailed in Chapter 4 of [AI & Design Systems](https://aianddesign.systems/) |
 | [`ds-token-architecture`](skills/design-systems/ds-token-architecture/SKILL.md) | Checks your design tokens against the three-tier architecture we teach in [Subatomic](https://designtokenscourse.com/), or establishes a tier ladder from a codebase that has no tokens yet |
@@ -191,6 +192,27 @@ These skills are practical accompaniments to detailed video lessons covered in [
 - **[`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)** analyzes a product to find bespoke user interface components, maps those components to design system equivalents, and then constructs a prioritized strategy to implement the design system adoption. 
 
 **Detailed tutorials, workflows, concepts and lessons for these skills are covered in Chapters 3 and 4 of the [AI & Design Systems](https://aianddesign.systems/) course.**
+
+## Keep AI on the rails of the design system
+
+Your team has put real work into its design system. How do you get AI to
+actually use it? **[`ds-ai-rails`](skills/design-systems/ds-ai-rails/SKILL.md)**
+helps you assess the environment, connect the right sources and tools, and
+verify the result with a small, representative exercise. It works with your
+system, your agents, and your delivery process.
+
+It also helps your team put a finer point on what happens when the system
+doesn't cover something. You can choose a scoped working agreement while
+the team discusses the bigger policy questions. New compositions, local
+extensions, shared contributions, and temporary exceptions each need a
+deliberate route; a missing component isn't permission to invent anything!
+
+Start with `/ds-ai-rails` and point it at a project and design system. Ask
+for an assessment, setup, or verification. You'll get the relevant evidence,
+concrete improvements, and decisions that still need your team. The skill
+distinguishes advisory instructions, checks that detect violations, and
+controls that actually block them. It does not promise that installing a
+skill makes every agent reliable.
 
 ## Kill the vibes
 

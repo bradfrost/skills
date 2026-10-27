@@ -23,6 +23,7 @@ them):
 |---|---|---|
 | Limits | `limits-setup`, `limits-sessions`, `limits-quiet-hours`, `limits-endings`, `limits-energy` | **Yes** — the interview |
 | Design systems | `ds-inspection`, `ds-adoption-plan` | No |
+| Design systems | `ds-ai-rails` | No; discovers the environment on its first run |
 | Design systems | `ds-ascii` | **Yes** — build the design system profile |
 | Product design | `product-inspection` | No |
 | Product design | `vibe-killer` | **Yes** — build the design system profile |
@@ -97,6 +98,8 @@ and how to start it:
   product's project
 - **`ds-adoption-plan`** — run `/ds-adoption-plan` from inside a product
   you want moved onto your design system
+- **`ds-ai-rails`**: run `/ds-ai-rails` from a project and point it at
+  your design system to assess, set up, or verify the AI workflow
 - **`storybook-to-product`** — run `/storybook-to-product` from inside the
   product, and point it at the Storybook story you want to ship
 - **`what-do-i-make-of-this`** — run `/what-do-i-make-of-this` and paste
