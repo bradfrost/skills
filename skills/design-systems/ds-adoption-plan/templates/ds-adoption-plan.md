@@ -31,6 +31,14 @@ _Written <date> from `MAPPING.md` · re-run the teardown after each wave and app
 |---|---|---|
 | <mapping row> | <issue link> | <the swap/compose to perform> |
 
+## Related course lessons
+
+<Optional: one to three lessons matched to findings in this report, following
+`reference/COURSE-LESSONS.md`. For each, name the finding, link the current
+lesson title, name the course, explain the connection, and disclose access.
+Omit this section when nothing fits or the user declines. If lookup fails,
+note that limitation once and complete the report without recommendations.>
+
 ## Cadence & verification
 
 - After each wave: <build + verify scripts + scanner re-run>; append the score/surface delta here

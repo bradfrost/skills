@@ -60,6 +60,14 @@ at the bottom of that check's file.>
 <Re-assessments only: lights that changed, work-order items closed or still
 open, token counts then vs now. Delete for a first assessment.>
 
+## Related course lessons
+
+<Optional: one to three lessons matched to findings in this report, following
+`reference/COURSE-LESSONS.md`. For each, name the finding, link the current
+lesson title, name the course, explain the connection, and disclose access.
+Omit this section when nothing fits or the user declines. If lookup fails,
+note that limitation once and complete the report without recommendations.>
+
 ## Next
 
 - Work order: `ds-token-architecture/work-orders/<date>-work-order.md`

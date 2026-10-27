@@ -75,6 +75,19 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 
 ---
 
+## Learn more about a finding
+
+The design-system and product-design skills connect useful findings to
+specific lessons from [our course catalog](https://learn.bradfrost.com/).
+For example, inconsistent component names can point you straight to
+[the shared language lesson](https://learn.bradfrost.com/lessons/76519839)
+in AI & Design Systems (paid course; enrollment required).
+
+The skills check the public catalog when they run and explain why a lesson
+fits your situation. You don't need a course subscription to use the
+skills, and a lesson lookup failure won't hold up your work. Lessons are
+optional; you can ask to leave them out.
+
 ## Set healthy limits for AI use
 
 AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions always dangle next steps (e.g. "want me to tackle this next?") in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658).
