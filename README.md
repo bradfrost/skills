@@ -80,6 +80,19 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 
 ---
 
+## Learn more about a finding
+
+The design-system and product-design skills connect useful findings to
+specific lessons from [our course catalog](https://learn.bradfrost.com/).
+For example, inconsistent component names can point you straight to
+[the shared language lesson](https://learn.bradfrost.com/lessons/76519839)
+in AI & Design Systems (paid course; enrollment required).
+
+The skills check the public catalog when they run and explain why a lesson
+fits your situation. You don't need a course subscription to use the
+skills, and a lesson lookup failure won't hold up your work. Lessons are
+optional; you can ask to leave them out.
+
 ## Set healthy limits for AI use
 
 AI companies are incentivized to keep you using AI, so the user experience is designed to keep you prompting. AI sessions always dangle next steps (e.g. "want me to tackle this next?") in front of you to keep you prompting, to the detriment of your [mental health](https://www.youtube.com/watch?v=iPUn1Fnfn0k) and the [environment](https://news.un.org/en/story/2026/06/1167658).
@@ -197,35 +210,6 @@ These skills are practical accompaniments to detailed video lessons covered in [
 - **[`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)** inventories a product's bespoke UI in code and design files, checks real design system replacements, estimates the effort, and lays out the work in waves. When the system doesn't cover something, the plan calls out the gap instead of inventing a component.
 
 **Detailed tutorials, workflows, concepts and lessons for these skills are covered in Chapters 3 and 4 of the [AI & Design Systems](https://aianddesign.systems/) course.**
-
-The two inspections tell you what needs attention. The adoption plan takes
-those findings (or a product you already know needs work) and maps a route
-from its current UI to your design system. If you only need to convert one
-page, use [`vibe-killer`](skills/product-design/vibe-killer/SKILL.md).
-
-## Check or establish your design tokens
-
-**[`ds-token-architecture`](skills/design-systems/ds-token-architecture/SKILL.md)**
-checks your tokens against the three tiers Ian and I teach in
-[Subatomic](https://designtokenscourse.com/): definitions, usage, and
-components. It runs nine evidence-based checks and gives you a report and a
-separate work order. There's no score out of 100; the useful question is
-whether another theme or brand would be a remap or a rewrite.
-
-Have a product full of hardcoded values and no tokens yet? The same skill
-can help establish the tiers from the code. It extracts what's there and
-proposes a ladder, but your team decides which values to merge and which
-pixels may change. You can also hand it a single `tokens.json` in chat; it
-will run the checks that file supports and name the evidence it still needs.
-
-## Sketch with your own components
-
-**[`ds-ascii`](skills/design-systems/ds-ascii/SKILL.md)** turns a page brief
-into a labeled text wireframe you can read in a chat, issue, or pull request.
-It first builds a profile of your design system's real component names,
-then uses those names in the diagram and its anatomy legend. If your system
-has no component for a region, it marks that region as unmapped. The result
-is a wireframe spec, ready to discuss before anybody writes markup.
 
 ## Keep AI on the rails of the design system
 
