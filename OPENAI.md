@@ -1,6 +1,6 @@
 # Use these skills in Codex & ChatGPT
 
-You can install all 15 public skills locally in Codex and upload the same
+You can install all 16 public skills locally in Codex and upload the same
 collection to your ChatGPT account. Each skill keeps its supporting files,
 including the design-system references and limits documentation.
 
@@ -32,7 +32,7 @@ python3 scripts/package-openai.py
 
 In ChatGPT, open **Plugins > Add > Upload plugin archive** and select
 `dist/brad-frost-skills.zip`. Choose **Add plugin**, then **Install plugin**.
-Confirm the detail page shows **Skills 15** and **Manage / Try in chat**.
+Confirm the detail page shows **Skills 16** and **Manage / Try in chat**.
 Start a new chat to use it.
 
 These upload controls are available on Brad's account as of October 22, 2026;

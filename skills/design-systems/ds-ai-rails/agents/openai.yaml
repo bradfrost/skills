@@ -1,0 +1,4 @@
+interface:
+  display_name: "Keep AI on the rails of the design system"
+  short_description: "Ground AI workflows in your actual design system"
+  default_prompt: "Use $ds-ai-rails to assess how reliably this project’s AI setup uses our design system and route uncovered needs."

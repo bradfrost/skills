@@ -1,0 +1,219 @@
+chapter,number,title,source_url,transcript_characters,course_link_status,review_depth
+Chapter 3,,"Eddie: Drumroll, Please! New DS Inspection Results",https://app.notion.com/3ca3c9323e8681ad899cf82934d11787,5145,needs review,retrieved; thematic screening
+Chapter 0,0.02,Course Goals and Outcomes,https://app.notion.com/34a3c9323e8681228238e5f75c052a53,1816,matched,retrieved; thematic screening
+Chapter 0,0.03,Who This Course Is For,https://app.notion.com/34a3c9323e868149b0e1da38918c4fe7,1891,matched,retrieved; thematic screening
+Chapter 0,0.04,Meet Your Teachers,https://app.notion.com/34a3c9323e868141b6c6f6118e6fa80d,3206,matched,retrieved; thematic screening
+Chapter 0,0.05,Our Collective AI Experience,https://app.notion.com/34a3c9323e86814b8650ff915a9bd71f,1476,matched,retrieved; thematic screening
+Chapter 0,0.06,Principles and Our Approach to AI,https://app.notion.com/34a3c9323e8681859a0fc379dd635f38,12466,matched,retrieved; thematic screening; selected transcript passages close-read
+Chapter 0,0.07,What to Expect,https://app.notion.com/34a3c9323e86819d83b5cc53e7887c99,3219,matched,retrieved; thematic screening
+Chapter 0,0.99,A quick note about how we're creating this course,https://app.notion.com/34a3c9323e8681b69280d31826e8c0a5,2119,matched,retrieved; thematic screening
+Chapter 1,1.00,Chapter 1 Introduction,https://app.notion.com/34a3c9323e8681d1a605d8f42f4594c5,1711,matched,retrieved; thematic screening
+Chapter 1,1.01,How did we get here? A brief history of technology & computing,https://app.notion.com/34a3c9323e8681e4a022ef0ecfe33a40,6166,matched,retrieved; thematic screening
+Chapter 1,1.02,History of Design Systems,https://app.notion.com/34a3c9323e8681f19853c139ba52db6b,8427,matched,retrieved; thematic screening
+Chapter 1,1.03,AI as Mortar for Design System Foundations,https://app.notion.com/34a3c9323e86815c945dc194dfa90afd,2131,matched,retrieved; thematic screening; selected transcript passages close-read
+Chapter 1,1.04,Design system definition,https://app.notion.com/34a3c9323e868139afc2e206bf0c672d,2016,matched,retrieved; thematic screening
+Chapter 1,1.05,A design system's ingredients,https://app.notion.com/34a3c9323e8681f8bf0ef286e69be1e8,2250,matched,retrieved; thematic screening
+Chapter 1,1.06,The Value of Design Systems,https://app.notion.com/34a3c9323e868171bca2d96140088d05,1710,matched,retrieved; thematic screening
+Chapter 1,1.07,What's Hard About Design Systems?,https://app.notion.com/34a3c9323e8681c7bdd7f0125b19a715,3028,matched,retrieved; thematic screening
+Chapter 1,1.08,A Brief History of AI,https://app.notion.com/3563c9323e8681db8393e822e6b02667,8959,matched,retrieved; thematic screening
+Chapter 1,1.09,LLM Overview,https://app.notion.com/3563c9323e8681c4ada9e1146bfce6ee,1591,matched,retrieved; thematic screening
+Chapter 1,1.10,LLMs in Action,https://app.notion.com/3573c9323e8681428d74d0461a7c31b1,11814,matched,retrieved; thematic screening
+Chapter 1,1.10 Appendix,LLMs in Action - Full Session,https://app.notion.com/3573c9323e86815eb28ec654ed61fb81,25558,matched,retrieved; thematic screening
+Chapter 1,1.11,AI for Digital Product Work,https://app.notion.com/3593c9323e8681209e9bf1fc637d5bc6,864,matched,retrieved; thematic screening
+Chapter 1,1.12,The Value of AI,https://app.notion.com/3593c9323e868160b726c84322a36a85,2857,matched,retrieved; thematic screening
+Chapter 1,1.13,What's Hard About AI,https://app.notion.com/3593c9323e86812494a4daebc1a42eb3,5192,matched,retrieved; thematic screening
+Chapter 1,1.15,Design System Tools Intro,https://app.notion.com/34a3c9323e8681b99b66c15f833c33dc,573,matched,retrieved; thematic screening
+Chapter 1,1.16,Figma Intro,https://app.notion.com/34a3c9323e86811a8003e125027accb4,569,matched,retrieved; thematic screening
+Chapter 1,1.17,Figma Component Walkthrough,https://app.notion.com/34a3c9323e86817dba5fc64e4bf05999,4419,matched,retrieved; thematic screening
+Chapter 1,1.18,Figma Variables Walkthrough,https://app.notion.com/34a3c9323e868164b649e708730a5be7,3355,matched,retrieved; thematic screening
+Chapter 1,1.19,Code and Storybook Intro,https://app.notion.com/34a3c9323e868175826dd26d50738b51,771,matched,retrieved; thematic screening
+Chapter 1,1.20,Code and Storybook Walkthrough,https://app.notion.com/34a3c9323e86817fae95c9736c646a58,5625,matched,retrieved; thematic screening
+Chapter 1,1.21,Publishing a Component Library in Code,https://app.notion.com/34a3c9323e8681f38873f69b2d35d6d6,1219,matched,retrieved; thematic screening
+Chapter 1,1.22,Documentation Tools,https://app.notion.com/34a3c9323e86812087abfd8f9d50bfa6,3542,matched,retrieved; thematic screening
+Chapter 1,1.23,Design System Tools Summary,https://app.notion.com/34a3c9323e86818c81f6d9708b57e883,899,matched,retrieved; thematic screening
+Chapter 1,1.24,AI Tooling Overview: Introduction,https://app.notion.com/34a3c9323e86811e8675f127ebb59385,755,matched,retrieved; thematic screening
+Chapter 1,1.25,What Are LLMs and How Do They Work?,https://app.notion.com/34a3c9323e868190956fe396935be094,2059,matched,retrieved; thematic screening
+Chapter 1,1.26,What LLMs Are Not,https://app.notion.com/34a3c9323e8681db9e7ad5edb36b418a,698,matched,retrieved; thematic screening
+Chapter 1,1.27,Major LLM Players: Overview and Features,https://app.notion.com/34a3c9323e86812fab99e94ac4d97a1a,2695,matched,retrieved; thematic screening
+Chapter 1,1.28,How We Actually Use LLMs,https://app.notion.com/34a3c9323e8681faac51c2e716ff5b25,2416,matched,retrieved; thematic screening
+Chapter 1,1.29,AI Supporting Tools: Introduction,https://app.notion.com/34a3c9323e8681e79ffef496b8f3fc8a,350,matched,retrieved; thematic screening
+Chapter 1,1.30,Agents,https://app.notion.com/34a3c9323e86819bb3cac64def0aa651,1445,matched,retrieved; thematic screening
+Chapter 1,1.31,Subagents,https://app.notion.com/34a3c9323e868180aa37e448364d9f0e,1249,matched,retrieved; thematic screening
+Chapter 1,1.32,MCPs,https://app.notion.com/34a3c9323e8681f78c7ddb47643b968a,2366,matched,retrieved; thematic screening
+Chapter 1,1.33,Why MCPs Matter,https://app.notion.com/34a3c9323e8681ea86d3d176c3794dc2,1639,matched,retrieved; thematic screening
+Chapter 1,1.34,Skills,https://app.notion.com/34a3c9323e86817b9a7aff094a41a422,1156,matched,retrieved; thematic screening
+Chapter 1,1.35,How It All Connects,https://app.notion.com/34a3c9323e8681e5a811f6aa16ad5fd7,717,matched,retrieved; thematic screening
+Chapter 1,1.36,AI Tools Recap,https://app.notion.com/34a3c9323e8681af8285de6af3470c11,1826,matched,retrieved; thematic screening
+Chapter 1,1.dsai.00,Design systems + AI Overview,https://app.notion.com/3c23c9323e86815280d1eb8eebd0cc19,1434,matched,retrieved; thematic screening
+Chapter 1,1.dsai.01,DS+AI Use Cases,https://app.notion.com/3c23c9323e8681368e06f34ca83795be,1026,matched,retrieved; thematic screening
+Chapter 1,1.dsai.02,Redefining Digital Process,https://app.notion.com/3c23c9323e868115be54dbc974c4af0c,813,matched,retrieved; thematic screening
+Chapter 1,1.dsai.03,Tools Orientation Intro,https://app.notion.com/3c23c9323e8681808f2fcc67c23c0c5d,533,matched,retrieved; thematic screening
+Chapter 1,1.outro,Chapter 1 Homework & Next Steps,https://app.notion.com/3c23c9323e8681169049feec89fd30f0,1960,matched,retrieved; thematic screening
+Chapter 1,1.review,Chapter 1 Review,https://app.notion.com/3c23c9323e8681a18efad199cb4912b1,1149,matched,retrieved; thematic screening
+Chapter 2,2.00,Chapter 2 Introduction,https://app.notion.com/34a3c9323e868145b1aef25140bbc152,1444,matched,retrieved; thematic screening
+Chapter 2,2.01,Installing Claude Desktop,https://app.notion.com/3c23c9323e8681ec9cb2ea3bee674f1f,1992,matched,retrieved; thematic screening
+Chapter 2,2.02,Installing Cursor,https://app.notion.com/3c23c9323e868191b0d9e36b5fe1fc16,2192,matched,retrieved; thematic screening
+Chapter 2,2.03,Claude Code,https://app.notion.com/3c23c9323e86811eb9daf67358de754b,794,matched,retrieved; thematic screening
+Chapter 2,2.04,Other Tools,https://app.notion.com/3c23c9323e8681548fb2dbe0f9e94001,1953,matched,retrieved; thematic screening
+Chapter 2,2.05,API Keys Introduction,https://app.notion.com/3c23c9323e868129a4a6da506fd59821,585,matched,retrieved; thematic screening
+Chapter 2,2.06,Claude API Keys,https://app.notion.com/3c23c9323e8681c6b48adc20f20a4940,1377,matched,retrieved; thematic screening
+Chapter 2,2.07,OpenAI API Keys,https://app.notion.com/3c23c9323e86810cb473cbb748b0da90,920,matched,retrieved; thematic screening
+Chapter 2,2.08,Gemini API Keys,https://app.notion.com/3c23c9323e868167a46fd80c5b9ca0ef,846,matched,retrieved; thematic screening
+Chapter 2,2.09,Figma Personal Access Tokens,https://app.notion.com/3c23c9323e86813aa901c0b525b0335f,1177,matched,retrieved; thematic screening
+Chapter 2,2.10,Configuration Introduction,https://app.notion.com/3c23c9323e868179bf2bc82db5911c48,318,matched,retrieved; thematic screening
+Chapter 2,2.11,Configuring Cursor,https://app.notion.com/3c23c9323e868158b039de07806b7670,2923,matched,retrieved; thematic screening
+Chapter 2,2.12,Installing Figma MCP in Cursor,https://app.notion.com/3c23c9323e86816d8252de491a07cad5,1228,matched,retrieved; thematic screening
+Chapter 2,2.13,Installing Figma MCP in Claude Desktop,https://app.notion.com/3c23c9323e868105be09d8bef2da3f58,2417,matched,retrieved; thematic screening
+Chapter 2,2.60,Why Git Matters In The AI Age,https://app.notion.com/3663c9323e868138ad8af8d1816a335a,3046,matched,retrieved; thematic screening
+Chapter 2,2.61,Git Definition,https://app.notion.com/3663c9323e86812b9d7cdde5bd669f93,1824,matched,retrieved; thematic screening
+Chapter 2,2.62,Installing Git,https://app.notion.com/3663c9323e8681caa715f272a6e2cae5,1152,matched,retrieved; thematic screening
+Chapter 2,2.63,A Quick Note About Access & Security,https://app.notion.com/3663c9323e86814fa114fc5f5605fbe6,1398,matched,retrieved; thematic screening
+Chapter 2,2.64,Creating a GitHub Account,https://app.notion.com/3663c9323e8681a7969ec5314e3ea481,2289,matched,retrieved; thematic screening
+Chapter 2,2.65,Installing GitHub CLI,https://app.notion.com/3663c9323e868105b059c2f1d09248ff,2084,matched,retrieved; thematic screening
+Chapter 2,2.66,Git Core Concepts Cheat Sheet,https://app.notion.com/3663c9323e86811a8c5ae262cb42ceef,4266,matched,retrieved; thematic screening
+Chapter 2,2.67,Git Demo: Making A New Website,https://app.notion.com/3663c9323e8681cba9aaca4ba6092563,1812,matched,retrieved; thematic screening
+Chapter 2,2.68,Git Init & Interacting With Git,https://app.notion.com/3663c9323e8681cb93e0c9cfb79f1352,2341,matched,retrieved; thematic screening
+Chapter 2,2.69,Git Commit & History,https://app.notion.com/3663c9323e868181a229c25debacb9f8,2172,matched,retrieved; thematic screening
+Chapter 2,2.70,AI-generated Code & Git Commits,https://app.notion.com/3663c9323e86819b877dd2bd02a64444,5406,matched,retrieved; thematic screening
+Chapter 2,2.71,Publish repository to GitHub,https://app.notion.com/3663c9323e8681d6a58cfc2d3f4adc72,2333,matched,retrieved; thematic screening
+Chapter 2,2.72,Adding GitHub Collaborators,https://app.notion.com/3663c9323e868145a1e0ca5cbc51e807,1057,matched,retrieved; thematic screening
+Chapter 2,2.73,Creating a new branch,https://app.notion.com/3663c9323e8681d5a8eafc0aa9d70e5e,2327,matched,retrieved; thematic screening
+Chapter 2,2.74,Publishing A New Branch,https://app.notion.com/3663c9323e868101a524f1c4608e2884,2085,matched,retrieved; thematic screening
+Chapter 2,2.75,Merging & Pull Requests,https://app.notion.com/3663c9323e8681978fd8f0a0f8d365bd,3698,matched,retrieved; thematic screening
+Chapter 2,2.76,Syncing Changes From GitHub,https://app.notion.com/3663c9323e8681d8a18cd6bd803bd3be,1375,matched,retrieved; thematic screening
+Chapter 2,2.77,Git Concepts Recap,https://app.notion.com/3663c9323e8681e09f87fd3c06fbb751,1505,matched,retrieved; thematic screening
+Chapter 2,2.78,Creating GitHub Issues,https://app.notion.com/3663c9323e8681cda798ef3a49a2a27f,870,matched,retrieved; thematic screening
+Chapter 2,2.79,Supercharging GitHub Issues with AI,https://app.notion.com/3663c9323e8681bfb164ef53d191b04b,8445,matched,retrieved; thematic screening
+Chapter 2,2.80,Chapter 2 Summary,https://app.notion.com/3c23c9323e8681a9a919dc94cdafdb57,1295,matched,retrieved; thematic screening
+Chapter 2,2.81,Chapter 2 Homework & Next Steps,https://app.notion.com/3c23c9323e868108b7f7ed4187c6a5e3,1645,matched,retrieved; thematic screening
+Chapter 2,2.90,Using Figma MCP with Claude Code,https://app.notion.com/3c23c9323e86816ca876cb5eea758029,1780,matched,retrieved; thematic screening
+Chapter 2,2.91,"Figma MCP Connectors, Plugins, and Skills",https://app.notion.com/3c23c9323e8681c3af68dc5c3a0accb8,6420,matched,retrieved; thematic screening
+Chapter 3,3.00,Chapter 3 Introduction,https://app.notion.com/34a3c9323e8681d4b8f5d76e1a3dd523,1504,matched,retrieved; thematic screening
+Chapter 3,3.01,The Check Engine Light for Design Systems,https://app.notion.com/3563c9323e8681e18ef5fa40a4752734,1695,matched,retrieved; thematic screening
+Chapter 3,3.015,Creating Design Systems,https://app.notion.com/39d3c9323e86815e8105e98078d750df,2279,matched,retrieved; thematic screening
+Chapter 3,3.018,Demo Design Systems Introduction,https://app.notion.com/39d3c9323e8681b781b1f7c82220c3dd,7488,matched,retrieved; thematic screening
+Chapter 3,3.02,Introducing & Configuring FigmaLint,https://app.notion.com/3563c9323e8681f59fcdc9b9b612e23c,1288,matched,retrieved; thematic screening
+Chapter 3,3.03,Analyzing a Component with FigmaLint,https://app.notion.com/3563c9323e868143bcacc3f810cdb908,5376,matched,retrieved; thematic screening
+Chapter 3,3.04,Fixing Component Issues with FigmaLint,https://app.notion.com/3563c9323e8681a79b35e1bd3a752e67,3828,matched,retrieved; thematic screening
+Chapter 3,3.09,Assessment Tools,https://app.notion.com/39d3c9323e8681419bfdc2a511b6d9bf,2539,no match,retrieved; thematic screening
+Chapter 3,3.10,Assessment Considerations,https://app.notion.com/39d3c9323e868197b983eecc309f07ac,1848,no match,retrieved; thematic screening
+Chapter 3,3.context.00,Context-Based Design Systems Overview,https://app.notion.com/3c23c9323e86813e8260edbe7793ded8,12124,matched,retrieved; thematic screening; selected transcript passages close-read
+Chapter 3,3.docs.00,Company Docs and Figma MCP Tools,https://app.notion.com/39d3c9323e86812683cae3798398253b,2832,matched,retrieved; thematic screening
+Chapter 3,3.docs.01,Generating documentation from Figma with Company Docs,https://app.notion.com/39d3c9323e86812b8d8cff5af73c74bc,4885,matched,retrieved; thematic screening
+Chapter 3,3.docs.02,Publishing docs via Mintlify,https://app.notion.com/39d3c9323e868185a0cceb9d945ebe7a,2093,matched,retrieved; thematic screening
+Chapter 3,3.docs.03,Publishing & Using Company Docs MCP,https://app.notion.com/39d3c9323e8681b68fb2c1fbb301f3df,5327,matched,retrieved; thematic screening
+Chapter 3,3.inspect.00,How AI Can Help With Assessing A Design System,https://app.notion.com/39d3c9323e86817ca562eb3941aa6321,2369,matched,retrieved; thematic screening
+Chapter 3,3.inspect.01,Design System Inspection Qualities,https://app.notion.com/39d3c9323e868118b181cc515e5ab293,2045,matched,retrieved; thematic screening
+Chapter 3,3.inspect.02,Design System Inspection Stations,https://app.notion.com/39d3c9323e8681349560f0642a5ba4f1,4706,matched,retrieved; thematic screening
+Chapter 3,3.inspection.00,Audit,https://app.notion.com/3ca3c9323e86814982bed28effdf1de8,12775,needs review,retrieved; thematic screening
+Chapter 3,3.outro,"Chapter 3 Summary, Homework, and Next Steps",https://app.notion.com/39d3c9323e8681a6ad24ce52d17338c8,1569,matched,retrieved; thematic screening
+Chapter 3,3.s1.eddie-demo.01,"Eddie: Clarifying Architecture, Finding More Gaps, and Capturing Tickets",https://app.notion.com/39d3c9323e8681ba9486c45a1daf6bea,6741,matched,retrieved; thematic screening
+Chapter 3,3.s1.eddie-demo.02,Eddie: Building a Loading State Button,https://app.notion.com/39d3c9323e8681e7bed0eb7042f93bc0,5373,matched,retrieved; thematic screening
+Chapter 3,3.s1.intro,Station 1: Coverage & Gaps,https://app.notion.com/39d3c9323e8681be96dce735a81b9ff4,4131,matched,retrieved; thematic screening
+Chapter 3,3.s1.outro,Station 1: Review & Considerations,https://app.notion.com/39d3c9323e86819096d3f47318ca2206,2703,matched,retrieved; thematic screening
+Chapter 3,3.s10.eddie-demo.01,Eddie: Publishing Eddie-Brain MCP,https://app.notion.com/39d3c9323e868159bf98e070f5045343,6399,matched,retrieved; thematic screening
+Chapter 3,3.s10.intro,Station 10: Agent Access,https://app.notion.com/39d3c9323e86814cbd1be87f1b6d5ab7,2206,matched,retrieved; thematic screening
+Chapter 3,3.s10.outro,Station 10: Agent Access Recap & Considerations,https://app.notion.com/39d3c9323e86818ab702ea406b469f5c,1968,matched,retrieved; thematic screening
+Chapter 3,3.s2.eddie-demo.01,Eddie: Fixing the Danger Button Dead Prop,https://app.notion.com/39d3c9323e86816c9c58f1d2c0f65c59,6232,matched,retrieved; thematic screening
+Chapter 3,3.s2.intro,Station 2: Best Practices,https://app.notion.com/39d3c9323e8681e7b113e60ed44ab892,3824,matched,retrieved; thematic screening
+Chapter 3,3.s2.outro,Station 2: Recap & Considerations,https://app.notion.com/39d3c9323e868130b894d08850cce384,2026,matched,retrieved; thematic screening
+Chapter 3,3.s3.eddie-demo.01,Eddie: Fixing Modal Focus Trap,https://app.notion.com/39d3c9323e8681d69a95d994c042534f,9503,matched,retrieved; thematic screening
+Chapter 3,3.s3.intro,Station 3: Accessibility,https://app.notion.com/39d3c9323e8681e586c9d8994319b523,3039,matched,retrieved; thematic screening
+Chapter 3,3.s3.outro,Station 3: Accessibility Recap & Considerations,https://app.notion.com/39d3c9323e86815f91d9f627bbe30121,2693,matched,retrieved; thematic screening
+Chapter 3,3.s4.eddie-demo.01,Eddie: Normalizing Shared Language with Knockout,https://app.notion.com/39d3c9323e8681c2b2d2c115a0706df6,4509,matched,retrieved; thematic screening
+Chapter 3,3.s4.intro,Station 4: Shared Language,https://app.notion.com/39d3c9323e86813f8207c576faf78d7f,2810,matched,retrieved; thematic screening
+Chapter 3,3.s4.outro,Station 4: Shared Language Recap & Considerations,https://app.notion.com/39d3c9323e8681a5b32cebed1360ad37,1738,matched,retrieved; thematic screening
+Chapter 3,3.s5.eddie-demo.01,Eddie: Closing Keyboard & Behavioral Testing Gaps,https://app.notion.com/39d3c9323e86815b84a1ccf375360fe4,4543,matched,retrieved; thematic screening
+Chapter 3,3.s5.intro,Station 5: Testing & Validation,https://app.notion.com/39d3c9323e86818f91d4cc878eb65a63,1919,matched,retrieved; thematic screening
+Chapter 3,3.s5.outro,Station 5: Testing & Validation Recap & Considerations,https://app.notion.com/39d3c9323e868159a217e5ddee078601,1904,matched,retrieved; thematic screening
+Chapter 3,3.s6.eddie-demo.01,Eddie: Fixing Synchronization in Knowledge Graph & CLAUDE.md,https://app.notion.com/39d3c9323e8681cbb940ea10f92c0e75,3977,matched,retrieved; thematic screening
+Chapter 3,3.s6.intro,Station 6: Orchestration,https://app.notion.com/39d3c9323e8681268365f61f07bcb99b,2749,matched,retrieved; thematic screening
+Chapter 3,3.s6.outro,Station 6: Orchestration Recap & Considerations,https://app.notion.com/39d3c9323e8681cf9b1dc465a1a343de,2732,matched,retrieved; thematic screening
+Chapter 3,3.s7.eddie-demo.01,Eddie: Improving Governance with Branch Protection and PR Template,https://app.notion.com/39d3c9323e8681398e91f6863e4718dd,3046,matched,retrieved; thematic screening
+Chapter 3,3.s7.eddie-demo.02,Using Figma Console MCP to Create Eddie's Governance Diagram,https://app.notion.com/3ca3c9323e8681db8691f7adbcd3bc43,7240,unset,retrieved; thematic screening
+Chapter 3,3.s7.intro,Station 7: Governance & Version Control,https://app.notion.com/39d3c9323e868197bac9f41a9f699cc9,2768,matched,retrieved; thematic screening
+Chapter 3,3.s7.outro,Station 7: Governance & Version Control Recap & Considerations,https://app.notion.com/39d3c9323e8681cfa5a2edfb08e7caff,2662,matched,retrieved; thematic screening
+Chapter 3,3.s8.eddie-demo.01,Eddie: Feedback & Adoption,https://app.notion.com/39d3c9323e86812e8fe3f86a3bbd63e2,4714,matched,retrieved; thematic screening
+Chapter 3,3.s8.intro,Station 8: Feedback & Adoption,https://app.notion.com/39d3c9323e8681949b01c08b42086ce4,2821,matched,retrieved; thematic screening
+Chapter 3,3.s8.outro,Station 8: Feedback & Adoption Recap & Considerations,https://app.notion.com/39d3c9323e8681259095edd3a2803c9d,1979,matched,retrieved; thematic screening
+Chapter 3,3.s9.eddie-demo.01,Eddie: Fix Machine-Readable Docs & Context,https://app.notion.com/39d3c9323e868107bd4cfc4d9438bb20,2346,matched,retrieved; thematic screening; selected transcript passages close-read
+Chapter 3,3.s9.intro,Station 9: Machine-Readable Docs & Context,https://app.notion.com/39d3c9323e8681fbb13ccad2f9f95277,2161,matched,retrieved; thematic screening
+Chapter 3,3.s9.outro,Station 9: Machine-Readable Docs & Context Recap & Considerations,https://app.notion.com/39d3c9323e8681a3b6d8e05b6865712b,1800,matched,retrieved; thematic screening
+Chapter 3,3.testing.00,Deterministic and Agentic Testing with FigmaLint,https://app.notion.com/39d3c9323e8681b8904dc16ec4fe5a2d,1307,matched,retrieved; thematic screening
+Chapter 3,3.testing.01,Evals Testing,https://app.notion.com/39d3c9323e86811888bbe7e0b10aa9a3,3385,matched,retrieved; thematic screening
+Chapter 3,3.testing.02,Playwright Testing & Self-Healing Loops,https://app.notion.com/39d3c9323e868191afb6d9fa01756d52,5421,matched,retrieved; thematic screening
+Chapter 3,3.xx,Improving Soul Patrol components with FigmaLint,https://app.notion.com/3563c9323e86811ba64cf27cf09411f4,6405,matched,retrieved; thematic screening
+Chapter 3,3.xx0,Figma MCP - Installing into Claude Desktop App,https://app.notion.com/3563c9323e8681efa717f1d346547247,2640,matched,retrieved; thematic screening
+Chapter 3,3.xx1,Figma MCP - Installing Into Claude Code in the Terminal,https://app.notion.com/3563c9323e868157ad71d28464757663,2529,matched,retrieved; thematic screening
+Chapter 3,3.xx10,Using Figma Console MCP To Create New Tokens,https://app.notion.com/3ca3c9323e86813695f6ca85f655ad3a,6533,unset,retrieved; thematic screening
+Chapter 3,3.xx11,Figma Console MCP - Implement New Tokens Into Figma Component Library,https://app.notion.com/3ca3c9323e8681b8bfdee3342b8237d0,2581,unset,retrieved; thematic screening
+Chapter 3,3.xx12,Figma Console MCP - Translate New Tokens Into Code and Storybook,https://app.notion.com/3ca3c9323e8681daa3a3c58ae0d5b94c,7393,unset,retrieved; thematic screening
+Chapter 3,3.xx2,Figma MCP - Translating Figma Component into Code,https://app.notion.com/3563c9323e8681689690dafac616c722,4955,matched,retrieved; thematic screening
+Chapter 3,3.xx3,Figma MCP - Translating Component Variant in Code Into Figma,https://app.notion.com/3663c9323e868162b409fdd099f15e16,4965,matched,retrieved; thematic screening
+Chapter 3,3.xx4,Figma Console MCP - Install into Claude Code,https://app.notion.com/3663c9323e868111bb6ee818641ca8c2,3694,matched,retrieved; thematic screening
+Chapter 3,3.xx5,Figma Console MCP - Assessing Component Synchronization in Design and Code,https://app.notion.com/3663c9323e8681bc9b98f125e0a90c8b,6849,matched,retrieved; thematic screening
+Chapter 3,3.xx6,Figma Console MCP - Bidirectional Figma and Code Component Changes From Assessment,https://app.notion.com/3663c9323e86817e9a55e71bfb3df9fc,5666,matched,retrieved; thematic screening
+Chapter 3,3.xx7,Story UI with Soul Patrol Design System Introduction,https://app.notion.com/3663c9323e8681f7a2c0db8271a73318,3261,matched,retrieved; thematic screening
+Chapter 3,3.xx8,Installing Story UI into Soul Patrol Design System,https://app.notion.com/3663c9323e86818daafac762d0df0d31,5305,matched,retrieved; thematic screening
+Chapter 3,3.xx9,Using Story UI to Create Sign In Page,https://app.notion.com/3663c9323e8681619d36d8a35af93ad6,5019,matched,retrieved; thematic screening
+Chapter 4,4.00,Chapter 4 Introduction,https://app.notion.com/34a3c9323e868153add9d60a439dac60,1929,matched,retrieved; thematic screening
+Chapter 4,4.01,Types of Product Work & The Redefined Process,https://app.notion.com/3c23c9323e868121988bcdbc514feb29,5785,matched,retrieved; thematic screening
+Chapter 4,4.02,Discovery & Strategy,https://app.notion.com/3c13c9323e8681b59a70dd23efa1a8b0,6540,matched,retrieved; thematic screening
+Chapter 4,4.03,Discovery & Strategy Recap and Considerations,https://app.notion.com/3c13c9323e868148a81dd302c076e3a3,2912,matched,retrieved; thematic screening
+Chapter 4,4.04,Experience Design,https://app.notion.com/3c33c9323e8681df84ccfbbc8b86260d,5900,unset,retrieved; thematic screening
+Chapter 4,4.05,Static Artifacts in the AI Age,https://app.notion.com/3c33c9323e86817eb9dee8294110f0ef,3597,unset,retrieved; thematic screening
+Chapter 4,4.07,Prototyping,https://app.notion.com/3c33c9323e8681dfb292d294120f984f,1567,unset,retrieved; thematic screening
+Chapter 4,4.08,Prototyping without the design system,https://app.notion.com/3c33c9323e868157ba16c47b77f12fad,2312,unset,retrieved; thematic screening
+Chapter 4,4.09,Prototyping Without The Design System Recap,https://app.notion.com/3c33c9323e8681578829f274d29b8d49,1894,unset,retrieved; thematic screening
+Chapter 4,4.10,Prototyping With the Design System,https://app.notion.com/3c43c9323e8681aa9c32d603f8f67150,3888,unset,retrieved; thematic screening
+Chapter 4,4.11,Prototyping With The Design System Recap,https://app.notion.com/3c43c9323e868186aad4f50557ee38ce,1368,unset,retrieved; thematic screening
+Chapter 4,4.12,Design phase recap,https://app.notion.com/3c43c9323e86810a9d9fe80df4a056dc,842,unset,retrieved; thematic screening
+Chapter 4,4.13,Engineering & Infrastructure,https://app.notion.com/3c73c9323e86811ab5e9d93c619747e7,3555,unset,retrieved; thematic screening
+Chapter 4,4.14,The Steel Curtain,https://app.notion.com/3c73c9323e868154bc3efd05e4c47b29,2824,unset,retrieved; thematic screening; selected transcript passages close-read
+Chapter 4,4.15,Engineering Demos,https://app.notion.com/3c73c9323e8681cc8080ec454fe8ce00,650,unset,retrieved; thematic screening
+Chapter 4,4.16,Ongoing Feature Work,https://app.notion.com/3c73c9323e86816aa450f49c4ccc6651,219,unset,retrieved; thematic screening
+Chapter 4,4.17,Greenfield Work,https://app.notion.com/3c73c9323e86816b82b1e07d0bb5ebae,445,unset,retrieved; thematic screening
+Chapter 4,4.18,Legacy Product Work,https://app.notion.com/3c73c9323e8681c68935ed2838a89b7f,530,unset,retrieved; thematic screening
+Chapter 4,4.19,Rebrands & Rethemes,https://app.notion.com/3c73c9323e868113b910c03d05ffc7ba,535,unset,retrieved; thematic screening
+Chapter 4,4.20,Engineering Recap & Considerations,https://app.notion.com/3c73c9323e8681c4aa46c072bd4061e3,2194,unset,retrieved; thematic screening
+Chapter 4,4.21,"Chapter 4 Summary, Homework, and Next Steps",https://app.notion.com/3c73c9323e8681d08089e0231f8e7948,3338,unset,retrieved; thematic screening
+Chapter 4,4.50,Using Figma MCP to Generate a DS-Powered Login Page,https://app.notion.com/3c23c9323e8681e49f20ef63e0ea6570,15913,matched,retrieved; thematic screening
+Chapter 4,4.bf.00,bradfrost.com - Introducing The Redesign Project,https://app.notion.com/3a23c9323e8681378e57d21ce76982a9,4777,matched,retrieved; thematic screening
+Chapter 4,4.bf.01,Introducing bfw-process and SPEC,https://app.notion.com/3a23c9323e868178b855e001a6501046,3089,matched,retrieved; thematic screening
+Chapter 4,4.bf.02,Reviewing the project SPEC,https://app.notion.com/3a23c9323e8681ec9a12c03c16c39f76,18123,matched,retrieved; thematic screening
+Chapter 4,4.bf.03,bradfrost.com - Installing and Running the Product Inspection,https://app.notion.com/3c23c9323e86815e9dc8fefd5a12ea2e,2818,matched,retrieved; thematic screening
+Chapter 4,4.bf.04,bradfrost.com - Product Inspection Results & Work Order,https://app.notion.com/3c23c9323e86816c8480c6a393f7a08c,10725,matched,retrieved; thematic screening
+Chapter 4,4.bf.05,Generating A Footer With And Without System Guardrails,https://app.notion.com/3ad3c9323e86819f8be0ec7cd93c45fe,4885,matched,retrieved; thematic screening; selected transcript passages close-read
+Chapter 4,4.bf.06,"Keeping Product On The Eddie Rails: Multi-Phase bfw-process, Settings, Rules, & Validation",https://app.notion.com/3ad3c9323e86811bbdc9ed6d0ce78d27,17476,matched,retrieved; thematic screening; selected transcript passages close-read
+Chapter 4,4.bf.07,Fixing the most urgent inspection issues with Declarative Shadow DOM,https://app.notion.com/3b93c9323e8681b59770f08ce4b76790,13088,matched,retrieved; thematic screening
+Chapter 4,4.bf.08,"Adopting the Eddie page shell, header, and footer",https://app.notion.com/3b93c9323e86813f8b41eeec85eeb470,5992,matched,retrieved; thematic screening
+Chapter 4,4.bf.09,Creating an adoption plan and getting quick wins,https://app.notion.com/3b93c9323e8681ae9766f409ecc8d659,10561,matched,retrieved; thematic screening
+Chapter 4,4.bf.10,Improving the article template,https://app.notion.com/3b93c9323e86815fb6f2c6fb7a0ffb00,7014,matched,retrieved; thematic screening
+Chapter 4,4.bf.11,Timeline component adoption,https://app.notion.com/3bd3c9323e8681b782bffa3912a672e0,6000,matched,retrieved; thematic screening
+Chapter 4,4.bf.12,Full Eddie Adoption Walkthrough & Recap,https://app.notion.com/3bd3c9323e86816d830dc2d629fdbcc1,7323,matched,retrieved; thematic screening
+Chapter 4,4.extract.00,Design System Extraction from Production Application,https://app.notion.com/3c03c9323e8681e3b970f2755fcd9429,7421,matched,retrieved; thematic screening
+Chapter 4,4.prototype.00,Head-To-Head AI Prototyping Showdown,https://app.notion.com/3a43c9323e86818f8240ceb272e32b23,1251,matched,retrieved; thematic screening
+Chapter 4,4.prototype.01,Figma Make,https://app.notion.com/3a43c9323e86813b9463c05f00871d94,3410,matched,retrieved; thematic screening
+Chapter 4,4.prototype.02,Bolt,https://app.notion.com/3a43c9323e868126aa2ddc87e7f6f7cf,6028,matched,retrieved; thematic screening
+Chapter 4,4.prototype.03,v0,https://app.notion.com/3a43c9323e86812faf17cbbf2114ef17,4024,matched,retrieved; thematic screening
+Chapter 4,4.prototype.04,Claude Design,https://app.notion.com/3a43c9323e868131bda7fe97fc606636,5420,matched,retrieved; thematic screening
+Chapter 4,4.prototype.05,Lovable,https://app.notion.com/3a43c9323e8681d383aed5d20587645b,4646,matched,retrieved; thematic screening
+Chapter 4,4.prototype.06,Prototyping Wrap Up & Other Options,https://app.notion.com/3c23c9323e86815fb2edfd1cb46690f2,2429,matched,retrieved; thematic screening
+Chapter 4,4.s0,Introducing Storybook MCP,https://app.notion.com/3c23c9323e8681bf93bffdab6ba22891,823,matched,retrieved; thematic screening
+Chapter 4,4.s1,Installing & Configuring Storybook MCP,https://app.notion.com/3c23c9323e868185b93ce9555fdf978c,2581,matched,retrieved; thematic screening
+Chapter 4,4.s2,Running Storybook MCP,https://app.notion.com/3c23c9323e86816b88c7c7a205c8c51f,3669,matched,retrieved; thematic screening
+Chapter 4,4.s3,Generating a Login Form with Storybook MCP,https://app.notion.com/3c23c9323e86811b9db5cdc821ddc70a,1623,matched,retrieved; thematic screening
+Chapter 4,4.xx0,Story UI with Soul Patrol Design Sytem Intro,https://app.notion.com/3ca3c9323e868167bf60e6839ca987ba,3323,unset,retrieved; thematic screening
+Chapter 4,4.xx1,Installing Story UI into Soul Patrol Design System,https://app.notion.com/3ca3c9323e86817e871eeab27072d1f3,5368,unset,retrieved; thematic screening
+Chapter 4,4.xx2,Creating a Composition using Story UI,https://app.notion.com/3ca3c9323e86813fa25cd8e1a04c4fc8,5069,unset,retrieved; thematic screening
+Chapter 4,4.xx3,Building a Soul Patrol Page in Figma Using the Figma MCP and Claude Skill,https://app.notion.com/3c23c9323e868111afeec955af531cf6,8568,matched,retrieved; thematic screening
+Chapter 4,4.xx4,Translating Soul Patrol Page from Figma into Code Using the Figma Console MCP,https://app.notion.com/3c23c9323e8681bb80c7d4ebee191240,6013,matched,retrieved; thematic screening
+Chapter 4,4.xx5,"Add Dark Mode To Soul Patrol Across Platforms With Figma Console MCP, Skills, and Scripts",https://app.notion.com/3c23c9323e8681468c1fd5fd5bd00f4b,8046,matched,retrieved; thematic screening
+Chapter 5,5.00,Intro,https://app.notion.com/34a3c9323e868131900dd5ba91dbc046,4967,matched,retrieved; thematic screening
+Chapter 5,5.01,Agents As Users,https://app.notion.com/3cb3c9323e868174a52bcfd873cd00bd,5061,unset,retrieved; thematic screening
+Chapter 5,5.02,Generative UI,https://app.notion.com/3cd3c9323e86811fac93dfcc7c5b5354,3973,unset,retrieved; thematic screening
+Chapter 5,5.03,Generative UI Recap & Considerations,https://app.notion.com/3cd3c9323e86815fb539df25d1ddcc76,1814,unset,retrieved; thematic screening
+Chapter 5,5.04,Hyperpersonalization,https://app.notion.com/3ce3c9323e868126827ccf6d39159191,6133,unset,retrieved; thematic screening
+Chapter 6,6.00,Intro,https://app.notion.com/34a3c9323e86814a8f12c0b8bcad17bb,1974,matched,retrieved; thematic screening
+Chapter 6,6.01,Selling AI & Design Systems,https://app.notion.com/3ce3c9323e86811a9793eb32fa53f139,43964,unset,retrieved; thematic screening; selected transcript passages close-read
+Chapter 7,7.00,Chapter 7 Intro,https://app.notion.com/34a3c9323e868194bd3cf25bea7429b1,1300,no match,retrieved; thematic screening

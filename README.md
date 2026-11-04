@@ -1,6 +1,8 @@
 # [Brad Frost](https://bradfrost.com) Skills
 
-These agent skills are aimed to help you in different dimensions of work and life. Right now, these skills have mostly emerged from creating our [online courses](https://bradfrost.com/courses/):
+These agent skills help with design systems, product work, healthier AI habits,
+and thinking through hard questions. Many grew out of making our
+[online courses](https://bradfrost.com/courses/):
 - [AI & Design Systems](https://aianddesign.systems/)
 - [Subatomic: The Complete Guide To Design Tokens](https://designtokenscourse.com/)
 - [Atomic Design Certification Course](https://atomicdesigncourse.com/)
@@ -51,16 +53,17 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 | Skill | What it does |
 |---|---|
 | [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) | A brief interview to set and wire up your AI limits |
-| [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) | Caps how many AI sessions you can start in a day |
-| [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) | Sets hours where AI tools are off-limits |
-| [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) | Ends sessions definitively, with no dangling next steps |
-| [`limits-energy`](skills/mental-health/limits-energy/SKILL.md) | Shows you the environmental cost of your AI usage |
+| [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) | Sets a daily session ceiling; the included hook enforces it in Claude Code, while other surfaces vary |
+| [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) | Sets quiet hours; the included hook blocks tool calls in Claude Code, while other surfaces vary |
+| [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) | Asks the agent to end sessions definitively; text behavior is advisory everywhere |
+| [`limits-energy`](skills/mental-health/limits-energy/SKILL.md) | Shows a floor estimate of energy use when you enable the footer |
 
 **Design & development**
 
 | Skill | What it does |
 |---|---|
 | [`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md) | Runs your design system through the 10-station inspection, detailed in Chapter 3 of our [AI & Design Systems course](https://aianddesign.systems) |
+| [`ds-ai-rails`](skills/design-systems/ds-ai-rails/SKILL.md) | Assesses, configures, and verifies how AI uses your actual design system, including what happens when the system doesn't cover a need |
 | [`product-inspection`](skills/product-design/product-inspection/SKILL.md) | Runs your product through a multi-point health inspection, detailed in Chapter 4 of [AI & Design Systems](https://aianddesign.systems/) |
 | [`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md) | Establishes a plan to migrate your product's existing UI over to your design system, detailed in Chapter 4 of [AI & Design Systems](https://aianddesign.systems/) |
 | [`ds-token-architecture`](skills/design-systems/ds-token-architecture/SKILL.md) | Checks your design tokens against the three-tier architecture we teach in [Subatomic](https://designtokenscourse.com/), or establishes a tier ladder from a codebase that has no tokens yet |
@@ -190,10 +193,60 @@ These skills are practical accompaniments to detailed video lessons covered in [
 
 
 - **[`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md)** puts your *design system* through a 10-station inspection and produces a graded report and a prioritized work order. 
-- **[`product-inspection`](skills/product-design/product-inspection/SKILL.md)** inspects a *product* 10 stations covering design system adoption, usability, accessibility, performance, and more. 
-- **[`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)** analyzes a product to find bespoke user interface components, maps those components to design system equivalents, and then constructs a prioritized strategy to implement the design system adoption. 
+- **[`product-inspection`](skills/product-design/product-inspection/SKILL.md)** inspects a *shipping product* across 10 stations, including design system adoption, usability, accessibility, performance, and more. It checks the running product when one is available and marks anything it couldn't inspect instead of guessing.
+- **[`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)** inventories a product's bespoke UI in code and design files, checks real design system replacements, estimates the effort, and lays out the work in waves. When the system doesn't cover something, the plan calls out the gap instead of inventing a component.
 
 **Detailed tutorials, workflows, concepts and lessons for these skills are covered in Chapters 3 and 4 of the [AI & Design Systems](https://aianddesign.systems/) course.**
+
+The two inspections tell you what needs attention. The adoption plan takes
+those findings (or a product you already know needs work) and maps a route
+from its current UI to your design system. If you only need to convert one
+page, use [`vibe-killer`](skills/product-design/vibe-killer/SKILL.md).
+
+## Check or establish your design tokens
+
+**[`ds-token-architecture`](skills/design-systems/ds-token-architecture/SKILL.md)**
+checks your tokens against the three tiers Ian and I teach in
+[Subatomic](https://designtokenscourse.com/): definitions, usage, and
+components. It runs nine evidence-based checks and gives you a report and a
+separate work order. There's no score out of 100; the useful question is
+whether another theme or brand would be a remap or a rewrite.
+
+Have a product full of hardcoded values and no tokens yet? The same skill
+can help establish the tiers from the code. It extracts what's there and
+proposes a ladder, but your team decides which values to merge and which
+pixels may change. You can also hand it a single `tokens.json` in chat; it
+will run the checks that file supports and name the evidence it still needs.
+
+## Sketch with your own components
+
+**[`ds-ascii`](skills/design-systems/ds-ascii/SKILL.md)** turns a page brief
+into a labeled text wireframe you can read in a chat, issue, or pull request.
+It first builds a profile of your design system's real component names,
+then uses those names in the diagram and its anatomy legend. If your system
+has no component for a region, it marks that region as unmapped. The result
+is a wireframe spec, ready to discuss before anybody writes markup.
+
+## Keep AI on the rails of the design system
+
+Your team has put real work into its design system. How do you get AI to
+actually use it? **[`ds-ai-rails`](skills/design-systems/ds-ai-rails/SKILL.md)**
+helps you assess the environment, connect the right sources and tools, and
+verify the result with a small, representative exercise. It works with your
+system, your agents, and your delivery process.
+
+It also helps your team put a finer point on what happens when the system
+doesn't cover something. You can choose a scoped working agreement while
+the team discusses the bigger policy questions. New compositions, local
+extensions, shared contributions, and temporary exceptions each need a
+deliberate route; a missing component isn't permission to invent anything!
+
+Start with `/ds-ai-rails` and point it at a project and design system. Ask
+for an assessment, setup, or verification. You'll get the relevant evidence,
+concrete improvements, and decisions that still need your team. The skill
+distinguishes advisory instructions, checks that detect violations, and
+controls that actually block them. It does not promise that installing a
+skill makes every agent reliable.
 
 ## Kill the vibes
 

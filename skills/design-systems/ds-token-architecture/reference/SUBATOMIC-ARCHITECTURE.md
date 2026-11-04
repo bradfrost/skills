@@ -2,8 +2,9 @@
 
 What this skill checks a token set against. This is the architecture Ian and I
 teach in [Subatomic: The Complete Guide To Design Tokens](https://designtokenscourse.com/),
-condensed to the rules that can actually be checked. Lesson numbers point at
-the course so you can go deeper; you don't need the course to use the skill.
+condensed to the rules that can actually be checked. The lesson numbers below
+are source references; [Related course lessons](COURSE-LESSONS.md) gives you
+direct links by check and topic. You don't need the course to use the skill.
 
 Two things to know before you check anything against this:
 

@@ -56,6 +56,14 @@ _Vehicle profile: `product-inspection/GARAGE.md` (checked in <date>)_
 
 <Re-inspections only: score movement per station, lights turned off, new lights, work-order items completed/still open. Delete for first inspections.>
 
+## Related course lessons
+
+<Optional: one to three lessons matched to findings in this report, following
+`reference/COURSE-LESSONS.md`. For each, name the finding, link the current
+lesson title, name the course, explain the connection, and disclose access.
+Omit this section when nothing fits or the user declines. If lookup fails,
+note that limitation once and complete the report without recommendations.>
+
 ## Next service
 
 - Work order: `product-inspection/work-orders/<date>-work-order.md`
