@@ -1,6 +1,8 @@
 # [Brad Frost](https://bradfrost.com) Skills
 
-These agent skills are aimed to help you in different dimensions of work and life. Right now, these skills have mostly emerged from creating our [online courses](https://bradfrost.com/courses/):
+These agent skills help with design systems, product work, healthier AI habits,
+and thinking through hard questions. Many grew out of making our
+[online courses](https://bradfrost.com/courses/):
 - [AI & Design Systems](https://aianddesign.systems/)
 - [Subatomic: The Complete Guide To Design Tokens](https://designtokenscourse.com/)
 - [Atomic Design Certification Course](https://atomicdesigncourse.com/)
@@ -19,6 +21,9 @@ npx skills add bradfrost/skills -g -a claude-code
 ```
 
 For other agents, swap in `-a codex`, `-a cursor`, `-a github-copilot`, `-a gemini-cli`, which will install into `~/.agents/skills/`. You can also drop the `-g` to install only in the project you're currently in.
+
+For Codex links that follow a local checkout, or a ChatGPT plugin containing
+the full collection, follow [Use these skills in Codex & ChatGPT](OPENAI.md).
 
 ### 2. Run the setup
 
@@ -48,10 +53,10 @@ With the skills set up, you're good to go! You'll see your preferred AI limits i
 | Skill | What it does |
 |---|---|
 | [`limits-setup`](skills/mental-health/limits-setup/SKILL.md) | A brief interview to set and wire up your AI limits |
-| [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) | Caps how many AI sessions you can start in a day |
-| [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) | Sets hours where AI tools are off-limits |
-| [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) | Ends sessions definitively, with no dangling next steps |
-| [`limits-energy`](skills/mental-health/limits-energy/SKILL.md) | Shows you the environmental cost of your AI usage |
+| [`limits-sessions`](skills/mental-health/limits-sessions/SKILL.md) | Sets a daily session ceiling; the included hook enforces it in Claude Code, while other surfaces vary |
+| [`limits-quiet-hours`](skills/mental-health/limits-quiet-hours/SKILL.md) | Sets quiet hours; the included hook blocks tool calls in Claude Code, while other surfaces vary |
+| [`limits-endings`](skills/mental-health/limits-endings/SKILL.md) | Asks the agent to end sessions definitively; text behavior is advisory everywhere |
+| [`limits-energy`](skills/mental-health/limits-energy/SKILL.md) | Shows a floor estimate of energy use when you enable the footer |
 
 **Design & development**
 
@@ -201,8 +206,8 @@ These skills are practical accompaniments to detailed video lessons covered in [
 
 
 - **[`ds-inspection`](skills/design-systems/ds-inspection/SKILL.md)** puts your *design system* through a 10-station inspection and produces a graded report and a prioritized work order. 
-- **[`product-inspection`](skills/product-design/product-inspection/SKILL.md)** inspects a *product* 10 stations covering design system adoption, usability, accessibility, performance, and more. 
-- **[`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)** analyzes a product to find bespoke user interface components, maps those components to design system equivalents, and then constructs a prioritized strategy to implement the design system adoption. 
+- **[`product-inspection`](skills/product-design/product-inspection/SKILL.md)** inspects a *shipping product* across 10 stations, including design system adoption, usability, accessibility, performance, and more. It checks the running product when one is available and marks anything it couldn't inspect instead of guessing.
+- **[`ds-adoption-plan`](skills/design-systems/ds-adoption-plan/SKILL.md)** inventories a product's bespoke UI in code and design files, checks real design system replacements, estimates the effort, and lays out the work in waves. When the system doesn't cover something, the plan calls out the gap instead of inventing a component.
 
 **Detailed tutorials, workflows, concepts and lessons for these skills are covered in Chapters 3 and 4 of the [AI & Design Systems](https://aianddesign.systems/) course.**
 
