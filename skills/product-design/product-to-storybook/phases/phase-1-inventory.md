@@ -33,8 +33,8 @@ Templates are in the source. Find them:
 11ty sense. The templates are the view renderers: find the router (the
 route table, the dispatch function) and the function each route calls, and
 group by the skeleton those functions emit. The shell is whatever static
-markup wraps every view. bf-brain's hub was 21 view renderers behind one
-`index.html`, grouped into 6 templates.
+markup wraps every view. One single-page app we ran this on had 21 view
+renderers behind one `index.html`, which grouped into 6 templates.
 
 ## From a live URL
 

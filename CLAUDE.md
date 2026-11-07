@@ -73,17 +73,19 @@ Keep it short. Every line in it is written five times.
 
 ## The judgment contract is copied on purpose too
 
-Skills in `skills/judgment/` exist to build the reader's own judgment, not
+Skills in the judgment family exist to build the reader's own judgment, not
 to produce an artifact. Each one ships identical copies of
 `reference/CONTRACT.md` (clear terms, never clinical, no commercial links,
 success means the reader leaves) and `reference/DATA-HYGIENE.md`, for the
 same standalone-install reason as FIGMA-ACCESS.md. `what-do-i-make-of-this`
-holds the canonical copies. A new skill in this family copies both before
-it ships, and an edit to either syncs every copy in the same commit:
+(parked in `in-progress/` for now) holds the canonical copies. A new
+skill in this family copies both before it ships, and the paths below move
+back to `skills/judgment/` when this one ships. An edit to either syncs
+every copy in the same commit:
 
 ```bash
-md5 -q skills/judgment/*/reference/CONTRACT.md | sort -u | wc -l       # must print 1
-md5 -q skills/judgment/*/reference/DATA-HYGIENE.md | sort -u | wc -l   # must print 1
+md5 -q in-progress/*/reference/CONTRACT.md | sort -u | wc -l       # must print 1
+md5 -q in-progress/*/reference/DATA-HYGIENE.md | sort -u | wc -l   # must print 1
 ```
 
 ## Course lesson pointers
@@ -111,3 +113,12 @@ Add `--check-redirects` to verify each permalink's destination too.
 - Energy figures are floor estimates from published vendor numbers. Never
   invent a conversion; never present an estimate as a measurement.
 - If a claim can't be verified, say so plainly instead of softening it.
+
+## Skills that aren't ready yet
+
+Unfinished skills live in `in-progress/` at the repo root, never under
+`skills/`. That matters because `npx skills add`, `scripts/install-codex.py`,
+and `scripts/package-openai.py` all pick up every `SKILL.md` under `skills/`,
+so a subfolder there would still install. A parked skill gets no README entry
+and no row in `setup-brad-frost-skills`. To ship one, move it into the right
+family folder under `skills/` and add those entries back in the same PR.
