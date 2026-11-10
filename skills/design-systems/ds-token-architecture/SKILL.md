@@ -119,6 +119,11 @@ Determine which mode the user wants; when ambiguous, ask one short question.
 6. **Confirm the outputs exist** before you report back: `PROFILE.md`, the
    report, and the work order, as three files (or three messages). A
    work-order-shaped table inside the report is not the work order.
+7. **Stop at the work order.** The run ends there. Fixing the items is the
+   team's next job, not part of this run, so don't start on them unless
+   they ask. Offer once to file the work order in their tracker (one issue
+   per item, in the work order's priority order), and file only if they
+   say yes.
 
 ### Mode 2 — Single check
 

@@ -49,6 +49,10 @@ underneath them.
 5. **Check the tier identifier.** Tier 2 and 3 should carry it in code
    (`theme`, `semantic`, `sys`); tier 1 should not. It's the signal that
    tells a consumer "this is API" versus "this is raw material" (3.45).
+   Some systems mark the other side instead: tier 1 carries the marker
+   (`ref-`, the way Material does it) and tier 2 goes unmarked. That sends
+   the same signal. If it's applied consistently, record it in the
+   vocabulary translation and move on; it isn't a finding.
 6. **Check Figma parity.** Same names, minus the global prefix and tier
    identifier, with slashes for dashes (3.32, 3.45). `default` spelled out on
    both sides, since Figma can't express an unnamed default (3.36). List the
@@ -63,7 +67,8 @@ underneath them.
 - No discernible algorithm, or several
 - Tier 2 or 3 names that describe values (`blue-500-text`, `white-bg`)
 - Synonyms for one concept
-- No tier identifier, so consumers can't tell API from raw material
+- No tier marker on either side, so consumers can't tell API from raw
+  material
 - Figma and code names diverge beyond the documented parity rules
 - Abbreviations nobody can expand (`clr-bg-pri-hv`)
 
@@ -96,7 +101,7 @@ underneath them.
 - Matches architecture order: <yes / with these deviations>
 - Value-named tokens at tier 2/3: <n> (<examples>)
 - Synonym pairs: <list>
-- Tier identifier present: <yes / no>
+- Tier marker: <on tier 2/3 / on tier 1 instead / none>
 - Figma parity: <n tokens diverge beyond the parity rules / not reachable>
 - Findings:
   - [verified|reported] <finding + evidence>

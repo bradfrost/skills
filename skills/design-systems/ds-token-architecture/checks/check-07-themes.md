@@ -44,6 +44,14 @@ This check runs even for a single-theme system, because the answer to
    full copy of the light theme will drift (typography tokens added to
    light and not dark is the classic symptom). Count the non-color tokens
    the dark theme declares; the right number is zero or close to it.
+
+   Before you call a full copy a drift risk, find out how it's made. Some
+   formats and pipelines emit one complete file per mode, and that's fine
+   when the copy is **generated** from a variant source or **gated** by a
+   check that fails the build when a key or a non-color value differs from
+   the parent. Read the build and CI to see which. A generated or gated
+   copy is recorded, not flagged. A hand-maintained copy with no gate is
+   the finding.
 5. **Check dark-theme direction.** Ramps reverse on dark: brand and link
    colors step lighter, hover brightens rather than darkens, `subtle` and
    `surface` step up from the page instead of down. A dark theme built by
@@ -76,7 +84,8 @@ This check runs even for a single-theme system, because the answer to
 - **Red:** themes have drifted structurally, or a second theme would be a
   rewrite.
 - **Yellow:** themes hold together but core is missing, the dark theme is a
-  full copy, or a few tokens exist in some themes only.
+  hand-maintained full copy with no gate, or a few tokens exist in some
+  themes only.
 - **Green:** a second theme is a remap; core exists; dark mode is a variant
   holding only what changes; switching is one class or one mode.
 
@@ -98,7 +107,7 @@ This check runs even for a single-theme system, because the answer to
 - Themes: <n> (<names and purposes>) · vanilla: <yes / no>
 - Structural drift between themes: <n tokens present in some themes only>
 - Core: <present, n tokens / absent> · universals duplicated: <yes / no>
-- Dark theme: <variant / full copy / none> · non-color tokens it declares: <n>
+- Dark theme: <variant / full copy (generated / gated / hand-maintained) / none> · non-color tokens it declares: <n>
 - Dark direction: <holds / brand steps down / hover darkens>
 - Switching: <one class / one mode / requires component edits>
 - Findings:
