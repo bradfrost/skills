@@ -38,6 +38,14 @@ safely change is a diagram.
    documented? In Figma: is tier 1 hidden from publishing (5.10), and are
    variables scoped so a content color can't be applied as a frame fill
    (4.26)?
+
+   Then check the opposite mistake, which is just as easy to make and much
+   quieter: tier 2 or tier 3 hidden from publishing. A library with its
+   roles hidden hands its designers zero usable tokens, and no test in code
+   will notice. Read the publishing flag on every collection (and on
+   individual variables), not only tier 1's. The Console bridge can read
+   `hiddenFromPublishing` on each collection and variable through
+   `figma_execute`; otherwise ask, or check the library's publish dialog.
 3. **Design/code alignment at publish time.** The pre-publishing checklist
    (5.07 through 5.13): mapping correct in both places, scopes set, hidden
    collections hidden, contrast checked, build tested, docs present. Ask
@@ -66,6 +74,8 @@ safely change is a diagram.
 
 - Prefix or tier identifier typed by hand into names
 - Tier 1 published with no reason
+- Tier 2 or tier 3 hidden from publishing (roles or component tokens
+  consumers need, missing from the library)
 - No scopes, tier 1 visible in every Figma fill picker
 - No changelog, or versions that don't follow semver
 - No owner, no request path
@@ -75,7 +85,8 @@ safely change is a diagram.
 ## Lights
 
 - **Red:** can't be built reliably, or published with no versioning, or
-  changed with no process.
+  changed with no process, or tier 2 hidden from publishing in a library
+  consumers already use.
 - **Yellow:** builds and ships, but tier 1 is published without a reason,
   versioning is loose, or nothing is automated.
 - **Green:** structural build, tier 1 hidden (or published for a stated
@@ -88,6 +99,8 @@ safely change is a diagram.
   transform.
 - Tier 1 published by accident → add a filter to the build and hide the
   collection in Figma; publish tier 2/3 only.
+- Tier 2 or 3 hidden by accident → unhide it, republish, and add the
+  publishing flags to whatever check runs before a library publish.
 - No gates → start with references (mechanical) and raw values (a grep),
   then contrast pairs once check 4's list exists.
 - No process → name the owner and write the four-way classification down.
@@ -98,7 +111,7 @@ safely change is a diagram.
 ```markdown
 ### Check 9 — Build, publishing, and governance: <RED|YELLOW|GREEN> (or N/I)
 - Build: <tool, outputs> · prefix by config: <yes/no> · tier by transform: <yes/no> · refs in output: <preserved / resolved>
-- Tier 1 published: <yes (reason) / no> · Figma: hidden <yes/no> · scoped <yes/no>
+- Tier 1 published: <yes (reason) / no> · Figma: tier 1 hidden <yes/no> · tier 2/3 hidden <none / list> · scoped <yes/no>
 - Versioning: <semver / loose / none> · changelog: <yes/no>
 - Deprecation path: <what exists, or none; no architecture guidance>
 - Owner: <name / none> · request path: <documented / ad hoc>

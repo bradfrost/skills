@@ -30,6 +30,15 @@ is the single most common way a tiered system quietly stops being one.
    with file and token name. Some are legitimate and should be recorded as
    such: a unitless line-height ratio, a `transparent`, a composed shadow
    string. A hex color in tier 2 is never legitimate.
+
+   Then sort the raw values by category, because two very different
+   situations produce the same count. **Values leaking past tier 1** means
+   the category has a tier 1 and some tier 2 tokens skip it; each one is a
+   decision that won't follow a theme change. **A category with no tier 1**
+   means there's nothing to reference yet (40 typography values in tier 2
+   when typography has no tier 1 at all). That second case is one finding,
+   not forty: record it once, name the category, and point at check 5,
+   which owns the per-category ladder. It doesn't push this check to red.
 3. **Walk tier 3.** Same rule. Note which tier each reference points at.
    Tier 3 pointing at tier 1 is allowed; tier 3 pointing at tier 1 *when an
    equivalent tier 2 token exists* is a smell, because that component won't
@@ -56,10 +65,11 @@ is the single most common way a tiered system quietly stops being one.
 
 ## Lights
 
-- **Red:** more than a handful of raw values above tier 1, or any broken
-  reference in a published set.
+- **Red:** more than a handful of raw values leaking past an existing tier 1,
+  or any broken reference in a published set.
 - **Yellow:** a few raw values with a reason (or without one, but few), some
-  tier 3 → tier 1 shortcuts past existing tier 2 tokens.
+  tier 3 → tier 1 shortcuts past existing tier 2 tokens, or a whole category
+  that has no tier 1 to reference yet.
 - **Green:** every tier 2 and 3 value resolves through a reference, tier 1
   holds only raw values, the build fails on a broken reference.
 
@@ -79,6 +89,7 @@ is the single most common way a tiered system quietly stops being one.
 ```markdown
 ### Check 2 — References: <RED|YELLOW|GREEN> (or N/I)
 - Tier 2 tokens read: <n> · raw values found: <n> (<list or "none">)
+- Of those: leaking past an existing tier 1 <n> · in categories with no tier 1 <n> (<categories>)
 - Tier 3 tokens read: <n> · raw values: <n> · shortcuts past tier 2: <n>
 - Tier 1 tokens referencing others: <n>
 - Broken references: <n> · Build fails on broken refs: <yes / no / unknown>

@@ -10,7 +10,10 @@ _Architecture reference: `reference/SUBATOMIC-ARCHITECTURE.md`_
 it holds, where it breaks, and the single most important thing to do next.
 Write it for a teammate who reads nothing else. Lead with counts: "Tier 2 is
 solid for color (41 tokens, all aliased) and absent for spacing (0 tokens;
-14 components hardcode px)." >
+14 components hardcode px)." When most lights are yellow, say how many of
+them are small fixes and how many are real projects (from the work order's
+effort field), because yellow alone covers a one-line setting and a
+month of work.>
 
 **Lights:** 🟢 <n> green · 🟡 <n> yellow · 🔴 <n> red · <n> not inspected
 

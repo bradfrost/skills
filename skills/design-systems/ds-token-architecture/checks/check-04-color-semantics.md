@@ -43,22 +43,43 @@ vocabulary that includes the pairing rule: a filled surface needs a
    word doesn't matter. The pair does. A filled surface with no pair means
    components are choosing white or black by hand, and one of them is
    wrong.
-4. **Compute the contrast of every pair, per theme.** Text pairs need
+4. **Build the pair list, then compute it.** Leaving the list to
+   judgment makes two runs impossible to compare, so start from these pair
+   types and add whatever else the system has:
+
+   | Pair type | Foreground | Background | Needs |
+   |---|---|---|---|
+   | Content on the page | every `content-*` intention meant for the page (default, subtle, strong, brand, link, utility) | each page or surface background (`default`, `subtle`, …) | 4.5:1 |
+   | Knockout | each `on-*` / knockout content token | the filled background it's named for | 4.5:1 |
+   | Filled states | the same knockout content | that fill's `hover` and `active` variants | 4.5:1 |
+   | Boundaries | borders that identify a control (input, checkbox) and the focus ring | the surfaces they sit on | 3:1 |
+   | Disabled | disabled content | its background | record it, don't fail it (WCAG exempts disabled controls) |
+
+   Write the list you computed into the check record (pair, ratio, theme),
+   so the next run can diff it.
+
+5. **Compute the contrast of every pair, per theme.** Text pairs need
    4.5:1 (3:1 for large text, only if the system's smallest use of that
    pair is actually large). Non-text pairs (a progress fill on its track, a
    border on its surface) need 3:1. Do the arithmetic on the resolved
    values; don't take the token's name as proof. A token named `on-brand`
    that fails on the brand fill is a stronger finding than one that was
    never named.
-5. **Check the states.** `hover`, `active`, `focus` variants where the
+
+   Resolve the value format before you compute. DTCG 2025.10 colors are
+   objects (`colorSpace`, `components`, `alpha`, optionally `hex`), not hex
+   strings, and other formats use `rgb()`, `hsl()`, or `oklch()`. Convert to
+   sRGB first, and composite any alpha over the background it sits on. A
+   contrast script that assumes hex will quietly skip or misread these.
+6. **Check the states.** `hover`, `active`, `focus` variants where the
    system has interactive surfaces. In a dark theme, note whether hover goes
    the right direction (lighter on dark, darker on light): a dark theme
    built by copying the light theme's values usually gets this backwards.
-6. **Check the subtle/strong dial.** `subtle` should recede relative to
+7. **Check the subtle/strong dial.** `subtle` should recede relative to
    `default`; `strong` should advance (6.26). Resolve the values and
    confirm. `content-subtle` resolving to the same value as `content-brand`
    is a real finding from a real system.
-7. **Check what components actually reach for.** Sample components and note
+8. **Check what components actually reach for.** Sample components and note
    whether they use tier 2 (good), tier 3 (fine), tier 1 (a finding), or raw
    values (check 8's finding; record it there).
 
@@ -102,6 +123,7 @@ vocabulary that includes the pairing rule: a filled surface needs a
 - Intentions present: <list> · missing: <list>
 - Filled surfaces: <n> · paired: <n> · unpaired: <list>
 - Pairs computed: <n> · failing: <n> (<pair, ratio, theme>)
+- Pair list: <every pair computed, by type: pair, ratio, theme>
 - Subtle/strong dial: <holds / inverted at …>
 - Components sampled: <n> · reaching into tier 1: <n>
 - Findings:

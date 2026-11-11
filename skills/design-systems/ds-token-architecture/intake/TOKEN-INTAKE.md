@@ -12,6 +12,14 @@ Wherever you have live access (repo, pasted JSON, a design-tool bridge),
 SKILL.md promised five minutes; keep that promise. Then write `PROFILE.md`
 from the template at the bottom and read it back.
 
+**When you already know the answers.** An agent that has been working in
+the project for a while can often answer sections 1, 2, and 5 itself. In
+that case, still put each question to the user in its exact words, with
+your drafted answer underneath, and ask them to confirm or correct the
+lot in one reply. That keeps the five-minute promise and keeps the human
+in charge of what goes in the profile. A drafted answer isn't confirmed
+until they say so.
+
 ## 0. Which mode?
 
 Ask first, because the two modes read different evidence. Put it to the

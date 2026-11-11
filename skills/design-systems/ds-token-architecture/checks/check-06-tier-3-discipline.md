@@ -31,11 +31,16 @@ for the tier 3 tokens that are really tier 2 tokens in disguise.
    - Special case (focus ring, highlighted table row, chart)
    - Mapping that legitimately differs per theme (link color: brand in one
      theme, interactive blue in another)
+   - Theming hook: a token that maps one-to-one today, kept on purpose so a
+     planned theme can remap it, under a written policy. Check
+     `PROFILE.md`'s intentional deviations and the docs for that policy.
    Anything that doesn't fit is a candidate for deletion or demotion.
 3. **Find the disguised tier 2 tokens.** A `card-color-background` that
    resolves to `color-background-default` in every theme is a tier 2
    reference with an extra name. A `button-padding-x` that equals
    `spacing-16` everywhere is the same. These cost a name and buy nothing.
+   The exception is a theming hook from step 2: if the policy is written
+   down, count it as a hook. If nobody wrote it down, it's disguised.
 4. **Find the duplicated disabled.** Disabled states at tier 3 can fall back
    to tier 2 `content-disabled` / `background-disabled` (6.27). Count the
    components that minted their own.
@@ -85,7 +90,7 @@ for the tier 3 tokens that are really tier 2 tokens in disguise.
 ```markdown
 ### Check 6 — Tier 3 discipline: <RED|YELLOW|GREEN> (or N/I)
 - Tier 3 total: <n> across <n> components · tier 3 : tier 2 ratio <x>
-- By reason: variable component <n> · category <n> · special case <n> · per-theme mapping <n> · no reason <n>
+- By reason: variable component <n> · category <n> · special case <n> · per-theme mapping <n> · theming hook <n> (policy: <where>) · no reason <n>
 - Disguised tier 2: <n> (<examples>) · re-minted disabled: <n>
 - References: tier 2 <n> · tier 1 <n> (past existing tier 2: <n>)
 - Findings:
