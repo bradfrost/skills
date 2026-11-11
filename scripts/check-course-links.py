@@ -26,19 +26,35 @@ class NoRedirect(HTTPRedirectHandler):
         return None
 
 
-def check_redirect(item):
-    lesson_id, destination = item
-    url = LESSON_URL + lesson_id
+def fetch_without_redirect(url):
+    """Return (status, Location) without following a redirect."""
     try:
-        # Read only the redirect response; don't enter a student's session.
+        # Read only the first response; don't enter a student's session.
         with build_opener(NoRedirect).open(Request(url), timeout=20) as response:
-            return f"{url}: expected 302, got {response.status}"
+            return response.status, None
     except HTTPError as error:
         status, location = error.code, error.headers.get("Location")
         error.close()
-        if status == 302 and location == destination:
-            return None
-        return f"{url}: expected 302 to {destination}; got {status} to {location}"
+        return status, location
+
+
+def check_redirect(item):
+    """A paid lesson's permalink is a page for people who aren't enrolled
+    (learn#65); a free lesson's redirects straight to the lesson. Either way,
+    /go always redirects to the catalog destination."""
+    lesson_id, (destination, free) = item
+    url = LESSON_URL + lesson_id
+    try:
+        errors = []
+        status, location = fetch_without_redirect(url)
+        if free and (status, location) != (302, destination):
+            errors.append(f"{url}: free lesson, expected 302 to {destination}; got {status} to {location}")
+        if not free and status != 200:
+            errors.append(f"{url}: paid lesson, expected its lesson page (200); got {status} to {location}")
+        status, location = fetch_without_redirect(url + "/go")
+        if (status, location) != (302, destination):
+            errors.append(f"{url}/go: expected 302 to {destination}; got {status} to {location}")
+        return "\n".join(errors) or None
     except Exception as error:
         return f"{url}: redirect check unavailable ({error})"
 
@@ -98,7 +114,7 @@ def check(catalog, root=ROOT):
                 if not isinstance(destination, str) or not destination.startswith("https://"):
                     errors.append(f"{ref}: {lesson_id} has no HTTPS destination.")
                 else:
-                    destinations[lesson_id] = destination
+                    destinations[lesson_id] = (destination, lesson.get("free") is True)
     # Check lesson links outside the tables too, including README examples.
     for file in [root / "README.md", *(root / "skills").rglob("*.md")]:
         for title, lesson_id in LINK.findall(file.read_text()):
@@ -110,7 +126,7 @@ def check(catalog, root=ROOT):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--catalog", type=Path, help="Use a saved catalog for an offline check.")
-    parser.add_argument("--check-redirects", action="store_true", help="Verify every unique permalink against its catalog destination.")
+    parser.add_argument("--check-redirects", action="store_true", help="Verify every unique permalink live: the lesson page or redirect, and its /go redirect.")
     args = parser.parse_args()
     try:
         if args.catalog:
@@ -131,7 +147,7 @@ def main():
     source = str(args.catalog) if args.catalog else CATALOG_URL
     print(f"PASS: {references} skills, {len(destinations)} unique lessons; catalog generated {catalog.get('generated_at', 'unknown')}.")
     print(f"Catalog source: {source}")
-    print("Permalink redirects verified." if args.check_redirects else "Redirects not checked; use --check-redirects to verify destinations.")
+    print("Permalinks verified: lesson pages, free-lesson redirects, and /go redirects." if args.check_redirects else "Redirects not checked; use --check-redirects to verify destinations.")
     return 0
 
 

@@ -103,7 +103,9 @@ connection and keep enrollment disclosures in generated recommendations.
 Judgment and mental-health skills stay outside this course-linking path.
 
 Run `python3 scripts/check-course-links.py` after changing pointers.
-Add `--check-redirects` to verify each permalink's destination too.
+Add `--check-redirects` to verify each permalink live too: a paid lesson's
+`/lessons/<id>` is a page (200), a free one's 302s to the catalog URL, and
+every `/lessons/<id>/go` 302s to the catalog URL.
 
 ## Honesty rules that outrank good marketing copy
 
