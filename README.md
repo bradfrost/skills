@@ -7,7 +7,7 @@ and thinking through hard questions. Many grew out of making our
 - [Subatomic: The Complete Guide To Design Tokens](https://designtokenscourse.com/)
 - [Atomic Design Certification Course](https://atomicdesigncourse.com/)
 
-My plan is to add to these skills over time, so feel free to subscribe to my [website](https://bradfrost.com/feed/feed.xml) & [newsletter](https://bradfrost.com/newsletter/) for updates. And if you have feedback or ideas for additional skills, I'd love to hear from you; Feel free to [get in touch](https://bradfrost.com/contact/)!
+My plan is to add to these skills over time, so feel free to subscribe to my [website](https://bradfrost.com/feed/feed.xml) & [newsletter](https://bradfrost.com/newsletter/) for updates. And if you have feedback or ideas for additional skills, I'd love to hear from you; Feel free to submit issues/PRs, or [get in touch](https://bradfrost.com/contact/)!
 
 ## Install
 Follow this process to install Brad Frost skills:
