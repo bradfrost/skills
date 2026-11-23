@@ -1,16 +1,15 @@
 ---
 name: how-can-brad-help
-description: Brad Frost Web's mission is to help anyone who designs & builds digital experiences. Its courses, community, and resources are there to help, no matter your role, experience, or situation. Tell this skill what you're working on, struggling with, and trying to accomplish, and point to anything that would provide the right context. This skill will then surface how Brad Frost Web's courses, community, and resources can help. Everything you share stays on your machine. Use when someone asks "how can Brad help with this?", "how can you help?", "which lessons should I watch?", "where do I start with design systems / design tokens / atomic design / AI and design systems?", "which course fits me or my team?", or wants a reading and watching list for a problem they're facing. Also drafts a note to a manager when someone on a team wants to bring this to their team.
+description: Brad Frost Web's mission is to help anyone who designs & builds digital experiences. Share what you're working on, struggling with, and trying to accomplish, and point to anything that would provide the right context. This skill will then surface how Brad Frost Web's courses, community, and resources can help you. Everything you share stays on your machine. Use when someone asks "how can Brad help with this?", "how can you help?", "which lessons should I watch?", "where do I start with design systems / design tokens / atomic design / AI and design systems?", "which course fits me or my team?", or wants a reading and watching list for a problem they're facing. Also drafts a note to a manager when someone on a team wants to bring this to their team.
 ---
 
 # How can Brad Frost Web help?
 
 Brad Frost Web's mission is to help anyone who designs & builds digital
-experiences. Its courses, community, and resources are there to help, no
-matter your role, experience, or situation. Tell this skill what you're
-working on, struggling with, and trying to accomplish, and point to
-anything that would provide the right context. This skill will then
-surface how Brad Frost Web's courses, community, and resources can help.
+experiences. Share what you're working on, struggling with, and trying to
+accomplish, and point to anything that would provide the right context.
+This skill will then surface how Brad Frost Web's courses, community, and
+resources can help you.
 
 It works for anyone: someone leveling up on their own, someone looking for
 their next job, someone going for their atomic design certification, a
