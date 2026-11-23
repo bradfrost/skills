@@ -1,16 +1,16 @@
 ---
 name: how-can-brad-help
-description: Tell it what you're working on (a paragraph, a doc, a repo, a plan) and it points you to the parts of Brad Frost's work that help, starting with the course lessons that fit your situation, plus blog posts and links from the course community, with everything you share staying on your machine. Use when someone asks "how can Brad help with this?", "which lessons should I watch?", "where do I start with design systems / design tokens / atomic design / AI and design systems?", "which course fits me or my team?", or wants a reading and watching list for a problem they're facing. Also drafts a note to a manager when someone on a team wants to bring this to their team.
+description: Our mission is to help anyone who designs & builds digital experiences. Our courses, community, and resources are here to help you, no matter your role, experience, or situation. Tell us what you're working on, struggling with, and trying to accomplish, and share any context or docs that help explain it (a paragraph, a doc, a plan, a repo). We'll share everything we can to help you on your journey, and everything you share stays on your machine. Use when someone asks "how can Brad help with this?", "how can you help?", "which lessons should I watch?", "where do I start with design systems / design tokens / atomic design / AI and design systems?", "which course fits me or my team?", or wants a reading and watching list for a problem they're facing. Also drafts a note to a manager when someone on a team wants to bring this to their team.
 ---
 
-# How can Brad help?
+# How can we help?
 
-Tell me what you're working on, and I'll point you to the lessons, blog
-posts, and resources that help. I'm Brad Frost, and over the years Ian and
-I (and a whole lot of generous friends) have recorded hundreds of course
-lessons and written a whole lot about design systems, design tokens, atomic
-design, AI, and the work of making things for the web. That's a lot to dig
-through, so this skill does the digging for you, based on YOUR situation.
+Our mission is to help anyone who designs & builds digital experiences.
+Our courses, community, and resources are here to help you, no matter your
+role, experience, or situation. Tell us what you're working on, struggling
+with, and trying to accomplish, and share any context or docs that help
+explain it (a paragraph, a doc, a plan, a repo). We'll share everything we
+can to help you on your journey.
 
 It works for anyone: someone leveling up on their own, someone looking for
 their next job, someone going for their atomic design certification, a
