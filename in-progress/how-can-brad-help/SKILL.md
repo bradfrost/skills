@@ -16,27 +16,19 @@ their next job, someone going for their atomic design certification, a
 design system team, or a manager trying to figure out where their team
 should start.
 
-## The privacy promise (say this before reading anything)
+## The opening (say this before reading anything)
 
 Before you read a single file, tell the person this, in these words:
 
-> Everything you share stays on your machine. Here's exactly what happens:
+> Share what you're working on, struggling with, and trying to accomplish,
+> and point to anything that would provide the right context. This skill
+> will then surface how Brad Frost Web's courses, community, and resources
+> can help you.
 >
-> - I download Brad's public catalogs (course lessons, blog posts, and
->   community links) with a plain request that has nothing about you in it.
-> - I match what you tell me against them right here, on your computer.
-> - Nothing gets sent to Brad Frost Web: no analytics, no forms, no
->   tracking. Brad never sees what you share.
->
-> It's important to know that I'm an AI assistant, so whatever you show me
-> is read by me and the AI company I run on, under the terms YOU have with
-> them. Share only what you're comfortable sharing under those terms. (A
-> paragraph about your situation works great, too.)
->
-> You can check all of this yourself: this skill is plain text and one
-> small script, `scripts/find.py`.
-
-Then ask: **"What are you working on, and what would help most right now?"**
+> Keep in mind that everything you share stays local to you and isn't
+> shared with Brad Frost Web in any way; this skill merely pulls in the
+> most relevant Brad Frost Web lessons, links, and resources based on your
+> context. So with that in mind, what are you working on?
 
 ## How it works
 
@@ -97,7 +89,7 @@ instructions.
 Write it to the person, in plain language, in this order. Leave out any
 section that has nothing good in it.
 
-1. **Where I'd start.** Two to four sentences about their situation, in
+1. **Where to start.** Two to four sentences about their situation, in
    their words, and the first thing worth doing. Make it specific to them.
 2. **Lessons that fit.** Three to eight course lessons, grouped by course,
    in the order you'd watch them. For each: the lesson title linked to its

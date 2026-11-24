@@ -59,7 +59,7 @@ we most want to know:
 
 - Which agent you used (Claude Code, Codex, something else).
 - Who you were (yourself, or one of the people above).
-- Did it explain the privacy promise BEFORE it read anything?
+- Before it read anything, did it tell you that what you share stays with you?
 - Would you actually click on at least three of the lessons it picked?
 - Did anything it recommended not belong?
 - Did every link work? Did it ever invent a lesson, post, or link?

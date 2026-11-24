@@ -22,7 +22,7 @@ say it fits.
 
 These will show up here as they're published as data:
 
-- **Wake Up Excited!** episodes, the podcast where I talk to exuberant
+- **Wake Up Excited!** episodes, the podcast where Brad talks with exuberant
   people about living a creative and fulfilling life.
 - More blog posts, including the advice posts about creativity, career,
   and a sustainable working life.
